@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Frip" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="jx0-Lh-2GX" id="af5-Tm-mAo"/>
+                <outlet property="greetingLabel" destination="wVW-8r-Mya" id="i1t-3n-mQn"/>
+                <outlet property="naverLoginButton" destination="RtH-10-Wem" id="ZO7-2F-cEU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="warningLabel" destination="Q8H-aT-F28" id="dNP-pe-qEQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginImage" translatesAutoresizingMaskIntoConstraints="NO" id="3W2-Yd-3AC">
+                    <rect key="frame" x="0.0" y="44" width="414" height="332"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="3W2-Yd-3AC" secondAttribute="height" multiplier="414:383" constant="55.127937336814625" id="Lhc-9m-tVk"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반가워요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVW-8r-Mya">
+                    <rect key="frame" x="175" y="411" width="64" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jx0-Lh-2GX">
+                    <rect key="frame" x="186" y="447" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtH-10-Wem">
+                    <rect key="frame" x="73" y="497.5" width="269" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="269" id="VTb-Vi-9Q0"/>
+                        <constraint firstAttribute="width" secondItem="RtH-10-Wem" secondAttribute="height" multiplier="130:23" constant="48.565217391304344" id="ytR-Lh-Mey"/>
+                    </constraints>
+                    <state key="normal" image="NaverLoginComplete"/>
+                    <connections>
+                        <action selector="naverLoginTapAction:" destination="-1" eventType="touchUpInside" id="rhj-ZN-daJ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8H-aT-F28">
+                    <rect key="frame" x="190" y="556.5" width="34.5" height="17"/>
+                    <fontDescription key="fontDescription" name=".SFNS-Semibold" family=".AppleSystemFallback" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RtH-10-Wem" firstAttribute="top" secondItem="jx0-Lh-2GX" secondAttribute="bottom" constant="30" id="5Fm-5E-50s"/>
+                <constraint firstItem="RtH-10-Wem" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" constant="0.5" id="HlJ-Bg-JpW"/>
+                <constraint firstItem="3W2-Yd-3AC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="J7I-gu-3h1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3W2-Yd-3AC" secondAttribute="trailing" id="JR1-f3-Bs7"/>
+                <constraint firstItem="jx0-Lh-2GX" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="LBg-5D-IMv"/>
+                <constraint firstItem="3W2-Yd-3AC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Q8y-cH-oEu"/>
+                <constraint firstItem="wVW-8r-Mya" firstAttribute="top" secondItem="3W2-Yd-3AC" secondAttribute="bottom" constant="35" id="eBn-B0-cYT"/>
+                <constraint firstItem="Q8H-aT-F28" firstAttribute="top" secondItem="RtH-10-Wem" secondAttribute="bottom" constant="20" id="ef2-7h-yRH"/>
+                <constraint firstItem="Q8H-aT-F28" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="l4X-3y-dG7"/>
+                <constraint firstItem="jx0-Lh-2GX" firstAttribute="top" secondItem="wVW-8r-Mya" secondAttribute="bottom" constant="15" id="laR-WH-h52"/>
+                <constraint firstItem="wVW-8r-Mya" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="rze-1f-ZiM"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="140.625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LoginImage" width="1124" height="804"/>
+        <image name="NaverLoginComplete" width="260" height="57"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
