@@ -2,20 +2,20 @@ import UIKit
 import NaverThirdPartyLogin
 import Alamofire
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
 
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var naverLoginButton: UIButton!
     
+    var timer: Timer = Timer()
     var userInfo: UserInfo = UserInfo(birthday: "", email: "", gender: "", mobile: "", mobileGlobal: "", name: "", nickname: "", profileImage: "")
     
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         greetingLabel.font = UIFont.NotoSans(.bold, size: 20)
         
@@ -31,6 +31,9 @@ class MainViewController: UIViewController {
         warningLabel.textColor = .systemGray
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+    }
+    
     @IBAction func naverLoginTapAction(_ sender: Any) {
         loginInstance?.delegate = self
         loginInstance?.requestThirdPartyLogin()
@@ -43,6 +46,15 @@ class MainViewController: UIViewController {
     func successToRequest(result: UserInfo) {
         userInfo = result
         print(userInfo)
+        DispatchQueue.global().sync {
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(pushController), userInfo: nil, repeats: true)
+        }
+    }
+    
+    @objc func pushController() {
+        self.changeRootViewController(BaseTabBarViewController())
+        self.navigationController?.pushViewController(MainViewController(), animated: true)
+        self.timer.invalidate()
     }
 }
 

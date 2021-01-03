@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B066B4C25A2375E002100A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B066B4A25A2375E002100A9 /* HomeViewController.swift */; };
+		3B066B4D25A2375E002100A9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B066B4B25A2375E002100A9 /* HomeViewController.xib */; };
+		3B066B5725A23C33002100A9 /* RecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B066B5525A23C33002100A9 /* RecViewController.swift */; };
+		3B066B5825A23C33002100A9 /* RecViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B066B5625A23C33002100A9 /* RecViewController.xib */; };
+		3B066B5C25A23C3E002100A9 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B066B5A25A23C3E002100A9 /* DailyViewController.swift */; };
+		3B066B5D25A23C3E002100A9 /* DailyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B066B5B25A23C3E002100A9 /* DailyViewController.xib */; };
+		3B066B6125A23C60002100A9 /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B066B5F25A23C60002100A9 /* BestViewController.swift */; };
+		3B066B6225A23C60002100A9 /* BestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B066B6025A23C60002100A9 /* BestViewController.xib */; };
 		3B7771FA25A0726000CF2905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771F925A0726000CF2905 /* AppDelegate.swift */; };
 		3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771FB25A0726000CF2905 /* SceneDelegate.swift */; };
 		3B77720325A0726200CF2905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B77720225A0726200CF2905 /* Assets.xcassets */; };
@@ -31,10 +39,27 @@
 		3B77728C25A0AC4000CF2905 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B77728A25A0AC4000CF2905 /* MainViewController.xib */; };
 		3B77729725A0E08800CF2905 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77729625A0E08800CF2905 /* SignInResponse.swift */; };
 		3B77729B25A0E45A00CF2905 /* MainDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77729A25A0E45A00CF2905 /* MainDataManager.swift */; };
+		3B7772A025A189DC00CF2905 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77729F25A189DC00CF2905 /* BaseTabBarViewController.swift */; };
+		3B7772B225A18D5200CF2905 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7772B025A18D5200CF2905 /* CategoryViewController.swift */; };
+		3B7772B325A18D5200CF2905 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7772B125A18D5200CF2905 /* CategoryViewController.xib */; };
+		3B7772B725A18D5E00CF2905 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7772B525A18D5E00CF2905 /* FeedViewController.swift */; };
+		3B7772B825A18D5E00CF2905 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7772B625A18D5E00CF2905 /* FeedViewController.xib */; };
+		3B7772BC25A18D6800CF2905 /* StoredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7772BA25A18D6800CF2905 /* StoredViewController.swift */; };
+		3B7772BD25A18D6800CF2905 /* StoredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7772BB25A18D6800CF2905 /* StoredViewController.xib */; };
+		3B7772C125A18D7400CF2905 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7772BF25A18D7400CF2905 /* MyInfoViewController.swift */; };
+		3B7772C225A18D7400CF2905 /* MyInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7772C025A18D7400CF2905 /* MyInfoViewController.xib */; };
 		F2E6D8BE50CDFE9B21315D05 /* Pods_Frip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBA4537F4C1AE15CFCC8F7A /* Pods_Frip.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B066B4A25A2375E002100A9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3B066B4B25A2375E002100A9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		3B066B5525A23C33002100A9 /* RecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecViewController.swift; sourceTree = "<group>"; };
+		3B066B5625A23C33002100A9 /* RecViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecViewController.xib; sourceTree = "<group>"; };
+		3B066B5A25A23C3E002100A9 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		3B066B5B25A23C3E002100A9 /* DailyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyViewController.xib; sourceTree = "<group>"; };
+		3B066B5F25A23C60002100A9 /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
+		3B066B6025A23C60002100A9 /* BestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestViewController.xib; sourceTree = "<group>"; };
 		3B7771F625A0726000CF2905 /* Frip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7771F925A0726000CF2905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B7771FB25A0726000CF2905 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +86,15 @@
 		3B77728A25A0AC4000CF2905 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		3B77729625A0E08800CF2905 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		3B77729A25A0E45A00CF2905 /* MainDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataManager.swift; sourceTree = "<group>"; };
+		3B77729F25A189DC00CF2905 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
+		3B7772B025A18D5200CF2905 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		3B7772B125A18D5200CF2905 /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		3B7772B525A18D5E00CF2905 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		3B7772B625A18D5E00CF2905 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		3B7772BA25A18D6800CF2905 /* StoredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredViewController.swift; sourceTree = "<group>"; };
+		3B7772BB25A18D6800CF2905 /* StoredViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoredViewController.xib; sourceTree = "<group>"; };
+		3B7772BF25A18D7400CF2905 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
+		3B7772C025A18D7400CF2905 /* MyInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoViewController.xib; sourceTree = "<group>"; };
 		3E97CE3C177AB129A6888CC5 /* Pods-Frip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frip.debug.xcconfig"; path = "Target Support Files/Pods-Frip/Pods-Frip.debug.xcconfig"; sourceTree = "<group>"; };
 		76D72DBCA516049EA41A0AAA /* Pods-Frip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frip.release.xcconfig"; path = "Target Support Files/Pods-Frip/Pods-Frip.release.xcconfig"; sourceTree = "<group>"; };
 		8FBA4537F4C1AE15CFCC8F7A /* Pods_Frip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +112,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B066B4F25A23780002100A9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3B7771ED25A0726000CF2905 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +140,11 @@
 		3B7771F825A0726000CF2905 /* Frip */ = {
 			isa = PBXGroup;
 			children = (
+				3B7772A625A18D0D00CF2905 /* MyInfo */,
+				3B7772A525A18CFF00CF2905 /* Stored */,
+				3B7772A425A18CE900CF2905 /* Feed */,
+				3B7772A325A18CE200CF2905 /* Category */,
+				3B77729E25A1878000CF2905 /* Home */,
 				3B77728825A0AC2900CF2905 /* Main */,
 				3B77724625A0A4CB00CF2905 /* Configuration */,
 				3B7771F925A0726000CF2905 /* AppDelegate.swift */,
@@ -169,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				3B77728125A0A8CE00CF2905 /* BaseViewController.swift */,
+				3B77729F25A189DC00CF2905 /* BaseTabBarViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -198,6 +245,58 @@
 				3B77729A25A0E45A00CF2905 /* MainDataManager.swift */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		3B77729E25A1878000CF2905 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3B066B4F25A23780002100A9 /* Cell */,
+				3B066B4A25A2375E002100A9 /* HomeViewController.swift */,
+				3B066B4B25A2375E002100A9 /* HomeViewController.xib */,
+				3B066B5525A23C33002100A9 /* RecViewController.swift */,
+				3B066B5625A23C33002100A9 /* RecViewController.xib */,
+				3B066B5A25A23C3E002100A9 /* DailyViewController.swift */,
+				3B066B5B25A23C3E002100A9 /* DailyViewController.xib */,
+				3B066B5F25A23C60002100A9 /* BestViewController.swift */,
+				3B066B6025A23C60002100A9 /* BestViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3B7772A325A18CE200CF2905 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3B7772B025A18D5200CF2905 /* CategoryViewController.swift */,
+				3B7772B125A18D5200CF2905 /* CategoryViewController.xib */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3B7772A425A18CE900CF2905 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				3B7772B525A18D5E00CF2905 /* FeedViewController.swift */,
+				3B7772B625A18D5E00CF2905 /* FeedViewController.xib */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		3B7772A525A18CFF00CF2905 /* Stored */ = {
+			isa = PBXGroup;
+			children = (
+				3B7772BA25A18D6800CF2905 /* StoredViewController.swift */,
+				3B7772BB25A18D6800CF2905 /* StoredViewController.xib */,
+			);
+			path = Stored;
+			sourceTree = "<group>";
+		};
+		3B7772A625A18D0D00CF2905 /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				3B7772BF25A18D7400CF2905 /* MyInfoViewController.swift */,
+				3B7772C025A18D7400CF2905 /* MyInfoViewController.xib */,
+			);
+			path = MyInfo;
 			sourceTree = "<group>";
 		};
 		AB81A9386B2D2F0E9435FD6C /* Frameworks */ = {
@@ -276,12 +375,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B7772C225A18D7400CF2905 /* MyInfoViewController.xib in Resources */,
+				3B7772B325A18D5200CF2905 /* CategoryViewController.xib in Resources */,
 				3B77724D25A0A54600CF2905 /* NotoSansCJKkr-Regular.otf in Resources */,
 				3B77728C25A0AC4000CF2905 /* MainViewController.xib in Resources */,
 				3B77720625A0726200CF2905 /* LaunchScreen.storyboard in Resources */,
+				3B7772B825A18D5E00CF2905 /* FeedViewController.xib in Resources */,
+				3B066B6225A23C60002100A9 /* BestViewController.xib in Resources */,
+				3B7772BD25A18D6800CF2905 /* StoredViewController.xib in Resources */,
 				3B77720325A0726200CF2905 /* Assets.xcassets in Resources */,
 				3B77724C25A0A54600CF2905 /* NotoSansCJKkr-Medium.otf in Resources */,
 				3B77724E25A0A54600CF2905 /* NotoSansCJKkr-Bold.otf in Resources */,
+				3B066B5D25A23C3E002100A9 /* DailyViewController.xib in Resources */,
+				3B066B4D25A2375E002100A9 /* HomeViewController.xib in Resources */,
+				3B066B5825A23C33002100A9 /* RecViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,19 +445,28 @@
 				3B7771FA25A0726000CF2905 /* AppDelegate.swift in Sources */,
 				3B77727525A0A70A00CF2905 /* UINavigationBar.swift in Sources */,
 				3B77727125A0A70A00CF2905 /* Date.swift in Sources */,
+				3B066B5C25A23C3E002100A9 /* DailyViewController.swift in Sources */,
 				3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */,
 				3B77727325A0A70A00CF2905 /* UIButton.swift in Sources */,
 				3B77729B25A0E45A00CF2905 /* MainDataManager.swift in Sources */,
 				3B77727625A0A70A00CF2905 /* UIViewController.swift in Sources */,
+				3B7772A025A189DC00CF2905 /* BaseTabBarViewController.swift in Sources */,
 				3B77728B25A0AC4000CF2905 /* MainViewController.swift in Sources */,
 				3B77727425A0A70A00CF2905 /* UIFont.swift in Sources */,
+				3B066B4C25A2375E002100A9 /* HomeViewController.swift in Sources */,
 				3B77729725A0E08800CF2905 /* SignInResponse.swift in Sources */,
 				3B77727E25A0A88E00CF2905 /* Device.swift in Sources */,
 				3B77727025A0A70A00CF2905 /* String.swift in Sources */,
 				3B77727B25A0A87A00CF2905 /* IndicatorView.swift in Sources */,
+				3B7772B225A18D5200CF2905 /* CategoryViewController.swift in Sources */,
 				3B77725125A0A58C00CF2905 /* Constant.swift in Sources */,
+				3B7772B725A18D5E00CF2905 /* FeedViewController.swift in Sources */,
+				3B7772BC25A18D6800CF2905 /* StoredViewController.swift in Sources */,
 				3B77728225A0A8CE00CF2905 /* BaseViewController.swift in Sources */,
+				3B066B6125A23C60002100A9 /* BestViewController.swift in Sources */,
+				3B066B5725A23C33002100A9 /* RecViewController.swift in Sources */,
 				3B77727225A0A70A00CF2905 /* UIView.swift in Sources */,
+				3B7772C125A18D7400CF2905 /* MyInfoViewController.swift in Sources */,
 				3B77726F25A0A70A00CF2905 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

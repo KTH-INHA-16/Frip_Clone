@@ -23,25 +23,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginImage" translatesAutoresizingMaskIntoConstraints="NO" id="3W2-Yd-3AC">
-                    <rect key="frame" x="0.0" y="44" width="414" height="332"/>
+                    <rect key="frame" x="0.0" y="88" width="414" height="332"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="3W2-Yd-3AC" secondAttribute="height" multiplier="414:383" constant="55.127937336814625" id="Lhc-9m-tVk"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반가워요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVW-8r-Mya">
-                    <rect key="frame" x="175" y="411" width="64" height="21"/>
+                    <rect key="frame" x="175" y="455" width="64" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jx0-Lh-2GX">
-                    <rect key="frame" x="186" y="447" width="42" height="20.5"/>
+                    <rect key="frame" x="186" y="491" width="42" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtH-10-Wem">
-                    <rect key="frame" x="73" y="497.5" width="269" height="39"/>
+                    <rect key="frame" x="73" y="541.5" width="269" height="39"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="269" id="VTb-Vi-9Q0"/>
                         <constraint firstAttribute="width" secondItem="RtH-10-Wem" secondAttribute="height" multiplier="130:23" constant="48.565217391304344" id="ytR-Lh-Mey"/>
@@ -52,7 +52,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8H-aT-F28">
-                    <rect key="frame" x="190" y="556.5" width="34.5" height="17"/>
+                    <rect key="frame" x="190" y="600.5" width="34.5" height="17"/>
                     <fontDescription key="fontDescription" name=".SFNS-Semibold" family=".AppleSystemFallback" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -73,6 +73,8 @@
                 <constraint firstItem="jx0-Lh-2GX" firstAttribute="top" secondItem="wVW-8r-Mya" secondAttribute="bottom" constant="15" id="laR-WH-h52"/>
                 <constraint firstItem="wVW-8r-Mya" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="rze-1f-ZiM"/>
             </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <point key="canvasLocation" x="137.68115942028987" y="140.625"/>
         </view>
     </objects>

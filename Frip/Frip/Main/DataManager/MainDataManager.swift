@@ -11,10 +11,11 @@ class MainDataManager {
         AF.request(targetUrl, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization":header])
             .validate()
             .responseDecodable(of: SignInResponse.self) { response in
+                print(response)
                 switch response.result {
                 case .success(let response):
                     viewController.successToRequest(result: response.response)
-                case .failure(let error):
+                case .failure(let _):
                     viewController.failedToRequest(message: "서버와의 연결이 원활하지 않음")
                 }
             }
