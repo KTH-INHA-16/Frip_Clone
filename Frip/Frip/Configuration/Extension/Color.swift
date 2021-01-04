@@ -15,4 +15,9 @@ extension UIColor {
     // MARK: 메인 테마 색 또는 자주 쓰는 색을 정의
     // ex. label.textColor = .mainOrange
     class var mainOrange: UIColor { UIColor(hex: 0xF5663F) }
+    class var saveColor: UIColor {UIColor(displayP3Red: 0.927, green: 0.440, blue: 0.420, alpha: 1)}
+    class var healthColor: UIColor {UIColor(displayP3Red: 0.945, green: 0.957, blue: 0.969, alpha: 1)}
+    class var greetingColor: UIColor{UIColor(displayP3Red: 0.953, green: 0.949, blue: 0.979, alpha: 1)}
+    class var activityColor: UIColor{UIColor(displayP3Red: 0.965, green: 0.973, blue: 0.949, alpha: 1)}
+    class var learningColor: UIColor{UIColor(displayP3Red: 0.949, green: 0.969, blue: 0.965, alpha: 1)}
 }

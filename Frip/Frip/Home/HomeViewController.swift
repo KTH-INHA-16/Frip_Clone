@@ -6,23 +6,23 @@
 //
 
 import UIKit
+import SwipeViewController
 
 class HomeViewController: BaseViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBAction func touch(_ sender: Any) {
-        print(234234)
-    }
-    
-    lazy   var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
+    lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
+    var touch = 0
+    let text = ["추천","일상","베스트"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setSearchBar()
-        
-        scrollView.contentSize = CGSize(width: self.view.bounds.width * 3, height: self.view.bounds.height-74)
+        scrollView.contentSize = CGSize(width: self.view.bounds.width * 3, height: self.view.bounds.height)
         scrollView.isPagingEnabled = true
+        scrollView.delegate = self
         
         let rVC = RecViewController()
         let dVC = DailyViewController()
@@ -31,17 +31,20 @@ class HomeViewController: BaseViewController {
         var idx = 0
         for vc in viewControllers {
             let originX = CGFloat(idx) * self.view.bounds.width
-            vc.view.frame = CGRect(x:originX,y: 74,width: vc.view.bounds.width,height: self.view.bounds.height-74)
+            vc.view.frame = CGRect(x:originX,y: 0,width: vc.view.bounds.width,height: vc.view.bounds.height)
             vc.willMove(toParent: self)
             addChild(vc)
             scrollView.addSubview(vc.view)
             vc.didMove(toParent: self)
             idx += 1
         }
+        
+        collectionView.register(UINib(nibName: "labelCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "labelCollectionViewCell")
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     func setSearchBar(){
-        
         //서치바 만들기
         let searchBar = UISearchBar()
         searchBar.cornerRadius = 50
@@ -68,9 +71,50 @@ class HomeViewController: BaseViewController {
                 //이미지 틴트 정하기
                 rightView.tintColor = UIColor.darkGray
             }
- 
         }
-        
     }
 
+}
+
+extension HomeViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        touch = Int(scrollView.contentOffset.x) / Int(self.view.frame.width)
+        collectionView.reloadData()
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "labelCollectionViewCell", for: indexPath) as! labelCollectionViewCell
+        cell.label.text = text[indexPath.row]
+        cell.label.font = UIFont.NotoSans(.regular, size: 15)
+        if touch == indexPath.row {
+            cell.border.backgroundColor = .black
+            cell.label.textColor = .black
+        } else {
+            cell.border.backgroundColor = .white
+            cell.label.textColor = .lightGray
+        }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        touch = indexPath.row
+        collectionView.reloadData()
+        scrollView.contentOffset.x = CGFloat(indexPath.row) * self.view.frame.width
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.frame.width/3, height: collectionView.frame.height)
+    }
+    
 }

@@ -7,9 +7,7 @@ class BaseViewController: UIViewController{
         self.navigationController?.navigationBar.titleTextAttributes = [
             .font : UIFont.NotoSans(.medium, size: 16)
         ]
-        
-        // Background Color
-        self.view.backgroundColor = .white
-        self.view.tintColor = .white
+        self.navigationController?.navigationBar.backgroundColor = .white
+        self.tabBarController?.tabBar.backgroundColor = .white
     }
 }

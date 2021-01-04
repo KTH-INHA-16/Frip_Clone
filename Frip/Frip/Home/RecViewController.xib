@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecViewController" customModule="Frip" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="OUU-li-tHN" id="f5E-pM-jog"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,13 +19,12 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OUU-li-tHN">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OUU-li-tHN">
+                    <rect key="frame" x="0.0" y="88" width="414" height="770"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y3S-ib-O3f">
                         <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="headerReferenceSize" width="50" height="50"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
@@ -32,6 +32,13 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OUU-li-tHN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6Uq-VS-Wn2"/>
+                <constraint firstItem="OUU-li-tHN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9oo-Vx-bbt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OUU-li-tHN" secondAttribute="bottom" constant="4" id="Af0-Qg-zYg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OUU-li-tHN" secondAttribute="trailing" id="o17-5c-eru"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="-155.07246376811597" y="85.714285714285708"/>
         </view>
     </objects>

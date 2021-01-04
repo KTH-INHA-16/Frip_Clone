@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="Frip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="291" height="214"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="291" height="214"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zeg-h4-kXI">
+                        <rect key="frame" x="5" y="48.5" width="286" height="161.5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91h-vr-A1u">
+                        <rect key="frame" x="35" y="118.5" width="145.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Zeg-h4-kXI" firstAttribute="height" secondItem="ZTg-uK-7eu" secondAttribute="height" multiplier="0.95" id="8Jp-1E-Vb8"/>
+                <constraint firstItem="Zeg-h4-kXI" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="5" id="CCm-v1-oUv"/>
+                <constraint firstItem="91h-vr-A1u" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.5" id="P1O-HB-afI"/>
+                <constraint firstItem="91h-vr-A1u" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="aTQ-vl-yGe"/>
+                <constraint firstItem="91h-vr-A1u" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="35" id="ieV-sf-sKh"/>
+                <constraint firstItem="Zeg-h4-kXI" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="lRx-fv-BHn"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="Zeg-h4-kXI" secondAttribute="trailing" id="tHj-vh-Gka"/>
+            </constraints>
+            <size key="customSize" width="291" height="214"/>
+            <connections>
+                <outlet property="label" destination="91h-vr-A1u" id="wXb-sP-2nr"/>
+                <outlet property="view" destination="Zeg-h4-kXI" id="eOu-zm-fJy"/>
+            </connections>
+            <point key="canvasLocation" x="183.33333333333334" y="153.34821428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
