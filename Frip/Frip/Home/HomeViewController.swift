@@ -13,6 +13,8 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
+    
+    var bigCategory: String = ""
     var touch = 0
     let text = ["추천","일상","베스트"]
     
@@ -27,6 +29,7 @@ class HomeViewController: BaseViewController {
         let rVC = RecViewController()
         let dVC = DailyViewController()
         let bVC = BestViewController()
+        //프로토콜, notification center
         let viewControllers = [ rVC, dVC, bVC ]
         var idx = 0
         for vc in viewControllers {
@@ -39,9 +42,20 @@ class HomeViewController: BaseViewController {
             idx += 1
         }
         
+        searchBar.delegate = self
         collectionView.register(UINib(nibName: "labelCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "labelCollectionViewCell")
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(presentVC(_:)), name: NSNotification.Name("PostButton"), object: nil)
+    }
+    
+    @objc func presentVC(_ notification: Notification) {
+        guard let bigCategory = notification.userInfo?["bigCategory"] as? String else {return}
+        print("vc")
+        let searchVC = CategorySearchViewController(bigCategory, "")
+        searchVC.modalPresentationStyle = .overFullScreen
+        self.navigationController?.pushViewController(searchVC, animated: true)
     }
     
     func setSearchBar(){
@@ -73,7 +87,10 @@ class HomeViewController: BaseViewController {
             }
         }
     }
+}
 
+extension HomeViewController: UISearchBarDelegate {
+    
 }
 
 extension HomeViewController: UIScrollViewDelegate {
@@ -81,6 +98,18 @@ extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         touch = Int(scrollView.contentOffset.x) / Int(self.view.frame.width)
         collectionView.reloadData()
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if velocity.y > 0 {
+            UIView.animate(withDuration: 0.1, animations: {
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+            })
+        } else {
+            UIView.animate(withDuration: 0.1, animations: {
+                self.navigationController?.setNavigationBarHidden(false, animated: false)
+            })
+        }
     }
 }
 

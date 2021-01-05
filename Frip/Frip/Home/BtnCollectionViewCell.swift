@@ -28,7 +28,6 @@ class BtnCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func buttonTap(_ sender: Any) {
-        print(idx)
         button.imageView?.image = UIImage(named: "ButtonImage\(idx)")
     }
     

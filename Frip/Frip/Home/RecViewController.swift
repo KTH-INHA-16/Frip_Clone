@@ -7,12 +7,13 @@
 import Foundation
 import UIKit
 
-class RecViewController: UIViewController {
+class RecViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     let labelText: [String] = ["아웃도어", "요리", "피트니스", "스터디"]
     let headerText: [String] = ["","가장 인기 있는 프립 🥇", "신규 프립", "후기가 많은 프립"]
+    var userInfo: [AnyHashable: Any]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,10 +49,11 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0{
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BtnCollectionViewCell", for: indexPath) as? BtnCollectionViewCell else { return UICollectionViewCell() }
-            print(indexPath.row)
             cell.idx = indexPath.row
             cell.button.setImage(UIImage(named: "ButtonImage\(indexPath.row)"), for: .normal)
             cell.label.text = labelText[indexPath.row]
+            cell.button.tag = indexPath.row
+            cell.button.addTarget(self, action: #selector(roundButtonTap(sender:)), for: .touchDown)
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as? MainCollectionViewCell else {
@@ -87,6 +89,12 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
             header.buttonConfigure(headerText[indexPath.section])
             return header
         }
+    }
+    
+    @objc func roundButtonTap(sender: UIButton!) {
+        print("se")
+        userInfo = ["bigCategory":labelText[sender.tag]]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PostButton"), object: nil, userInfo: userInfo)
     }
     
 }

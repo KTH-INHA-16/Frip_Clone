@@ -15,6 +15,8 @@
 		3B066B5D25A23C3E002100A9 /* DailyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B066B5B25A23C3E002100A9 /* DailyViewController.xib */; };
 		3B066B6125A23C60002100A9 /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B066B5F25A23C60002100A9 /* BestViewController.swift */; };
 		3B066B6225A23C60002100A9 /* BestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B066B6025A23C60002100A9 /* BestViewController.xib */; };
+		3B3B5CD625A43FCF00719FA7 /* CategorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B5CD425A43FCF00719FA7 /* CategorySearchViewController.swift */; };
+		3B3B5CD725A43FCF00719FA7 /* CategorySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3B5CD525A43FCF00719FA7 /* CategorySearchViewController.xib */; };
 		3B3F31C025A3376700EE22C5 /* MainPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F31BF25A3376700EE22C5 /* MainPostDataManager.swift */; };
 		3B3F31C525A339EC00EE22C5 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F31C325A339EC00EE22C5 /* CategoryCollectionViewCell.swift */; };
 		3B3F31C625A339EC00EE22C5 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F31C425A339EC00EE22C5 /* CategoryCollectionViewCell.xib */; };
@@ -78,6 +80,8 @@
 		3B066B5B25A23C3E002100A9 /* DailyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyViewController.xib; sourceTree = "<group>"; };
 		3B066B5F25A23C60002100A9 /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
 		3B066B6025A23C60002100A9 /* BestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestViewController.xib; sourceTree = "<group>"; };
+		3B3B5CD425A43FCF00719FA7 /* CategorySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchViewController.swift; sourceTree = "<group>"; };
+		3B3B5CD525A43FCF00719FA7 /* CategorySearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySearchViewController.xib; sourceTree = "<group>"; };
 		3B3F31BF25A3376700EE22C5 /* MainPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPostDataManager.swift; sourceTree = "<group>"; };
 		3B3F31C325A339EC00EE22C5 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B3F31C425A339EC00EE22C5 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -148,6 +152,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B3B5CCE25A43EE400719FA7 /* CategorySearch */ = {
+			isa = PBXGroup;
+			children = (
+				3B3B5CD425A43FCF00719FA7 /* CategorySearchViewController.swift */,
+				3B3B5CD525A43FCF00719FA7 /* CategorySearchViewController.xib */,
+			);
+			path = CategorySearch;
+			sourceTree = "<group>";
+		};
 		3B3F31C225A339D100EE22C5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +213,7 @@
 		3B7771F825A0726000CF2905 /* Frip */ = {
 			isa = PBXGroup;
 			children = (
+				3B3B5CCE25A43EE400719FA7 /* CategorySearch */,
 				3B7772A625A18D0D00CF2905 /* MyInfo */,
 				3B7772A525A18CFF00CF2905 /* Stored */,
 				3B7772A425A18CE900CF2905 /* Feed */,
@@ -452,6 +466,7 @@
 				3B77728C25A0AC4000CF2905 /* MainViewController.xib in Resources */,
 				3B77720625A0726200CF2905 /* LaunchScreen.storyboard in Resources */,
 				3B7772B825A18D5E00CF2905 /* FeedViewController.xib in Resources */,
+				3B3B5CD725A43FCF00719FA7 /* CategorySearchViewController.xib in Resources */,
 				3B066B6225A23C60002100A9 /* BestViewController.xib in Resources */,
 				3B3F321025A41FC900EE22C5 /* NoneCollectionViewCell.xib in Resources */,
 				3B7EF0F125A2E7500003C210 /* MainCollectionViewCell.xib in Resources */,
@@ -539,6 +554,7 @@
 				3B77729725A0E08800CF2905 /* SignInResponse.swift in Sources */,
 				3B77727E25A0A88E00CF2905 /* Device.swift in Sources */,
 				3B7EF0F025A2E7500003C210 /* MainCollectionViewCell.swift in Sources */,
+				3B3B5CD625A43FCF00719FA7 /* CategorySearchViewController.swift in Sources */,
 				3B77727025A0A70A00CF2905 /* String.swift in Sources */,
 				3B77727B25A0A87A00CF2905 /* IndicatorView.swift in Sources */,
 				3B3F320325A398A800EE22C5 /* SaveHostViewController.swift in Sources */,
