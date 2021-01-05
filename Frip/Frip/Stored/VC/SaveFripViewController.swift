@@ -7,23 +7,53 @@
 
 import UIKit
 
-class SaveFripViewController: UIViewController {
+class SaveFripViewController: BaseViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    var saveFrip: [Any] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.isHidden = true
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        collectionView.register(UINib(nibName: "NoneCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NoneCollectionViewCell")
+        collectionView.reloadData()
     }
 
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension SaveFripViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if saveFrip.count != 0 {
+            return saveFrip.count
+        } else {
+            return 1
+        }
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if saveFrip.count != 0 {
+            return UICollectionViewCell()
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NoneCollectionViewCell", for: indexPath) as? NoneCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.label1.text = "아직 저장한 프립이 없어요."
+            cell.label2.text = "관심있는 프립을 저장해 보세요!"
+            return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if saveFrip.count != 0 {
+            return CGSize(width: collectionView.frame.width / 2 - 5, height: 300)
+        } else {
+            return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        }
+    }
+    
+    
 }

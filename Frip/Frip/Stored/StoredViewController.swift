@@ -15,8 +15,6 @@ class StoredViewController: BaseViewController {
     var touch = 0
     var text = ["프립","호스트"]
     
-    lazy var searchBar:UICollectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 30))
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

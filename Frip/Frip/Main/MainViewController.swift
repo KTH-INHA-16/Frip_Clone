@@ -99,6 +99,7 @@ extension MainViewController: NaverThirdPartyLoginConnectionDelegate {
         let url = URL(string: Constant.NAVER_LOGIN_URL)!
         
         let authorization = "\(tokenType) \(accessToken)"
+        print("access: \(accessToken)")
         
         MainDataManager().searchMainUser(targetUrl: url, header: authorization, viewController: self)
         dismissIndicator()
