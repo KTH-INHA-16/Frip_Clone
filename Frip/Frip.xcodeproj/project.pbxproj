@@ -26,6 +26,8 @@
 		3B3F320A25A398B300EE22C5 /* SaveFripViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F320825A398B300EE22C5 /* SaveFripViewController.xib */; };
 		3B3F320F25A41FC900EE22C5 /* NoneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F320D25A41FC900EE22C5 /* NoneCollectionViewCell.swift */; };
 		3B3F321025A41FC900EE22C5 /* NoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F320E25A41FC900EE22C5 /* NoneCollectionViewCell.xib */; };
+		3B3F321425A42FE400EE22C5 /* HostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F321225A42FE400EE22C5 /* HostCollectionViewCell.swift */; };
+		3B3F321525A42FE400EE22C5 /* HostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F321325A42FE400EE22C5 /* HostCollectionViewCell.xib */; };
 		3B7771FA25A0726000CF2905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771F925A0726000CF2905 /* AppDelegate.swift */; };
 		3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771FB25A0726000CF2905 /* SceneDelegate.swift */; };
 		3B77720325A0726200CF2905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B77720225A0726200CF2905 /* Assets.xcassets */; };
@@ -87,6 +89,8 @@
 		3B3F320825A398B300EE22C5 /* SaveFripViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveFripViewController.xib; sourceTree = "<group>"; };
 		3B3F320D25A41FC900EE22C5 /* NoneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B3F320E25A41FC900EE22C5 /* NoneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoneCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B3F321225A42FE400EE22C5 /* HostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B3F321325A42FE400EE22C5 /* HostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B7771F625A0726000CF2905 /* Frip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7771F925A0726000CF2905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B7771FB25A0726000CF2905 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 			children = (
 				3B3F320D25A41FC900EE22C5 /* NoneCollectionViewCell.swift */,
 				3B3F320E25A41FC900EE22C5 /* NoneCollectionViewCell.xib */,
+				3B3F321225A42FE400EE22C5 /* HostCollectionViewCell.swift */,
+				3B3F321325A42FE400EE22C5 /* HostCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 				3B066B5D25A23C3E002100A9 /* DailyViewController.xib in Resources */,
 				3B7EF04725A2E3C70003C210 /* BtnCollectionViewCell.xib in Resources */,
 				3B3F31C625A339EC00EE22C5 /* CategoryCollectionViewCell.xib in Resources */,
+				3B3F321525A42FE400EE22C5 /* HostCollectionViewCell.xib in Resources */,
 				3B066B4D25A2375E002100A9 /* HomeViewController.xib in Resources */,
 				3B3F320425A398A800EE22C5 /* SaveHostViewController.xib in Resources */,
 				3B066B5825A23C33002100A9 /* RecViewController.xib in Resources */,
@@ -545,6 +552,7 @@
 				3B066B5725A23C33002100A9 /* RecViewController.swift in Sources */,
 				3B77727225A0A70A00CF2905 /* UIView.swift in Sources */,
 				3B7772C125A18D7400CF2905 /* MyInfoViewController.swift in Sources */,
+				3B3F321425A42FE400EE22C5 /* HostCollectionViewCell.swift in Sources */,
 				3BE3FE6525A31E8C00F49E0C /* HeaderCollectionReusableView.swift in Sources */,
 				3B77726F25A0A70A00CF2905 /* Color.swift in Sources */,
 				3B3F320925A398B300EE22C5 /* SaveFripViewController.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 class SaveFripViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var saveFrip: [Any] = []
+    var saveFrip: [Any] = [1]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,7 @@ class SaveFripViewController: BaseViewController {
         collectionView.dataSource = self
         
         collectionView.register(UINib(nibName: "NoneCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NoneCollectionViewCell")
+        collectionView.register(UINib(nibName: "MainCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MainCollectionViewCell")
         collectionView.reloadData()
     }
 
@@ -36,7 +37,15 @@ extension SaveFripViewController: UICollectionViewDelegate, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if saveFrip.count != 0 {
-            return UICollectionViewCell()
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as? MainCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.save = true
+            cell.saveButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            cell.saveButton.tintColor = UIColor.saveColor
+            cell.saveButton.tag = indexPath.row
+            cell.saveButton.addTarget(self, action: #selector(buttonTap(sender:)), for: .touchDown)
+            return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NoneCollectionViewCell", for: indexPath) as? NoneCollectionViewCell else {
                 return UICollectionViewCell()
@@ -55,5 +64,9 @@ extension SaveFripViewController: UICollectionViewDelegate, UICollectionViewDele
         }
     }
     
+    @objc func buttonTap(sender: UIButton!) {
+        saveFrip.remove(at: sender.tag)
+        collectionView.reloadData()
+    }
     
 }

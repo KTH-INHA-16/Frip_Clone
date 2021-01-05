@@ -17,6 +17,7 @@ class MainCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var place: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
+    var idx = 0
     var save = false
     
     override func awakeFromNib() {
@@ -42,12 +43,12 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     @IBAction func save(_ sender: Any) {
         if save == false {
-            saveButton.imageView?.image = UIImage(systemName: "bookmark.fill")
+            saveButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
             saveButton.tintColor = UIColor.saveColor
             print("save")
             save = true
         } else {
-            saveButton.imageView?.image = UIImage(systemName: "bookmark")
+            saveButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
             saveButton.tintColor = .white
             save = false
             print("unsave")

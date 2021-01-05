@@ -21,6 +21,7 @@ class SaveHostViewController: BaseViewController {
         collectionView.dataSource = self
         
         collectionView.register(UINib(nibName: "NoneCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NoneCollectionViewCell")
+        collectionView.register(UINib(nibName: "HostCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HostCollectionViewCell")
         collectionView.reloadData()
         print("saveHost")
     }
@@ -39,7 +40,11 @@ extension SaveHostViewController: UICollectionViewDelegate, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if saveHost.count != 0 {
-            return UICollectionViewCell()
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HostCollectionViewCell", for: indexPath) as? HostCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.bookmarkButton.addTarget(self, action: #selector(hostTap), for: .touchDown)
+            return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NoneCollectionViewCell", for: indexPath) as? NoneCollectionViewCell else {
                 return UICollectionViewCell()
@@ -57,6 +62,8 @@ extension SaveHostViewController: UICollectionViewDelegate, UICollectionViewDele
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         }
     }
-    
-    
+ 
+    @objc func hostTap() {
+        
+    }
 }
