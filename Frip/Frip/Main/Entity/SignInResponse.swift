@@ -11,7 +11,7 @@ struct UserInfo: Decodable {
     var mobileGlobal: String
     var name: String
     var nickname: String
-    var profileImage: String?
+    var profileImage: String
     
     enum CodingKeys: String, CodingKey {
         case birthday

@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategorySearchViewController" customModule="Frip" customModuleProvider="target">
             <connections>
+                <outlet property="bigCategoryButton" destination="SGS-pu-o0K" id="1Yi-iL-jkE"/>
+                <outlet property="downCollectionView" destination="xyh-uN-gfa" id="NwB-sE-KlS"/>
+                <outlet property="upperCollectionView" destination="ZdO-Z3-qsV" id="M72-A9-Bvj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,29 +22,37 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGS-pu-o0K">
-                    <rect key="frame" x="15" y="108" width="68" height="22"/>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGS-pu-o0K">
+                    <rect key="frame" x="15" y="108" width="100" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="tqq-zQ-faQ"/>
+                    </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="무언가 ">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <imageReference key="image" image="chevron.down" catalog="system" symbolScale="small"/>
                     </state>
                 </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZdO-Z3-qsV">
-                    <rect key="frame" x="0.0" y="138" width="414" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZdO-Z3-qsV">
+                    <rect key="frame" x="0.0" y="138" width="414" height="30"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KJO-Kk-fmE">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="N5E-Om-Ngf"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KJO-Kk-fmE">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xyh-uN-gfa">
-                    <rect key="frame" x="0.0" y="190" width="414" height="623"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xyh-uN-gfa">
+                    <rect key="frame" x="0.0" y="189" width="414" height="623"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="623" id="ipb-zq-D22"/>
+                        <constraint firstAttribute="width" constant="414" id="jGX-JP-CYS"/>
+                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zqO-Zw-OJR">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -53,6 +64,11 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="xyh-uN-gfa" firstAttribute="top" secondItem="ZdO-Z3-qsV" secondAttribute="bottom" constant="21" id="6AM-cO-zkj"/>
+                <constraint firstItem="xyh-uN-gfa" firstAttribute="leading" secondItem="ZdO-Z3-qsV" secondAttribute="leading" id="Oa0-ML-NUl"/>
+                <constraint firstItem="ZdO-Z3-qsV" firstAttribute="top" secondItem="SGS-pu-o0K" secondAttribute="bottom" constant="8" symbolic="YES" id="Wcp-yW-f7S"/>
+                <constraint firstItem="ZdO-Z3-qsV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dcE-ay-aAu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZdO-Z3-qsV" secondAttribute="trailing" id="p3d-Cl-afC"/>
                 <constraint firstItem="SGS-pu-o0K" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="qTj-WZ-dFc"/>
                 <constraint firstItem="SGS-pu-o0K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="r2E-jQ-GQb"/>
             </constraints>

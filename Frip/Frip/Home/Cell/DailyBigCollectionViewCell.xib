@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DailyBigCollectionViewCell" id="gTV-IL-0wX" customClass="DailyBigCollectionViewCell" customModule="Frip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="256" height="208"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="256" height="208"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhv-ET-Yk6">
+                        <rect key="frame" x="0.0" y="204.5" width="256" height="1.5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1.5" id="chp-wW-vvb"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfk-TE-90T">
+                        <rect key="frame" x="107" y="115.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bfk-TE-90T" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="82b-f4-2fR"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="hhv-ET-Yk6" secondAttribute="trailing" id="GhH-F1-ofJ"/>
+                <constraint firstItem="hhv-ET-Yk6" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="HZd-e6-48S"/>
+                <constraint firstItem="bfk-TE-90T" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="JlB-yw-o41"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="hhv-ET-Yk6" secondAttribute="bottom" constant="2" id="gmY-ZB-n3Y"/>
+            </constraints>
+            <size key="customSize" width="256" height="208"/>
+            <connections>
+                <outlet property="border" destination="hhv-ET-Yk6" id="Eyk-4q-AP7"/>
+                <outlet property="label" destination="bfk-TE-90T" id="9Zt-Ip-Ns3"/>
+            </connections>
+            <point key="canvasLocation" x="155.07246376811597" y="127.90178571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

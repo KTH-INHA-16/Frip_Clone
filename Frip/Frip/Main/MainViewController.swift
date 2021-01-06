@@ -11,6 +11,7 @@ class MainViewController: BaseViewController {
     
     var timer: Timer = Timer()
     var userInfo: UserInfo = UserInfo(birthday: "", email: "", gender: "", mobile: "", mobileGlobal: "", name: "", nickname: "", profileImage: "")
+    var loginInfo : LogIn = LogIn(isSuccess: false, code: 0, message: "", result: JWT(jwt: ""))
     
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
@@ -31,9 +32,6 @@ class MainViewController: BaseViewController {
         warningLabel.textColor = .systemGray
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-    }
-    
     @IBAction func naverLoginTapAction(_ sender: Any) {
         loginInstance?.delegate = self
         loginInstance?.requestThirdPartyLogin()
@@ -45,15 +43,25 @@ class MainViewController: BaseViewController {
     
     func successToRequest(result: UserInfo) {
         userInfo = result
-        print(userInfo)
         DispatchQueue.global().sync {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(pushController), userInfo: nil, repeats: true)
         }
     }
     
+    func successToLogin(result: LogIn) {
+        loginInfo = result
+        UserDefaults.standard.set(result.result.jwt, forKey: "userJWT")
+    }
+    
+    func autoLogInCheck(result: Int) {
+        print("result Code: \(result)")
+        if result < 2000 {
+            self.changeRootViewController(BaseTabBarViewController())
+        }
+    }
+    
     @objc func pushController() {
         self.changeRootViewController(BaseTabBarViewController())
-        self.navigationController?.pushViewController(MainViewController(), animated: true)
         self.timer.invalidate()
     }
 }
@@ -102,6 +110,7 @@ extension MainViewController: NaverThirdPartyLoginConnectionDelegate {
         print("access: \(accessToken)")
         
         MainDataManager().searchMainUser(targetUrl: url, header: authorization, viewController: self)
+        MainPostDataManager().postOurServer(targetUrl: URL(string: Constant.LOGIN_URL)!, header: accessToken,VC: self)
         dismissIndicator()
       }
     

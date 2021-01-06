@@ -11,6 +11,7 @@ class RecViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let bigText: [String] = ["엑티비티","배움","건강·뷰티","모임"]
     let labelText: [String] = ["아웃도어", "요리", "피트니스", "스터디"]
     let headerText: [String] = ["","가장 인기 있는 프립 🥇", "신규 프립", "후기가 많은 프립"]
     var userInfo: [AnyHashable: Any]?
@@ -93,7 +94,7 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
     
     @objc func roundButtonTap(sender: UIButton!) {
         print("se")
-        userInfo = ["bigCategory":labelText[sender.tag]]
+        userInfo = ["bigCategory":bigText[sender.tag],"smallCategory":labelText[sender.tag]]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PostButton"), object: nil, userInfo: userInfo)
     }
     

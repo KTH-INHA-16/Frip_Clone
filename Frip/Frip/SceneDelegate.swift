@@ -11,6 +11,7 @@ import NaverThirdPartyLogin
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var result: Int = 0
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -19,9 +20,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = scene as? UIWindowScene else { return }
         
+        checkJWT()
+        
         self.window = UIWindow(windowScene: scene)
-        window?.rootViewController = MainViewController()
+        if result < 2000 {
+            window?.rootViewController = BaseTabBarViewController()
+        } else {
+            window?.rootViewController = MainViewController()
+        }
         window?.makeKeyAndVisible()
+    }
+    
+    func checkJWT() {
+        guard let jwt = UserDefaults.standard.string(forKey: "userJWT") else {
+            return
+        }
+        print("hello")
+        MainPostDataManager().postServerJWT(targetUrl: URL(string: Constant.AUTO_LOGIN_URL)!, header: jwt, VC: self)
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {

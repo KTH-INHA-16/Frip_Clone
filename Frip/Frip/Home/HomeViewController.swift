@@ -25,6 +25,7 @@ class HomeViewController: BaseViewController {
         scrollView.contentSize = CGSize(width: self.view.bounds.width * 3, height: self.view.bounds.height)
         scrollView.isPagingEnabled = true
         scrollView.delegate = self
+        collectionView.isScrollEnabled = false
         
         let rVC = RecViewController()
         let dVC = DailyViewController()
@@ -52,9 +53,10 @@ class HomeViewController: BaseViewController {
     
     @objc func presentVC(_ notification: Notification) {
         guard let bigCategory = notification.userInfo?["bigCategory"] as? String else {return}
-        print("vc")
-        let searchVC = CategorySearchViewController(bigCategory, "")
+        guard let smallCategory = notification.userInfo?["smallCategory"] as? String else {return}
+        let searchVC = CategorySearchViewController(bigCategory, smallCategory)
         searchVC.modalPresentationStyle = .overFullScreen
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.pushViewController(searchVC, animated: true)
     }
     

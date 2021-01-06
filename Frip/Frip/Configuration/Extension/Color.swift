@@ -20,4 +20,12 @@ extension UIColor {
     class var greetingColor: UIColor{UIColor(displayP3Red: 0.953, green: 0.949, blue: 0.979, alpha: 1)}
     class var activityColor: UIColor{UIColor(displayP3Red: 0.965, green: 0.973, blue: 0.949, alpha: 1)}
     class var learningColor: UIColor{UIColor(displayP3Red: 0.949, green: 0.969, blue: 0.965, alpha: 1)}
+    
+    class var gradationBlue1: UIColor{UIColor(displayP3Red: 0.322, green: 0.590, blue: 0.969, alpha: 1)}
+    
+    class var gradationBlue2: UIColor{UIColor(displayP3Red: 0.423, green: 0.703, blue: 0.973, alpha: 1)}
+    
+    class var gradationBlue3: UIColor{UIColor(displayP3Red: 0.340, green: 0.610, blue: 0.969, alpha: 1)}
+    
+    class var gradationBlue4: UIColor{UIColor(displayP3Red: 0.481, green: 0.772, blue: 0.976, alpha: 1)}
 }
