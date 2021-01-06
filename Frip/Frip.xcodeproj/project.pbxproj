@@ -37,6 +37,8 @@
 		3B3F321525A42FE400EE22C5 /* HostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F321325A42FE400EE22C5 /* HostCollectionViewCell.xib */; };
 		3B44FE0425A5F85500B85451 /* BestButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44FE0225A5F85500B85451 /* BestButtonCollectionViewCell.swift */; };
 		3B44FE0525A5F85500B85451 /* BestButtonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B44FE0325A5F85500B85451 /* BestButtonCollectionViewCell.xib */; };
+		3B56C55025A61C9B00C45B0E /* FripShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56C54E25A61C9B00C45B0E /* FripShowViewController.swift */; };
+		3B56C55125A61C9B00C45B0E /* FripShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B56C54F25A61C9B00C45B0E /* FripShowViewController.xib */; };
 		3B7771FA25A0726000CF2905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771F925A0726000CF2905 /* AppDelegate.swift */; };
 		3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771FB25A0726000CF2905 /* SceneDelegate.swift */; };
 		3B77720325A0726200CF2905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B77720225A0726200CF2905 /* Assets.xcassets */; };
@@ -113,6 +115,8 @@
 		3B3F321325A42FE400EE22C5 /* HostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B44FE0225A5F85500B85451 /* BestButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B44FE0325A5F85500B85451 /* BestButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestButtonCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B56C54E25A61C9B00C45B0E /* FripShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripShowViewController.swift; sourceTree = "<group>"; };
+		3B56C54F25A61C9B00C45B0E /* FripShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FripShowViewController.xib; sourceTree = "<group>"; };
 		3B7771F625A0726000CF2905 /* Frip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7771F925A0726000CF2905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B7771FB25A0726000CF2905 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 		3B56C54C25A60B0800C45B0E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3B56C54E25A61C9B00C45B0E /* FripShowViewController.swift */,
+				3B56C54F25A61C9B00C45B0E /* FripShowViewController.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -544,6 +550,7 @@
 				3B77724C25A0A54600CF2905 /* NotoSansCJKkr-Medium.otf in Resources */,
 				3B44FE0525A5F85500B85451 /* BestButtonCollectionViewCell.xib in Resources */,
 				3B77724E25A0A54600CF2905 /* NotoSansCJKkr-Bold.otf in Resources */,
+				3B56C55125A61C9B00C45B0E /* FripShowViewController.xib in Resources */,
 				3B066B5D25A23C3E002100A9 /* DailyViewController.xib in Resources */,
 				3B7EF04725A2E3C70003C210 /* BtnCollectionViewCell.xib in Resources */,
 				3B3F31C625A339EC00EE22C5 /* CategoryCollectionViewCell.xib in Resources */,
@@ -619,6 +626,7 @@
 				3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */,
 				3B77727325A0A70A00CF2905 /* UIButton.swift in Sources */,
 				3B77729B25A0E45A00CF2905 /* MainDataManager.swift in Sources */,
+				3B56C55025A61C9B00C45B0E /* FripShowViewController.swift in Sources */,
 				3B77727625A0A70A00CF2905 /* UIViewController.swift in Sources */,
 				3B7772A025A189DC00CF2905 /* BaseTabBarViewController.swift in Sources */,
 				3B77728B25A0AC4000CF2905 /* MainViewController.swift in Sources */,

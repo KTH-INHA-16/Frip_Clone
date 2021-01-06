@@ -68,6 +68,7 @@ class HomeViewController: BaseViewController {
         //네비게이션에 서치바 넣기
         self.navigationController?.navigationBar.topItem?.titleView = searchBar
         
+        
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
             //서치바 백그라운드 컬러
             textfield.backgroundColor = UIColor.systemGroupedBackground
@@ -92,7 +93,14 @@ class HomeViewController: BaseViewController {
 }
 
 extension HomeViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        let search = self.navigationController?.navigationBar.topItem?.titleView as! UISearchBar
+        search.showsCancelButton = true
+    }
     
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
 }
 
 extension HomeViewController: UIScrollViewDelegate {

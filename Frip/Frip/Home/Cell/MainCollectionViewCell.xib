@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="212" height="300"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lm1-vS-rch">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lm1-vS-rch">
                         <rect key="frame" x="10.5" y="49" width="191" height="151"/>
                         <state key="normal" image="LoginImage"/>
                     </button>
