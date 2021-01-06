@@ -33,6 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func checkJWT() {
         guard let jwt = UserDefaults.standard.string(forKey: "userJWT") else {
+            self.result = 5000
             return
         }
         print("hello")

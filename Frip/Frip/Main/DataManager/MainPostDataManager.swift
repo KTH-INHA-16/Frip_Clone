@@ -15,8 +15,10 @@ class MainPostDataManager {
         .responseDecodable(of: LogIn.self) { response in
             switch response.result {
             case .success(let response):
+                print("우리 서버 성공")
                 VC.successToLogin(result: response)
             case .failure(_):
+                print("우리 서버 실패")
                 VC.failedToRequest(message: "서버와의 연결이 원활하지 않음")
             }
         }
@@ -28,9 +30,11 @@ class MainPostDataManager {
         .responseDecodable(of: AutoLogin.self) { response in
             switch response.result {
             case .success(let response):
+                print("JWT 성공")
                 VC.result = response.code
             case .failure(_):
-                break
+                print("JWT 실패")
+                VC.result = 5000
             }
         }
     }

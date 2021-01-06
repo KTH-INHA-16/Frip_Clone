@@ -8,9 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryViewController" customModule="Frip" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecViewController" customModule="Frip" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="S8m-zc-0NT" id="Whz-WI-U7k"/>
+                <outlet property="collectionView" destination="OUU-li-tHN" id="f5E-pM-jog"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,33 +19,28 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="S8m-zc-0NT">
-                    <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OUU-li-tHN">
+                    <rect key="frame" x="0.0" y="88" width="414" height="721"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="MKf-D1-td5">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y3S-ib-O3f">
                         <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="headerReferenceSize" width="50" height="50"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" red="0.94499999999999995" green="0.95661741499999997" blue="0.96863001589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="S8m-zc-0NT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="719-HP-FSE"/>
-                <constraint firstItem="S8m-zc-0NT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8Od-GR-3bL"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S8m-zc-0NT" secondAttribute="trailing" id="So6-hU-Bq7"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="S8m-zc-0NT" secondAttribute="bottom" id="jqH-8q-Iya"/>
+                <constraint firstItem="OUU-li-tHN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6Uq-VS-Wn2"/>
+                <constraint firstItem="OUU-li-tHN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9oo-Vx-bbt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OUU-li-tHN" secondAttribute="bottom" constant="4" id="Af0-Qg-zYg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OUU-li-tHN" secondAttribute="trailing" id="o17-5c-eru"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-            <point key="canvasLocation" x="139" y="104"/>
+            <point key="canvasLocation" x="-155.07246376811597" y="85.714285714285708"/>
         </view>
     </objects>
     <resources>

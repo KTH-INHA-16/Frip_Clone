@@ -6,6 +6,7 @@ class CategoryViewController: BaseViewController {
     
     let category: [[String]] = [["아웃도어","서핑","스포츠","수상레저"],["공예·DIY","댄스","요리","음료"],["피트니스","요가","필라테스","뷰티"],["클럽","스터디","토크","게임"]]
     let bigCategory: [String] = ["🏃‍♂️엑티비티","🍰배움","✨건강·뷰티","👫모임"]
+    let bigText: [String] = ["엑티비티","배움","건강·뷰티","모임"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +94,13 @@ extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDe
         default:
             return UICollectionViewCell()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let big: String = bigText[indexPath.section]
+        let small: String = category[indexPath.section][indexPath.row]
+        let vc = CategorySearchViewController(big,small)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

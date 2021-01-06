@@ -35,6 +35,8 @@
 		3B3F321025A41FC900EE22C5 /* NoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F320E25A41FC900EE22C5 /* NoneCollectionViewCell.xib */; };
 		3B3F321425A42FE400EE22C5 /* HostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F321225A42FE400EE22C5 /* HostCollectionViewCell.swift */; };
 		3B3F321525A42FE400EE22C5 /* HostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F321325A42FE400EE22C5 /* HostCollectionViewCell.xib */; };
+		3B44FE0425A5F85500B85451 /* BestButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44FE0225A5F85500B85451 /* BestButtonCollectionViewCell.swift */; };
+		3B44FE0525A5F85500B85451 /* BestButtonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B44FE0325A5F85500B85451 /* BestButtonCollectionViewCell.xib */; };
 		3B7771FA25A0726000CF2905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771F925A0726000CF2905 /* AppDelegate.swift */; };
 		3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771FB25A0726000CF2905 /* SceneDelegate.swift */; };
 		3B77720325A0726200CF2905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B77720225A0726200CF2905 /* Assets.xcassets */; };
@@ -109,6 +111,8 @@
 		3B3F320E25A41FC900EE22C5 /* NoneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoneCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B3F321225A42FE400EE22C5 /* HostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B3F321325A42FE400EE22C5 /* HostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B44FE0225A5F85500B85451 /* BestButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B44FE0325A5F85500B85451 /* BestButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestButtonCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B7771F625A0726000CF2905 /* Frip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7771F925A0726000CF2905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B7771FB25A0726000CF2905 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +224,26 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		3B44FE0825A6037500B85451 /* SubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B066B5525A23C33002100A9 /* RecViewController.swift */,
+				3B066B5625A23C33002100A9 /* RecViewController.xib */,
+				3B066B5A25A23C3E002100A9 /* DailyViewController.swift */,
+				3B066B5B25A23C3E002100A9 /* DailyViewController.xib */,
+				3B066B5F25A23C60002100A9 /* BestViewController.swift */,
+				3B066B6025A23C60002100A9 /* BestViewController.xib */,
+			);
+			path = SubViewController;
+			sourceTree = "<group>";
+		};
+		3B56C54C25A60B0800C45B0E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		3B7771ED25A0726000CF2905 = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +265,7 @@
 		3B7771F825A0726000CF2905 /* Frip */ = {
 			isa = PBXGroup;
 			children = (
+				3B56C54C25A60B0800C45B0E /* Common */,
 				3B3B5CCE25A43EE400719FA7 /* CategorySearch */,
 				3B7772A625A18D0D00CF2905 /* MyInfo */,
 				3B7772A525A18CFF00CF2905 /* Stored */,
@@ -356,22 +381,10 @@
 		3B77729E25A1878000CF2905 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3B44FE0825A6037500B85451 /* SubViewController */,
 				3B885A5A25A586FC00C73854 /* Cell */,
 				3B066B4A25A2375E002100A9 /* HomeViewController.swift */,
 				3B066B4B25A2375E002100A9 /* HomeViewController.xib */,
-				3B066B5525A23C33002100A9 /* RecViewController.swift */,
-				3B066B5625A23C33002100A9 /* RecViewController.xib */,
-				3B066B5A25A23C3E002100A9 /* DailyViewController.swift */,
-				3B066B5B25A23C3E002100A9 /* DailyViewController.xib */,
-				3B066B5F25A23C60002100A9 /* BestViewController.swift */,
-				3B066B6025A23C60002100A9 /* BestViewController.xib */,
-				3B7EF04425A2E3C70003C210 /* BtnCollectionViewCell.swift */,
-				3B7EF04525A2E3C70003C210 /* BtnCollectionViewCell.xib */,
-				3B7EF0EE25A2E7500003C210 /* MainCollectionViewCell.swift */,
-				3B7EF0EF25A2E7500003C210 /* MainCollectionViewCell.xib */,
-				3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */,
-				3B3F31C925A37B6100EE22C5 /* labelCollectionViewCell.swift */,
-				3B3F31CA25A37B6100EE22C5 /* labelCollectionViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -418,10 +431,19 @@
 		3B885A5A25A586FC00C73854 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				3B7EF04425A2E3C70003C210 /* BtnCollectionViewCell.swift */,
+				3B7EF04525A2E3C70003C210 /* BtnCollectionViewCell.xib */,
+				3B7EF0EE25A2E7500003C210 /* MainCollectionViewCell.swift */,
+				3B7EF0EF25A2E7500003C210 /* MainCollectionViewCell.xib */,
+				3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */,
+				3B3F31C925A37B6100EE22C5 /* labelCollectionViewCell.swift */,
+				3B3F31CA25A37B6100EE22C5 /* labelCollectionViewCell.xib */,
 				3B885A5B25A5871E00C73854 /* DailyBigCollectionViewCell.swift */,
 				3B885A5C25A5871E00C73854 /* DailyBigCollectionViewCell.xib */,
 				3B1AA24C25A5B1590020E967 /* DailyButtonCollectionViewCell.swift */,
 				3B1AA24D25A5B1590020E967 /* DailyButtonCollectionViewCell.xib */,
+				3B44FE0225A5F85500B85451 /* BestButtonCollectionViewCell.swift */,
+				3B44FE0325A5F85500B85451 /* BestButtonCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -520,6 +542,7 @@
 				3B3F320A25A398B300EE22C5 /* SaveFripViewController.xib in Resources */,
 				3B77720325A0726200CF2905 /* Assets.xcassets in Resources */,
 				3B77724C25A0A54600CF2905 /* NotoSansCJKkr-Medium.otf in Resources */,
+				3B44FE0525A5F85500B85451 /* BestButtonCollectionViewCell.xib in Resources */,
 				3B77724E25A0A54600CF2905 /* NotoSansCJKkr-Bold.otf in Resources */,
 				3B066B5D25A23C3E002100A9 /* DailyViewController.xib in Resources */,
 				3B7EF04725A2E3C70003C210 /* BtnCollectionViewCell.xib in Resources */,
@@ -584,6 +607,7 @@
 				3B77725525A0A5B300CF2905 /* Key.swift in Sources */,
 				3B7771FA25A0726000CF2905 /* AppDelegate.swift in Sources */,
 				3B77727525A0A70A00CF2905 /* UINavigationBar.swift in Sources */,
+				3B44FE0425A5F85500B85451 /* BestButtonCollectionViewCell.swift in Sources */,
 				3B1AA24E25A5B1590020E967 /* DailyButtonCollectionViewCell.swift in Sources */,
 				3B885A5D25A5871E00C73854 /* DailyBigCollectionViewCell.swift in Sources */,
 				3B77727125A0A70A00CF2905 /* Date.swift in Sources */,
