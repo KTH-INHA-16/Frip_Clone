@@ -13,6 +13,7 @@ class BestViewController: BaseViewController {
     @IBOutlet weak var fripCollectionView: UICollectionView!
     @IBOutlet weak var sortButton: UIButton!
     
+    var count = 20
     var bigCategory: [String] = ["전체","엑티비티","배움","건강·뷰티","모임"]
     var sortText: [String] = ["인기","후기"]
     var idx = 0
@@ -82,7 +83,7 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView.tag == 0{
             return bigCategory.count
         } else {
-            return 50
+            return count
         }
     }
     
@@ -116,5 +117,10 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
             userInfo = ["velocity":"down"]
         }
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "hide"), object: nil, userInfo: userInfo)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        count += 10
+        fripCollectionView.reloadData()
     }
 }
