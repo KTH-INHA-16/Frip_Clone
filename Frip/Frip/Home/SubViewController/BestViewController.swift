@@ -17,6 +17,7 @@ class BestViewController: BaseViewController {
     var sortText: [String] = ["인기","후기"]
     var idx = 0
     var sortType: Int = 0
+    var userInfo: [AnyHashable: Any]?
     
     let text1 = NSAttributedString(string: "인기순", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black,NSAttributedString.Key.font: UIFont.NotoSans(.regular, size: 15)])
     let text2 = NSAttributedString(string: "후기순", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black,NSAttributedString.Key.font: UIFont.NotoSans(.regular, size: 15)])
@@ -81,7 +82,7 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView.tag == 0{
             return bigCategory.count
         } else {
-            return 4
+            return 50
         }
     }
     
@@ -107,4 +108,13 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if velocity.y > 0 {
+            userInfo = ["velocity":"up"]
+        } else {
+            userInfo = ["velocity":"down"]
+        }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "hide"), object: nil, userInfo: userInfo)
+    }
 }

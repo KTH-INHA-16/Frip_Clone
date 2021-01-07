@@ -48,6 +48,7 @@ class HomeViewController: BaseViewController {
         collectionView.dataSource = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(presentVC(_:)), name: NSNotification.Name("PostButton"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(scrollVC(_:)), name: NSNotification.Name("hide"), object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -62,6 +63,19 @@ class HomeViewController: BaseViewController {
         searchVC.modalPresentationStyle = .overFullScreen
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.pushViewController(searchVC, animated: true)
+    }
+    
+    @objc func scrollVC(_ notification: Notification) {
+        guard let velo = notification.userInfo?["velocity"] as? String else {return}
+        if velo != "up" {
+            UIView.animate(withDuration: 0.1, animations: {
+                self.navigationController?.setNavigationBarHidden(false, animated: false)
+            })
+        } else {
+            UIView.animate(withDuration: 0.1, animations: {
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+            })
+        }
     }
     
     func setSearchBar(){

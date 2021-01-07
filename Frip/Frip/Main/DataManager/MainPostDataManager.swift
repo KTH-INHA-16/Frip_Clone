@@ -30,13 +30,14 @@ class MainPostDataManager {
         AF.request(targetUrl, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":header])
         .validate()
         .responseDecodable(of: AutoLogin.self) { response in
+            print("jwt 조회")
             switch response.result {
             case .success(let response):
                 print("JWT 성공")
-                VC.result = response.code
+                VC.successJwt(code: response.code)
             case .failure(_):
                 print("JWT 실패")
-                VC.result = 5000
+                VC.failedJwt(code: 5000)
             }
         }
     }

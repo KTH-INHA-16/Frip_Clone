@@ -140,7 +140,7 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
         if indexPath.section != 0 {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as? MainCollectionViewCell else {
                 return  }
-            self.navigationController?.pushViewController(FripShowViewController(), animated: true)
+            
         }
     }
     
@@ -176,6 +176,15 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
         print("se")
         userInfo = ["bigCategory":bigText[sender.tag],"smallCategory":labelText[sender.tag]]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PostButton"), object: nil, userInfo: userInfo)
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if velocity.y > 0 {
+            userInfo = ["velocity":"up"]
+        } else {
+            userInfo = ["velocity":"down"]
+        }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "hide"), object: nil, userInfo: userInfo)
     }
     
 }

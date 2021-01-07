@@ -20,9 +20,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = scene as? UIWindowScene else { return }
         
+        self.window = UIWindow(windowScene: scene)
         checkJWT()
         
-        self.window = UIWindow(windowScene: scene)
+        print("finish")
+        if result < 2000 {
+            window?.rootViewController = BaseTabBarViewController()
+        } else {
+            window?.rootViewController = MainViewController()
+        }
+        window?.makeKeyAndVisible()
+    }
+    
+    func failedJwt(code: Int) {
+        result = code
+        print("fail")
+        if result < 2000 {
+            window?.rootViewController = BaseTabBarViewController()
+        } else {
+            window?.rootViewController = MainViewController()
+        }
+        window?.makeKeyAndVisible()
+    }
+    
+    func successJwt(code:Int) {
+        result = code
+        print("success")
         if result < 2000 {
             window?.rootViewController = BaseTabBarViewController()
         } else {

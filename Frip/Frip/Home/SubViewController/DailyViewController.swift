@@ -68,6 +68,24 @@ class DailyViewController: BaseViewController {
             showBigCategoryCollectionView.reloadData()
         }
     }
+    
+    @objc func saveButtonTap(_ sender: UIButton!) {
+        let save = sender.tag % 10
+        let idx = sender.tag / 10
+        if save != 0 {
+            sender.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            sender.tintColor = UIColor.saveColor
+            HomePostResponse().fripSavingDailyPost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
+            sender.tag = idx * 10 + 0
+            print("save")
+        } else {
+            sender.setImage(UIImage(systemName: "bookmark"), for: .normal)
+            sender.tintColor = .white
+            HomePostResponse().fripSavingDailyPost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
+            sender.tag = idx * 10 + 1
+            print("unsave")
+        }
+    }
 }
 
 extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -120,6 +138,35 @@ extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegat
             } else {
                 if indexPath.section < 2 {
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
+                    var frip: Frip = Frip(fripIdx: 0, fripHeader: "", fripTitle: "", price: "", rate: "", isNew: "", isOnly: "", place: "", fripLike: "", fripPhotoUrl: "")
+                    var base = 0
+                    if indexPath.section != 0 {
+                        base = 3
+                    }
+                    frip = frips[base+indexPath.row]
+                    do {
+                        let url = URL(string: frip.fripPhotoUrl)!
+                        let realUrl = URL(string: "https://dummyimage.com"+url.relativePath)!
+                        let data = try Data(contentsOf: realUrl)
+                        cell.image.setImage(UIImage(data: data), for: .normal)
+                    } catch { print("image load error") }
+                    cell.saveButton.tag = frip.fripIdx
+                    if frip.fripLike == "Y" {
+                        cell.saveButton.tag = cell.saveButton.tag * 10 + 1
+                        cell.saveButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+                        cell.saveButton.tintColor = UIColor.saveColor
+                    } else {
+                        cell.saveButton.tag = cell.saveButton.tag * 10 + 0
+                        cell.saveButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+                        cell.saveButton.tintColor = .white
+                    }
+                    cell.idx = frip.fripIdx
+                    cell.place.text = frip.place
+                    cell.price.text = frip.price
+                    cell.point.text = frip.rate
+                    cell.shortDescription.text = frip.fripHeader
+                    cell.title.text = frip.fripTitle
+                    cell.saveButton.addTarget(self, action: #selector(saveButtonTap(_:)), for: .touchDown)
                     return cell
                 } else {
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DailyButtonCollectionViewCell", for: indexPath) as! DailyButtonCollectionViewCell
@@ -138,8 +185,8 @@ extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegat
             bigCategoryCollectionView.reloadData()
             smallCategoryCollectionView.reloadData()
             showBigCategoryCollectionView.reloadData()
-            HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: idx, option: 0, header: jwt, vc: self)
-            HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: idx, option: 1, header: jwt, vc: self)
+            HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: idx+1, option: 0, header: jwt, vc: self)
+            HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: idx+1, option: 1, header: jwt, vc: self)
         } else if collectionView.tag == 1{
             userInfo = ["bigCategory": bigCategory[idx],"smallCategory":category[bigCategory[idx]]![indexPath.row]]
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PostButton"), object: nil, userInfo: userInfo)
@@ -198,5 +245,14 @@ extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegat
         }
     }
     
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if velocity.y > 0 {
+            userInfo = ["velocity":"up"]
+        } else {
+            userInfo = ["velocity":"down"]
+        }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "hide"), object: nil, userInfo: userInfo)
+    }
     
 }
