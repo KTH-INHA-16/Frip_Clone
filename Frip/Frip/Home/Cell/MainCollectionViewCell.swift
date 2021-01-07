@@ -27,9 +27,11 @@ class MainCollectionViewCell: UICollectionViewCell {
         
         place.font = UIFont.NotoSans(.regular, size: 9)
         shortDescription.font = UIFont.NotoSans(.medium, size: 10)
+        shortDescription.adjustsFontSizeToFitWidth = true
         shortDescription.textColor = .lightGray
         
-        title.font = UIFont.NotoSans(.regular, size: 11)
+        title.font = UIFont.NotoSans(.regular, size: 13)
+        title.adjustsFontSizeToFitWidth = true
         title.textColor = .black
         
         price.font = UIFont.NotoSans(.bold, size: 12)
@@ -39,20 +41,6 @@ class MainCollectionViewCell: UICollectionViewCell {
 
         point.font = UIFont.NotoSans(.regular, size: 10)
         point.textColor = .lightGray
-    }
-    
-    @IBAction func save(_ sender: Any) {
-        if save == false {
-            saveButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
-            saveButton.tintColor = UIColor.saveColor
-            print("save")
-            save = true
-        } else {
-            saveButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
-            saveButton.tintColor = .white
-            save = false
-            print("unsave")
-        }
     }
     
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwipeViewController
 
 class StoredViewController: BaseViewController {
 

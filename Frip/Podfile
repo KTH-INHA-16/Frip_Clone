@@ -10,6 +10,5 @@ target 'Frip' do
 pod 'Alamofire'
 pod 'naveridlogin-sdk-ios'
 pod 'SnapKit'
-pod 'SwipeViewController'
 
 end

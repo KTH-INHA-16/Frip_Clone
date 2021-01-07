@@ -36,6 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.result = 5000
             return
         }
+        print("jwt: \(jwt)")
         print("hello")
         MainPostDataManager().postServerJWT(targetUrl: URL(string: Constant.AUTO_LOGIN_URL)!, header: jwt, VC: self)
     }

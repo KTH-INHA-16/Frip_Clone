@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwipeViewController
 
 class HomeViewController: BaseViewController {
     
@@ -49,6 +48,11 @@ class HomeViewController: BaseViewController {
         collectionView.dataSource = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(presentVC(_:)), name: NSNotification.Name("PostButton"), object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     @objc func presentVC(_ notification: Notification) {
