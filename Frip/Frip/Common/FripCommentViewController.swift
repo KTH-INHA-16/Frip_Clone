@@ -33,8 +33,8 @@ class FripCommentViewController: BaseViewController {
         self.navigationController?.navigationItem.title = "후기"
         self.tabBarController?.tabBar.isHidden = true
         
-        collectionView.register(UINib(nibName: "CommentHeader", bundle: nil), forCellWithReuseIdentifier: "CommentHeader")
-        collectionView.register(UINib(nibName: "CommentShow", bundle: nil), forCellWithReuseIdentifier: "CommentShow")
+        collectionView.register(UINib(nibName: "CommentHeaderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CommentHeaderCollectionViewCell")
+        collectionView.register(UINib(nibName: "CommentShowCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CommentShowCollectionViewCell")
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -42,11 +42,7 @@ class FripCommentViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        collectionView.register(UINib(nibName: "CommentHeader", bundle: nil), forCellWithReuseIdentifier: "CommentHeader")
-        collectionView.register(UINib(nibName: "CommentShow", bundle: nil), forCellWithReuseIdentifier: "CommentShow")
         self.tabBarController?.tabBar.isHidden = true
-        collectionView.backgroundColor = .black
-        collectionView.alpha = 0.05
         indicator.startAnimating()
     }
     
@@ -71,10 +67,10 @@ extension FripCommentViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommentHeader", for: indexPath) as! CommentHeaderCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommentHeaderCollectionViewCell", for: indexPath) as! CommentHeaderCollectionViewCell
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommentShow", for: indexPath) as! CommentShowCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommentShowCollectionViewCell", for: indexPath) as! CommentShowCollectionViewCell
             return cell
         }
     }

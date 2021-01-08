@@ -27,7 +27,7 @@ class CommentShowCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        userImage.cornerRadius = userImage.bounds.width * 0.5
+        userImage.cornerRadius = userImage.frame.height * 0.5
         
         userNameLabel.font = UIFont.NotoSans(.bold, size: 13)
         userRateLabel.font = UIFont.NotoSans(.regular, size: 13)
@@ -42,9 +42,9 @@ class CommentShowCollectionViewCell: UICollectionViewCell {
         fripOptionLabel.font = UIFont.NotoSans(.regular, size: 13)
         fripOptionLabel.textColor = .lightGray
         
-        commentImage.cornerRadius = 8
+        commentImage.cornerRadius = commentImage.frame.height / 8
         
-        hostImage.cornerRadius = hostImage.bounds.width * 0.5
+        hostImage.cornerRadius = hostImage.frame.height * 0.5
         hostNameLabel.font = UIFont.NotoSans(.bold, size: 13)
         hostDateLabel.font = UIFont.NotoSans(.regular, size: 13)
         hostDateLabel.textColor = .lightGray
