@@ -28,8 +28,10 @@ class DailyViewController: BaseViewController {
         refreshButton.borderColor = .lightGray
         refreshButton.cornerRadius = 5
         
-        HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: 1, option: 0, header: jwt, vc: self)
-        HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: 1, option: 1, header: jwt, vc: self)
+        DispatchQueue.global(qos: .userInitiated).sync {
+            HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: 1, option: 0, header: jwt, vc: self)
+            HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: 1, option: 1, header: jwt, vc: self)
+        }
         
         self.view.setGradient(color1: UIColor.gradationBlue1, color2: UIColor.gradationBlue4, bounds: CGRect(x: 0, y: 0, width: self.view.frame.width, height: bigCategoryCollectionView.frame.height + smallCategoryCollectionView.frame.height))
         self.view.addSubview(bigCategoryCollectionView)
@@ -148,7 +150,7 @@ extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegat
                         let url = URL(string: frip.fripPhotoUrl)!
                         let realUrl = URL(string: "https://dummyimage.com"+url.relativePath)!
                         let data = try Data(contentsOf: realUrl)
-                        cell.image.setImage(UIImage(data: data), for: .normal)
+                        cell.image.image = UIImage(data: data)
                     } catch { print("image load error") }
                     cell.saveButton.tag = frip.fripIdx
                     if frip.fripLike == "Y" {
@@ -185,8 +187,10 @@ extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegat
             bigCategoryCollectionView.reloadData()
             smallCategoryCollectionView.reloadData()
             showBigCategoryCollectionView.reloadData()
-            HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: idx+1, option: 0, header: jwt, vc: self)
-            HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: idx+1, option: 1, header: jwt, vc: self)
+            DispatchQueue.global(qos: .userInitiated).sync {
+                HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: idx+1, option: 0, header: jwt, vc: self)
+                HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: idx+1, option: 1, header: jwt, vc: self)
+            }
         } else if collectionView.tag == 1{
             userInfo = ["bigCategory": bigCategory[idx],"smallCategory":category[bigCategory[idx]]![indexPath.row]]
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PostButton"), object: nil, userInfo: userInfo)

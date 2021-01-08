@@ -30,7 +30,7 @@ class HomeGetResponse {
     }
     
     func getDailyFrips(targetURL: URL,idx: Int,option: Int ,header:String, vc: DailyViewController) {
-        let url = URL(string: targetURL.absoluteString+"/\(idx)"+"?main=1&order=\(option)")!
+        let url = URL(string: targetURL.absoluteString+"/\(idx)?main=1&order=\(option)")!
         print(url.absoluteString)
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":header])
             .validate()
@@ -40,6 +40,44 @@ class HomeGetResponse {
                     switch result.isSuccess {
                     case true:
                         vc.getResult(res: result.result)
+                    case false:
+                        print("no data")
+                    }
+                case .failure(_):
+                    print("error: getDailyFrips error")
+                }
+            }
+    }
+    
+    func getBestFrips(targetURL: URL,idx: Int,option: Int ,start: Int,end:Int,header:String, vc: BestViewController) {
+        let url =  URL(string: targetURL.absoluteString+"/\(idx)?order=\(option)&start=\(start)&end=\(end)")!
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":header])
+            .validate()
+            .responseDecodable(of: HomeFrips.self) { response in
+                switch response.result {
+                case .success(let result):
+                    switch result.isSuccess {
+                    case true:
+                        vc.getFrips(results: result.result)
+                    case false:
+                        print("no data")
+                    }
+                case .failure(_):
+                    print("error: getDailyFrips error")
+                }
+            }
+    }
+    
+    func getBestAllFrips(targetURL: URL,option: Int ,start: Int,end:Int,header:String, vc: BestViewController) {
+        let url =  URL(string: targetURL.absoluteString+"?order=\(option)&start=\(start)&end=\(end)")!
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":header])
+            .validate()
+            .responseDecodable(of: HomeFrips.self) { response in
+                switch response.result {
+                case .success(let result):
+                    switch result.isSuccess {
+                    case true:
+                        vc.getFrips(results: result.result)
                     case false:
                         print("no data")
                     }

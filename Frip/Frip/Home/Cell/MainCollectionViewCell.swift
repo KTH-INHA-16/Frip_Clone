@@ -9,7 +9,7 @@ import UIKit
 
 class MainCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var image: UIButton!
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var shortDescription: UILabel!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var price: UILabel!

@@ -113,7 +113,7 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
                 let url = URL(string: frip.fripPhotoUrl)!
                 let realUrl = URL(string: "https://dummyimage.com"+url.relativePath)!
                 let data = try Data(contentsOf: realUrl)
-                cell.image.setImage(UIImage(data: data), for: .normal)
+                cell.image.image = UIImage(data: data)
             } catch { print("image load error") }
             cell.saveButton.tag = frip.fripIdx
             if frip.fripLike == "Y" {

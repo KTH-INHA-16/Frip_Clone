@@ -13,20 +13,27 @@ class BestViewController: BaseViewController {
     @IBOutlet weak var fripCollectionView: UICollectionView!
     @IBOutlet weak var sortButton: UIButton!
     
-    var count = 20
     var bigCategory: [String] = ["전체","엑티비티","배움","건강·뷰티","모임"]
-    var sortText: [String] = ["인기","후기"]
-    var idx = 0
-    var sortType: Int = 0
+    var sortText: [String] = ["인기","최신"]
+    var frips: [Frip] = []
+    var categoryIdx: Int = 0
+    var option: Int = 0
+    var idx: Int = 0
     var userInfo: [AnyHashable: Any]?
+    private let jwt = UserDefaults.standard.string(forKey: "userJWT")!
     
     let text1 = NSAttributedString(string: "인기순", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black,NSAttributedString.Key.font: UIFont.NotoSans(.regular, size: 15)])
-    let text2 = NSAttributedString(string: "후기순", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black,NSAttributedString.Key.font: UIFont.NotoSans(.regular, size: 15)])
+    let text2 = NSAttributedString(string: "최신순", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black,NSAttributedString.Key.font: UIFont.NotoSans(.regular, size: 15)])
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        frips = []
+        
         sortButton.setAttributedTitle(text1, for: .normal)
+        Dispatch.DispatchQueue.global(qos: .userInitiated).sync {
+            HomeGetResponse().getBestAllFrips(targetURL: URL(string: Constant.ALL_FRIP)!, option: 0, start: idx, end: idx+16, header: jwt, vc: self)
+        }
         
         buttonCollectionView.tag = 0
         buttonCollectionView.dataSource = self
@@ -38,23 +45,73 @@ class BestViewController: BaseViewController {
         
         buttonCollectionView.register(UINib(nibName: "BestButtonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BestButtonCollectionViewCell")
         fripCollectionView.register(UINib(nibName: "MainCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MainCollectionViewCell")
+        fripCollectionView.register(UINib(nibName: "IndicatorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "IndicatorCollectionViewCell")
     }
     
     @IBAction func sortButtonTapDown(_ sender: Any) {
         let action = UIAlertController(title: "정렬 기준 선택", message: nil, preferredStyle: .actionSheet)
         let alert1 = UIAlertAction(title: "인기순", style: .default, handler: { _ in
+            self.option = 0
             self.idx = 0
-            //파싱 추가
+            self.frips = []
+            self.fripCollectionView.reloadData()
+            self.reloadView()
             self.sortButton.setAttributedTitle(self.text1, for: .normal)
         })
         let alert2 = UIAlertAction(title: "후기순", style: .default, handler: { _ in
-            self.idx = 1
-            //파싱 추가
+            self.option = 1
+            self.idx = 0
+            self.frips = []
+            self.fripCollectionView.reloadData()
+            self.reloadView()
             self.sortButton.setAttributedTitle(self.text2, for: .normal)
         })
         action.addAction(alert1)
         action.addAction(alert2)
         present(action, animated: true, completion: nil)
+    }
+    
+    func getFrips(results: [Frip]) {
+        for res in results {
+            frips.append(res)
+        }
+        var indexPaths: [NSIndexPath] = []
+        for i in idx..<idx+results.count {
+            indexPaths.append(NSIndexPath(item: i, section: 0))
+        }
+        idx = idx + results.count
+        fripCollectionView.insertItems(at: indexPaths as [IndexPath])
+        fripCollectionView.reloadItems(at: indexPaths as [IndexPath])
+    }
+    
+    func reloadView(){
+        if self.categoryIdx == 0{
+            Dispatch.DispatchQueue.global(qos: .userInitiated).sync {
+                HomeGetResponse().getBestAllFrips(targetURL: URL(string: Constant.ALL_FRIP)!, option: self.option, start: self.idx, end: self.idx+16, header: self.jwt, vc: self)
+            }
+        } else {
+            Dispatch.DispatchQueue.global(qos: .userInitiated).sync {
+                HomeGetResponse().getBestFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: self.categoryIdx, option: self.option, start: self.idx, end: self.idx+16, header: self.jwt, vc: self)
+            }
+        }
+    }
+    
+    @objc func saveButtonTap(_ sender: UIButton!) {
+        let save = sender.tag % 10
+        let idx = sender.tag / 10
+        if save != 0 {
+            sender.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            sender.tintColor = UIColor.saveColor
+            HomePostResponse().fripSavingBestPost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
+            sender.tag = idx * 10 + 0
+            print("save")
+        } else {
+            sender.setImage(UIImage(systemName: "bookmark"), for: .normal)
+            sender.tintColor = .white
+            HomePostResponse().fripSavingBestPost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
+            sender.tag = idx * 10 + 1
+            print("unsave")
+        }
     }
 }
 
@@ -64,7 +121,7 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView.tag == 0{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BestButtonCollectionViewCell", for: indexPath) as! BestButtonCollectionViewCell
             cell.button.text = bigCategory[indexPath.row]
-            if idx == indexPath.row {
+            if categoryIdx == indexPath.row {
                 cell.backgroundColor = .systemBlue
                 cell.button.textColor = .white
             } else {
@@ -74,8 +131,37 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.button.tag = indexPath.row
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
-            return cell
+            if frips.count == 0 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IndicatorCollectionViewCell", for: indexPath) as! IndicatorCollectionViewCell
+                return cell
+            } else {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
+                let frip = frips[indexPath.row]
+                do {
+                    let url = URL(string: frip.fripPhotoUrl)!
+                    let realUrl = URL(string: "https://dummyimage.com"+url.relativePath)!
+                    let data = try Data(contentsOf: realUrl)
+                    cell.image.image = UIImage(data: data)
+                } catch { print("image load error") }
+                cell.saveButton.tag = frip.fripIdx
+                if frip.fripLike == "Y" {
+                    cell.saveButton.tag = cell.saveButton.tag * 10 + 1
+                    cell.saveButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+                    cell.saveButton.tintColor = UIColor.saveColor
+                } else {
+                    cell.saveButton.tag = cell.saveButton.tag * 10 + 0
+                    cell.saveButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+                    cell.saveButton.tintColor = .white
+                }
+                cell.idx = frip.fripIdx
+                cell.place.text = frip.place
+                cell.price.text = frip.price
+                cell.point.text = frip.rate
+                cell.shortDescription.text = frip.fripHeader
+                cell.title.text = frip.fripTitle
+                cell.saveButton.addTarget(self, action: #selector(saveButtonTap(_:)), for: .touchDown)
+                return cell
+            }
         }
     }
     
@@ -83,15 +169,30 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView.tag == 0{
             return bigCategory.count
         } else {
-            return count
+            if frips.count == 0{
+                return 1
+            } else {
+                return frips.count
+            }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView.tag == 0{
-            idx = indexPath.row
+            categoryIdx = indexPath.row
+            idx = 0
+            frips = []
             buttonCollectionView.reloadData()
             fripCollectionView.reloadData()
+            if categoryIdx == 0{
+                Dispatch.DispatchQueue.global(qos: .userInitiated).sync {
+                    HomeGetResponse().getBestAllFrips(targetURL: URL(string: Constant.ALL_FRIP)!, option: option, start: idx, end: idx+16, header: jwt, vc: self)
+                }
+            } else {
+                Dispatch.DispatchQueue.global(qos: .userInitiated).sync {
+                    HomeGetResponse().getBestFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: categoryIdx, option: option, start: idx, end: idx+16, header: jwt, vc: self)
+                }
+            }
         } else {
             
         }
@@ -105,7 +206,11 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 return CGSize(width: 60, height: 30)
             }
         } else {
-            return CGSize(width: collectionView.frame.width / 2 - 5, height: 300)
+            if frips.count == 0 {
+                return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+            } else {
+                return CGSize(width: collectionView.frame.width / 2 - 5, height: 300)
+            }
         }
     }
     
@@ -120,7 +225,6 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        count += 10
-        fripCollectionView.reloadData()
+        reloadView()
     }
 }
