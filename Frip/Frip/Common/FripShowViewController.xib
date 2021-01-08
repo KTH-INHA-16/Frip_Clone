@@ -11,6 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FripShowViewController" customModule="Frip" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="Few-Qv-lBJ" id="h0R-0T-gu4"/>
+                <outlet property="joinButton" destination="7ZM-hN-E5b" id="Hc6-1M-aih"/>
+                <outlet property="saveButton" destination="2ao-oW-9a4" id="YPy-tW-fKO"/>
+                <outlet property="toolBar" destination="OGg-vC-h7N" id="eWr-Yr-fLe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,20 +25,24 @@
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGg-vC-h7N">
                     <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                     <items>
-                        <barButtonItem style="plain" id="Gni-3z-E6O">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="urX-Hu-ghv">
-                                <rect key="frame" x="20" y="16" width="88" height="22"/>
+                        <barButtonItem style="plain" id="LAy-ZP-xnv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="2ao-oW-9a4">
+                                <rect key="frame" x="20" y="12" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="square.and.arrow.up.fill" catalog="system">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <connections>
+                                    <action selector="saveButtonTouchDown:" destination="-1" eventType="touchUpInside" id="CMh-ms-YoL"/>
+                                </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem style="plain" id="eb1-nJ-o0j">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yTQ-O7-ZpF">
-                                <rect key="frame" x="108" y="12" width="286" height="30"/>
+                        <barButtonItem style="plain" id="wTH-OH-kzn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="7ZM-hN-E5b">
+                                <rect key="frame" x="66" y="12" width="328" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="참여하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </barButtonItem>
                     </items>
@@ -49,6 +56,11 @@
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -63,13 +75,15 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OGg-vC-h7N" secondAttribute="bottom" id="tqD-H9-okz"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-            <point key="canvasLocation" x="139" y="108"/>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
         </view>
     </objects>
     <resources>
-        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

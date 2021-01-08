@@ -17,8 +17,8 @@ class MainCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var place: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
-    var idx = 0
-    var save = false
+    var idx:Int = 0
+    var save:Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()

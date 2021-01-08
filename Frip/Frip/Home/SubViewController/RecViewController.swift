@@ -125,6 +125,7 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
                 cell.saveButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
                 cell.saveButton.tintColor = .white
             }
+            print(frip)
             cell.idx = frip.fripIdx
             cell.place.text = frip.place
             cell.price.text = frip.price
@@ -138,9 +139,11 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section != 0 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as? MainCollectionViewCell else {
-                return  }
-            
+            let cell = collectionView.cellForItem(at: indexPath) as! MainCollectionViewCell
+            print(cell.idx)
+            userInfo = ["fripIdx":cell.idx]
+            print(userInfo)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "detail"), object: nil, userInfo: userInfo)
         }
     }
     

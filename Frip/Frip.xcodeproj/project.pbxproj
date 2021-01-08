@@ -15,9 +15,16 @@
 		3B066B5D25A23C3E002100A9 /* DailyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B066B5B25A23C3E002100A9 /* DailyViewController.xib */; };
 		3B066B6125A23C60002100A9 /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B066B5F25A23C60002100A9 /* BestViewController.swift */; };
 		3B066B6225A23C60002100A9 /* BestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B066B6025A23C60002100A9 /* BestViewController.xib */; };
+		3B0947AC25A8702D0084EBC9 /* FripIntroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0947AA25A8702D0084EBC9 /* FripIntroCollectionViewCell.swift */; };
+		3B0947AD25A8702D0084EBC9 /* FripIntroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0947AB25A8702D0084EBC9 /* FripIntroCollectionViewCell.xib */; };
+		3B0947B025A880490084EBC9 /* CommonPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0947AF25A880490084EBC9 /* CommonPostDataManager.swift */; };
+		3B0947B825A8846C0084EBC9 /* FripCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0947B625A8846C0084EBC9 /* FripCommentViewController.swift */; };
+		3B0947B925A8846C0084EBC9 /* FripCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0947B725A8846C0084EBC9 /* FripCommentViewController.xib */; };
 		3B1AA24225A59C650020E967 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1AA24125A59C650020E967 /* UICollectionView.swift */; };
 		3B1AA24E25A5B1590020E967 /* DailyButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1AA24C25A5B1590020E967 /* DailyButtonCollectionViewCell.swift */; };
 		3B1AA24F25A5B1590020E967 /* DailyButtonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B1AA24D25A5B1590020E967 /* DailyButtonCollectionViewCell.xib */; };
+		3B24D81725A8B74B00A4A002 /* CommentHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEEBBE625A88A2400343B34 /* CommentHeaderCollectionViewCell.xib */; };
+		3B24D81A25A8B76300A4A002 /* CommentShowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD4CCCD25A8A441009B03C6 /* CommentShowCollectionViewCell.xib */; };
 		3B3B5CD625A43FCF00719FA7 /* CategorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B5CD425A43FCF00719FA7 /* CategorySearchViewController.swift */; };
 		3B3B5CD725A43FCF00719FA7 /* CategorySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3B5CD525A43FCF00719FA7 /* CategorySearchViewController.xib */; };
 		3B3B5CDC25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B5CDA25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift */; };
@@ -82,7 +89,12 @@
 		3B885A5825A578DF00C73854 /* AutoLogInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B885A5725A578DF00C73854 /* AutoLogInResponse.swift */; };
 		3B885A5D25A5871E00C73854 /* DailyBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B885A5B25A5871E00C73854 /* DailyBigCollectionViewCell.swift */; };
 		3B885A5E25A5871E00C73854 /* DailyBigCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B885A5C25A5871E00C73854 /* DailyBigCollectionViewCell.xib */; };
+		3BC4DDB325A82875000ABF0C /* CategorySearchGetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4DDB225A82875000ABF0C /* CategorySearchGetManager.swift */; };
+		3BC4DDB825A84455000ABF0C /* CommonGetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4DDB725A84455000ABF0C /* CommonGetDataManager.swift */; };
+		3BC4DDBC25A8491F000ABF0C /* FripDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4DDBB25A8491F000ABF0C /* FripDetailResponse.swift */; };
+		3BD4CCCE25A8A441009B03C6 /* CommentShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD4CCCC25A8A441009B03C6 /* CommentShowCollectionViewCell.swift */; };
 		3BE3FE6525A31E8C00F49E0C /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */; };
+		3BEEBBE725A88A2400343B34 /* CommentHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEBBE525A88A2400343B34 /* CommentHeaderCollectionViewCell.swift */; };
 		3BFDD01C25A6F9350079B29D /* HomePostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD01B25A6F9350079B29D /* HomePostResponse.swift */; };
 		3BFDD01F25A6FA020079B29D /* FripSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD01E25A6FA020079B29D /* FripSave.swift */; };
 		3BFDD02825A6FE0E0079B29D /* IndicatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */; };
@@ -105,6 +117,11 @@
 		3B066B5B25A23C3E002100A9 /* DailyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyViewController.xib; sourceTree = "<group>"; };
 		3B066B5F25A23C60002100A9 /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
 		3B066B6025A23C60002100A9 /* BestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestViewController.xib; sourceTree = "<group>"; };
+		3B0947AA25A8702D0084EBC9 /* FripIntroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripIntroCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B0947AB25A8702D0084EBC9 /* FripIntroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FripIntroCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B0947AF25A880490084EBC9 /* CommonPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPostDataManager.swift; sourceTree = "<group>"; };
+		3B0947B625A8846C0084EBC9 /* FripCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripCommentViewController.swift; sourceTree = "<group>"; };
+		3B0947B725A8846C0084EBC9 /* FripCommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FripCommentViewController.xib; sourceTree = "<group>"; };
 		3B1AA24125A59C650020E967 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		3B1AA24C25A5B1590020E967 /* DailyButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B1AA24D25A5B1590020E967 /* DailyButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyButtonCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -174,7 +191,14 @@
 		3B885A5725A578DF00C73854 /* AutoLogInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLogInResponse.swift; sourceTree = "<group>"; };
 		3B885A5B25A5871E00C73854 /* DailyBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBigCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B885A5C25A5871E00C73854 /* DailyBigCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyBigCollectionViewCell.xib; sourceTree = "<group>"; };
+		3BC4DDB225A82875000ABF0C /* CategorySearchGetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchGetManager.swift; sourceTree = "<group>"; };
+		3BC4DDB725A84455000ABF0C /* CommonGetDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonGetDataManager.swift; sourceTree = "<group>"; };
+		3BC4DDBB25A8491F000ABF0C /* FripDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripDetailResponse.swift; sourceTree = "<group>"; };
+		3BD4CCCC25A8A441009B03C6 /* CommentShowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentShowCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BD4CCCD25A8A441009B03C6 /* CommentShowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentShowCollectionViewCell.xib; sourceTree = "<group>"; };
 		3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		3BEEBBE525A88A2400343B34 /* CommentHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BEEBBE625A88A2400343B34 /* CommentHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		3BFDD01B25A6F9350079B29D /* HomePostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostResponse.swift; sourceTree = "<group>"; };
 		3BFDD01E25A6FA020079B29D /* FripSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripSave.swift; sourceTree = "<group>"; };
 		3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -205,6 +229,7 @@
 		3B3B5CCE25A43EE400719FA7 /* CategorySearch */ = {
 			isa = PBXGroup;
 			children = (
+				3BC4DDB125A8274C000ABF0C /* DataManager */,
 				3B3B5CD925A543D900719FA7 /* cell */,
 				3B3B5CD425A43FCF00719FA7 /* CategorySearchViewController.swift */,
 				3B3B5CD525A43FCF00719FA7 /* CategorySearchViewController.xib */,
@@ -268,9 +293,13 @@
 		3B56C54C25A60B0800C45B0E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3BC4DDBE25A8492C000ABF0C /* Entity */,
+				3BC4DDB625A84446000ABF0C /* DataManager */,
 				3BFDD02125A6FDE50079B29D /* Cell */,
 				3B56C54E25A61C9B00C45B0E /* FripShowViewController.swift */,
 				3B56C54F25A61C9B00C45B0E /* FripShowViewController.xib */,
+				3B0947B625A8846C0084EBC9 /* FripCommentViewController.swift */,
+				3B0947B725A8846C0084EBC9 /* FripCommentViewController.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -499,17 +528,64 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		3BFDD02125A6FDE50079B29D /* Cell */ = {
+		3BC4DDB125A8274C000ABF0C /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */,
-				3BFDD02725A6FE0E0079B29D /* IndicatorCollectionViewCell.xib */,
+				3BC4DDB225A82875000ABF0C /* CategorySearchGetManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		3BC4DDB625A84446000ABF0C /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3BC4DDB725A84455000ABF0C /* CommonGetDataManager.swift */,
+				3B0947AF25A880490084EBC9 /* CommonPostDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		3BC4DDBE25A8492C000ABF0C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3BC4DDBB25A8491F000ABF0C /* FripDetailResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3BEF49D025A8878C00BC93BF /* FripShowCell */ = {
+			isa = PBXGroup;
+			children = (
 				3BFDD02B25A707520079B29D /* FripImageCollectionViewCell.swift */,
 				3BFDD02C25A707520079B29D /* FripImageCollectionViewCell.xib */,
 				3BFDD03025A707FE0079B29D /* FripShowCollectionViewCell.swift */,
 				3BFDD03125A707FE0079B29D /* FripShowCollectionViewCell.xib */,
 				3BFDD03B25A725870079B29D /* FripCommentCollectionViewCell.swift */,
 				3BFDD03C25A725870079B29D /* FripCommentCollectionViewCell.xib */,
+				3B0947AA25A8702D0084EBC9 /* FripIntroCollectionViewCell.swift */,
+				3B0947AB25A8702D0084EBC9 /* FripIntroCollectionViewCell.xib */,
+			);
+			path = FripShowCell;
+			sourceTree = "<group>";
+		};
+		3BEF49D125A887A300BC93BF /* FripCommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				3BEEBBE525A88A2400343B34 /* CommentHeaderCollectionViewCell.swift */,
+				3BEEBBE625A88A2400343B34 /* CommentHeaderCollectionViewCell.xib */,
+				3BD4CCCC25A8A441009B03C6 /* CommentShowCollectionViewCell.swift */,
+				3BD4CCCD25A8A441009B03C6 /* CommentShowCollectionViewCell.xib */,
+			);
+			path = FripCommentCell;
+			sourceTree = "<group>";
+		};
+		3BFDD02125A6FDE50079B29D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3BEF49D125A887A300BC93BF /* FripCommentCell */,
+				3BEF49D025A8878C00BC93BF /* FripShowCell */,
+				3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */,
+				3BFDD02725A6FE0E0079B29D /* IndicatorCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -593,6 +669,7 @@
 				3B885A5E25A5871E00C73854 /* DailyBigCollectionViewCell.xib in Resources */,
 				3B7772C225A18D7400CF2905 /* MyInfoViewController.xib in Resources */,
 				3B3F31CC25A37B6100EE22C5 /* labelCollectionViewCell.xib in Resources */,
+				3B0947B925A8846C0084EBC9 /* FripCommentViewController.xib in Resources */,
 				3B3B5CDD25A543FB00719FA7 /* SmallCategoryCollectionViewCell.xib in Resources */,
 				3B7772B325A18D5200CF2905 /* CategoryViewController.xib in Resources */,
 				3B77724D25A0A54600CF2905 /* NotoSansCJKkr-Regular.otf in Resources */,
@@ -600,7 +677,9 @@
 				3B77720625A0726200CF2905 /* LaunchScreen.storyboard in Resources */,
 				3B7772B825A18D5E00CF2905 /* FeedViewController.xib in Resources */,
 				3BFDD02E25A707520079B29D /* FripImageCollectionViewCell.xib in Resources */,
+				3B24D81A25A8B76300A4A002 /* CommentShowCollectionViewCell.xib in Resources */,
 				3B3B5CD725A43FCF00719FA7 /* CategorySearchViewController.xib in Resources */,
+				3B0947AD25A8702D0084EBC9 /* FripIntroCollectionViewCell.xib in Resources */,
 				3B1AA24F25A5B1590020E967 /* DailyButtonCollectionViewCell.xib in Resources */,
 				3B066B6225A23C60002100A9 /* BestViewController.xib in Resources */,
 				3BFDD02925A6FE0E0079B29D /* IndicatorCollectionViewCell.xib in Resources */,
@@ -614,6 +693,7 @@
 				3B77724E25A0A54600CF2905 /* NotoSansCJKkr-Bold.otf in Resources */,
 				3B56C55125A61C9B00C45B0E /* FripShowViewController.xib in Resources */,
 				3BFDD03E25A725870079B29D /* FripCommentCollectionViewCell.xib in Resources */,
+				3B24D81725A8B74B00A4A002 /* CommentHeaderCollectionViewCell.xib in Resources */,
 				3B066B5D25A23C3E002100A9 /* DailyViewController.xib in Resources */,
 				3B7EF04725A2E3C70003C210 /* BtnCollectionViewCell.xib in Resources */,
 				3B3F31C625A339EC00EE22C5 /* CategoryCollectionViewCell.xib in Resources */,
@@ -687,12 +767,16 @@
 				3B885A5825A578DF00C73854 /* AutoLogInResponse.swift in Sources */,
 				3B3F320F25A41FC900EE22C5 /* NoneCollectionViewCell.swift in Sources */,
 				3B3F31CB25A37B6100EE22C5 /* labelCollectionViewCell.swift in Sources */,
+				3B0947B825A8846C0084EBC9 /* FripCommentViewController.swift in Sources */,
 				3B7EF04625A2E3C70003C210 /* BtnCollectionViewCell.swift in Sources */,
 				3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */,
 				3B77727325A0A70A00CF2905 /* UIButton.swift in Sources */,
 				3B77729B25A0E45A00CF2905 /* MainDataManager.swift in Sources */,
+				3BC4DDB325A82875000ABF0C /* CategorySearchGetManager.swift in Sources */,
 				3B56C55025A61C9B00C45B0E /* FripShowViewController.swift in Sources */,
+				3BEEBBE725A88A2400343B34 /* CommentHeaderCollectionViewCell.swift in Sources */,
 				3BFDD02825A6FE0E0079B29D /* IndicatorCollectionViewCell.swift in Sources */,
+				3B0947AC25A8702D0084EBC9 /* FripIntroCollectionViewCell.swift in Sources */,
 				3B77727625A0A70A00CF2905 /* UIViewController.swift in Sources */,
 				3B56C55925A6D86700C45B0E /* MainFrip.swift in Sources */,
 				3B7772A025A189DC00CF2905 /* BaseTabBarViewController.swift in Sources */,
@@ -702,6 +786,7 @@
 				3B77729725A0E08800CF2905 /* SignInResponse.swift in Sources */,
 				3B77727E25A0A88E00CF2905 /* Device.swift in Sources */,
 				3B7EF0F025A2E7500003C210 /* MainCollectionViewCell.swift in Sources */,
+				3B0947B025A880490084EBC9 /* CommonPostDataManager.swift in Sources */,
 				3B3B5CD625A43FCF00719FA7 /* CategorySearchViewController.swift in Sources */,
 				3B77727025A0A70A00CF2905 /* String.swift in Sources */,
 				3BFDD03225A707FE0079B29D /* FripShowCollectionViewCell.swift in Sources */,
@@ -710,12 +795,14 @@
 				3B1AA24225A59C650020E967 /* UICollectionView.swift in Sources */,
 				3B7772B225A18D5200CF2905 /* CategoryViewController.swift in Sources */,
 				3B77725125A0A58C00CF2905 /* Constant.swift in Sources */,
+				3BD4CCCE25A8A441009B03C6 /* CommentShowCollectionViewCell.swift in Sources */,
 				3B56C55625A6D62900C45B0E /* HomeGetResponse.swift in Sources */,
 				3B7772B725A18D5E00CF2905 /* FeedViewController.swift in Sources */,
 				3BFDD02D25A707520079B29D /* FripImageCollectionViewCell.swift in Sources */,
 				3B7772BC25A18D6800CF2905 /* StoredViewController.swift in Sources */,
 				3B77728225A0A8CE00CF2905 /* BaseViewController.swift in Sources */,
 				3B3F31C025A3376700EE22C5 /* MainPostDataManager.swift in Sources */,
+				3BC4DDBC25A8491F000ABF0C /* FripDetailResponse.swift in Sources */,
 				3BFDD01C25A6F9350079B29D /* HomePostResponse.swift in Sources */,
 				3B885A5525A5701300C73854 /* LogInResponse.swift in Sources */,
 				3B066B6125A23C60002100A9 /* BestViewController.swift in Sources */,
@@ -724,6 +811,7 @@
 				3B7772C125A18D7400CF2905 /* MyInfoViewController.swift in Sources */,
 				3B3B5CDC25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift in Sources */,
 				3BFDD03D25A725870079B29D /* FripCommentCollectionViewCell.swift in Sources */,
+				3BC4DDB825A84455000ABF0C /* CommonGetDataManager.swift in Sources */,
 				3B3F321425A42FE400EE22C5 /* HostCollectionViewCell.swift in Sources */,
 				3BE3FE6525A31E8C00F49E0C /* HeaderCollectionReusableView.swift in Sources */,
 				3B77726F25A0A70A00CF2905 /* Color.swift in Sources */,

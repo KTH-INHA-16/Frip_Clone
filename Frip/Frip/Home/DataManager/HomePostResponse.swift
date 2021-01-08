@@ -7,7 +7,7 @@ class HomePostResponse {
             .validate()
             .responseDecodable(of: SaveResult.self) { response in
                 switch response.result {
-                case .success(let response):
+                case .success(_):
                     print("저장 성공")
                 case .failure(_):
                     print("저장 실패")
@@ -21,7 +21,7 @@ class HomePostResponse {
             .validate()
             .responseDecodable(of: SaveResult.self) { response in
                 switch response.result {
-                case .success(let response):
+                case .success(_):
                     print("저장 성공")
                 case .failure(_):
                     print("저장 실패")
@@ -35,7 +35,35 @@ class HomePostResponse {
             .validate()
             .responseDecodable(of: SaveResult.self) { response in
                 switch response.result {
-                case .success(let response):
+                case .success(_):
+                    print("저장 성공")
+                case .failure(_):
+                    print("저장 실패")
+                }
+            }
+    }
+    
+    func fripSavingCategorySearch (targetUrl: URL,idx:Int,header: String, VC: CategorySearchViewController) {
+        let url = URL(string: targetUrl.absoluteString+"/\(idx)/likes")!
+        AF.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":header])
+            .validate()
+            .responseDecodable(of: SaveResult.self) { response in
+                switch response.result {
+                case .success(_):
+                    print("저장 성공")
+                case .failure(_):
+                    print("저장 실패")
+                }
+            }
+    }
+    
+    func fripShowSave (targetUrl: URL,idx:Int,header: String, VC: FripShowViewController) {
+        let url = URL(string: targetUrl.absoluteString+"/\(idx)/likes")!
+        AF.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":header])
+            .validate()
+            .responseDecodable(of: SaveResult.self) { response in
+                switch response.result {
+                case .success(_):
                     print("저장 성공")
                 case .failure(_):
                     print("저장 실패")

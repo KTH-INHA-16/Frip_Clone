@@ -7,4 +7,5 @@ struct Constant {
     static let AUTO_LOGIN_URL = BASE_URL + "/users/auto-login"
     static let ALL_FRIP = BASE_URL + "/frips"
     static let FRIP_CATEGORY = ALL_FRIP + "/categories"
+    static let HOST = BASE_URL + "/hosts"
 }

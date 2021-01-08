@@ -14,12 +14,12 @@ class HostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var hostCountLabel: UILabel!
     @IBOutlet weak var bookmarkButton: UIButton!
     
-    
+    var hostIdx: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
         bookmarkButton.tintColor = UIColor.saveColor
-        image.cornerRadius = image.frame.width * 0.5
+        image.cornerRadius = image.bounds.width * 0.5
         
         hostNameLabel.font = UIFont.NotoSans(.bold, size: 15)
         hostCountLabel.font = UIFont.NotoSans(.regular, size: 12)

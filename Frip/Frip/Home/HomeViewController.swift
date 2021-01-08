@@ -13,9 +13,12 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
     
+    var fripIndex: Int = 0
+    var fripDetail: FripDetailInfo?
     var bigCategory: String = ""
     var touch = 0
     let text = ["추천","일상","베스트"]
+    private let jwt = UserDefaults.standard.string(forKey: "userJWT")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +52,21 @@ class HomeViewController: BaseViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(presentVC(_:)), name: NSNotification.Name("PostButton"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(scrollVC(_:)), name: NSNotification.Name("hide"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(detailVC(_:)), name: NSNotification.Name("detail"), object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    @objc func detailVC(_ notification: Notification) {
+        guard let idx = notification.userInfo?["fripIdx"] as? Int else {return}
+        print("index is: \(idx)")
+        fripIndex = idx
+        DispatchQueue.global(qos:.userInitiated).sync {
+            CommonGetDataManager().getMainFrips(targetURL: URL(string: Constant.ALL_FRIP)!, index: idx, header: jwt, vc: self)
+        }
     }
     
     @objc func presentVC(_ notification: Notification) {
@@ -107,6 +120,12 @@ class HomeViewController: BaseViewController {
                 rightView.tintColor = UIColor.darkGray
             }
         }
+    }
+    
+    func getResult(_ result: FripDetailInfo) {
+        fripDetail = result
+        print("show")
+        self.navigationController?.pushViewController(FripShowViewController(fripIndex,fripDetail!), animated: true)
     }
 }
 

@@ -194,7 +194,12 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 }
             }
         } else {
-            
+            if frips.count != 0 {
+                let cell = collectionView.cellForItem(at: indexPath) as! MainCollectionViewCell
+                print(cell.idx)
+                userInfo = ["fripIdx":cell.idx]
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "detail"), object: nil, userInfo: userInfo)
+            }
         }
     }
     
