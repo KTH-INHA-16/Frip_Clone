@@ -191,6 +191,7 @@
                 <outlet property="userImage" destination="md6-Y9-bgE" id="jUH-Nb-X6f"/>
                 <outlet property="userNameLabel" destination="a7T-i6-CeY" id="5uI-W1-8Xl"/>
                 <outlet property="userRateLabel" destination="Q8y-WL-nqx" id="cU0-AM-z5F"/>
+                <outlet property="view" destination="aTd-mo-vAe" id="aim-Fd-BUL"/>
             </connections>
             <point key="canvasLocation" x="283.33333333333337" y="263.50446428571428"/>
         </collectionViewCell>

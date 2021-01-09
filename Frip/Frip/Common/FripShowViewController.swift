@@ -109,7 +109,7 @@ class FripShowViewController: BaseViewController {
     
     @objc func showCommentTap(_ sender:UIButton!) {
         let idx = sender.tag
-        let vc = FripCommentViewController(fripIdx: idx)
+        let vc = FripCommentViewController(fripIdx: idx, rate: detail.rate, commentCount: detail.fripReviewCnt,title:detail.fripTitle)
         vc.tabBarController?.tabBar.isHidden = true
         self.navigationController?.pushViewController(vc, animated: true)
     }

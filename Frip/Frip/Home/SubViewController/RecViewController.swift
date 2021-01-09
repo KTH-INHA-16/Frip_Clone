@@ -142,7 +142,6 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
             let cell = collectionView.cellForItem(at: indexPath) as! MainCollectionViewCell
             print(cell.idx)
             userInfo = ["fripIdx":cell.idx]
-            print(userInfo)
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "detail"), object: nil, userInfo: userInfo)
         }
     }

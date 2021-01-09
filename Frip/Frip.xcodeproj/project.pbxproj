@@ -25,6 +25,7 @@
 		3B1AA24F25A5B1590020E967 /* DailyButtonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B1AA24D25A5B1590020E967 /* DailyButtonCollectionViewCell.xib */; };
 		3B24D81725A8B74B00A4A002 /* CommentHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEEBBE625A88A2400343B34 /* CommentHeaderCollectionViewCell.xib */; };
 		3B24D81A25A8B76300A4A002 /* CommentShowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD4CCCD25A8A441009B03C6 /* CommentShowCollectionViewCell.xib */; };
+		3B24D81D25A9452800A4A002 /* FripCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B24D81C25A9452800A4A002 /* FripCommentResponse.swift */; };
 		3B3B5CD625A43FCF00719FA7 /* CategorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B5CD425A43FCF00719FA7 /* CategorySearchViewController.swift */; };
 		3B3B5CD725A43FCF00719FA7 /* CategorySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3B5CD525A43FCF00719FA7 /* CategorySearchViewController.xib */; };
 		3B3B5CDC25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B5CDA25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift */; };
@@ -95,6 +96,8 @@
 		3BD4CCCE25A8A441009B03C6 /* CommentShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD4CCCC25A8A441009B03C6 /* CommentShowCollectionViewCell.swift */; };
 		3BE3FE6525A31E8C00F49E0C /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */; };
 		3BEEBBE725A88A2400343B34 /* CommentHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEBBE525A88A2400343B34 /* CommentHeaderCollectionViewCell.swift */; };
+		3BF8BAB825A994A4005E3FB7 /* HostMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BAB625A994A4005E3FB7 /* HostMainViewController.swift */; };
+		3BF8BAB925A994A4005E3FB7 /* HostMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BAB725A994A4005E3FB7 /* HostMainViewController.xib */; };
 		3BFDD01C25A6F9350079B29D /* HomePostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD01B25A6F9350079B29D /* HomePostResponse.swift */; };
 		3BFDD01F25A6FA020079B29D /* FripSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD01E25A6FA020079B29D /* FripSave.swift */; };
 		3BFDD02825A6FE0E0079B29D /* IndicatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */; };
@@ -125,6 +128,7 @@
 		3B1AA24125A59C650020E967 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		3B1AA24C25A5B1590020E967 /* DailyButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B1AA24D25A5B1590020E967 /* DailyButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyButtonCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B24D81C25A9452800A4A002 /* FripCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripCommentResponse.swift; sourceTree = "<group>"; };
 		3B3B5CD425A43FCF00719FA7 /* CategorySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchViewController.swift; sourceTree = "<group>"; };
 		3B3B5CD525A43FCF00719FA7 /* CategorySearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySearchViewController.xib; sourceTree = "<group>"; };
 		3B3B5CDA25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 		3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		3BEEBBE525A88A2400343B34 /* CommentHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BEEBBE625A88A2400343B34 /* CommentHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		3BF8BAB625A994A4005E3FB7 /* HostMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostMainViewController.swift; sourceTree = "<group>"; };
+		3BF8BAB725A994A4005E3FB7 /* HostMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostMainViewController.xib; sourceTree = "<group>"; };
 		3BFDD01B25A6F9350079B29D /* HomePostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostResponse.swift; sourceTree = "<group>"; };
 		3BFDD01E25A6FA020079B29D /* FripSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripSave.swift; sourceTree = "<group>"; };
 		3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -300,6 +306,8 @@
 				3B56C54F25A61C9B00C45B0E /* FripShowViewController.xib */,
 				3B0947B625A8846C0084EBC9 /* FripCommentViewController.swift */,
 				3B0947B725A8846C0084EBC9 /* FripCommentViewController.xib */,
+				3BF8BAB625A994A4005E3FB7 /* HostMainViewController.swift */,
+				3BF8BAB725A994A4005E3FB7 /* HostMainViewController.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -549,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				3BC4DDBB25A8491F000ABF0C /* FripDetailResponse.swift */,
+				3B24D81C25A9452800A4A002 /* FripCommentResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -689,6 +698,7 @@
 				3B3F320A25A398B300EE22C5 /* SaveFripViewController.xib in Resources */,
 				3B77720325A0726200CF2905 /* Assets.xcassets in Resources */,
 				3B77724C25A0A54600CF2905 /* NotoSansCJKkr-Medium.otf in Resources */,
+				3BF8BAB925A994A4005E3FB7 /* HostMainViewController.xib in Resources */,
 				3B44FE0525A5F85500B85451 /* BestButtonCollectionViewCell.xib in Resources */,
 				3B77724E25A0A54600CF2905 /* NotoSansCJKkr-Bold.otf in Resources */,
 				3B56C55125A61C9B00C45B0E /* FripShowViewController.xib in Resources */,
@@ -762,6 +772,7 @@
 				3B44FE0425A5F85500B85451 /* BestButtonCollectionViewCell.swift in Sources */,
 				3B1AA24E25A5B1590020E967 /* DailyButtonCollectionViewCell.swift in Sources */,
 				3B885A5D25A5871E00C73854 /* DailyBigCollectionViewCell.swift in Sources */,
+				3B24D81D25A9452800A4A002 /* FripCommentResponse.swift in Sources */,
 				3B77727125A0A70A00CF2905 /* Date.swift in Sources */,
 				3B066B5C25A23C3E002100A9 /* DailyViewController.swift in Sources */,
 				3B885A5825A578DF00C73854 /* AutoLogInResponse.swift in Sources */,
@@ -778,6 +789,7 @@
 				3BFDD02825A6FE0E0079B29D /* IndicatorCollectionViewCell.swift in Sources */,
 				3B0947AC25A8702D0084EBC9 /* FripIntroCollectionViewCell.swift in Sources */,
 				3B77727625A0A70A00CF2905 /* UIViewController.swift in Sources */,
+				3BF8BAB825A994A4005E3FB7 /* HostMainViewController.swift in Sources */,
 				3B56C55925A6D86700C45B0E /* MainFrip.swift in Sources */,
 				3B7772A025A189DC00CF2905 /* BaseTabBarViewController.swift in Sources */,
 				3B77728B25A0AC4000CF2905 /* MainViewController.swift in Sources */,

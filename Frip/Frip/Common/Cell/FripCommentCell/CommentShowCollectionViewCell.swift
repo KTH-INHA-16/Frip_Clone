@@ -24,8 +24,11 @@ class CommentShowCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var hostCommentView: UITextView!
     
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var view: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        image.tintColor = UIColor.saveColor
         
         userImage.cornerRadius = userImage.frame.height * 0.5
         
@@ -50,6 +53,8 @@ class CommentShowCollectionViewCell: UICollectionViewCell {
         hostDateLabel.textColor = .lightGray
         
         hostCommentView.font = UIFont.NotoSans(.regular, size: 13)
+        
+        view.cornerRadius = view.bounds.height / 8
     }
 
 }
