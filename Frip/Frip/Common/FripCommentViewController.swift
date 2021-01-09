@@ -133,10 +133,14 @@ extension FripCommentViewController: UICollectionViewDelegate, UICollectionViewD
                 if comments[indexPath.row].fripReviewPhotoUrl != "null" {
                     cell.commentImage.isHidden = false
                     do {
-                        let url = URL(string: comments[indexPath.row].fripReviewPhotoUrl)!
-                        let data = try Data(contentsOf: url)
-                        cell.commentImage.image = UIImage(data: data)
-                    } catch { print("image error") }
+                        if let url = URL(string: comments[indexPath.row].fripReviewPhotoUrl){
+                            let data = try Data(contentsOf: url)
+                            cell.commentImage.image = UIImage(data: data)
+                        }
+                    } catch {
+                        print("image error")
+                        cell.commentImage.isHidden = true
+                    }
                 } else {
                     cell.commentImage.isHidden = true
                 }

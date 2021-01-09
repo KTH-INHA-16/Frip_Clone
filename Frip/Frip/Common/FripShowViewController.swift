@@ -52,6 +52,7 @@ class FripShowViewController: BaseViewController {
         collectionView.delegate = self
         
         registerCell(collectionView)
+        collectionView.register(FripCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FripCollectionReusableView")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -123,6 +124,19 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 2 {
+            let cell = collectionView.cellForItem(at: indexPath) as! HostCollectionViewCell
+            let vc = HostMainViewController(hostIdx: cell.hostIdx)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FripCollectionReusableView", for: indexPath)
+        return header
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -214,6 +228,17 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
             return CGSize(width: collectionView.frame.width, height: 180)
         default:
             return CGSize(width: collectionView.frame.width, height: 100)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        switch section {
+        case 3:
+            return CGSize(width: collectionView.frame.width, height: 10)
+        case 4:
+            return CGSize(width: collectionView.frame.width, height: 10)
+        default:
+            return CGSize(width: collectionView.frame.width, height: 0)
         }
     }
     

@@ -98,6 +98,11 @@
 		3BEEBBE725A88A2400343B34 /* CommentHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEBBE525A88A2400343B34 /* CommentHeaderCollectionViewCell.swift */; };
 		3BF8BAB825A994A4005E3FB7 /* HostMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BAB625A994A4005E3FB7 /* HostMainViewController.swift */; };
 		3BF8BAB925A994A4005E3FB7 /* HostMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BAB725A994A4005E3FB7 /* HostMainViewController.xib */; };
+		3BF8BABC25A99A34005E3FB7 /* FripCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BABB25A99A34005E3FB7 /* FripCollectionReusableView.swift */; };
+		3BF8BAC125A9A31B005E3FB7 /* HostTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BABF25A9A31B005E3FB7 /* HostTextCollectionViewCell.swift */; };
+		3BF8BAC225A9A31B005E3FB7 /* HostTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BAC025A9A31B005E3FB7 /* HostTextCollectionViewCell.xib */; };
+		3BF8BAC625A9A446005E3FB7 /* HostButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BAC425A9A446005E3FB7 /* HostButtonCollectionViewCell.swift */; };
+		3BF8BAC725A9A446005E3FB7 /* HostButtonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BAC525A9A446005E3FB7 /* HostButtonCollectionViewCell.xib */; };
 		3BFDD01C25A6F9350079B29D /* HomePostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD01B25A6F9350079B29D /* HomePostResponse.swift */; };
 		3BFDD01F25A6FA020079B29D /* FripSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD01E25A6FA020079B29D /* FripSave.swift */; };
 		3BFDD02825A6FE0E0079B29D /* IndicatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */; };
@@ -205,6 +210,11 @@
 		3BEEBBE625A88A2400343B34 /* CommentHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		3BF8BAB625A994A4005E3FB7 /* HostMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostMainViewController.swift; sourceTree = "<group>"; };
 		3BF8BAB725A994A4005E3FB7 /* HostMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostMainViewController.xib; sourceTree = "<group>"; };
+		3BF8BABB25A99A34005E3FB7 /* FripCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripCollectionReusableView.swift; sourceTree = "<group>"; };
+		3BF8BABF25A9A31B005E3FB7 /* HostTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostTextCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BF8BAC025A9A31B005E3FB7 /* HostTextCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostTextCollectionViewCell.xib; sourceTree = "<group>"; };
+		3BF8BAC425A9A446005E3FB7 /* HostButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BF8BAC525A9A446005E3FB7 /* HostButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostButtonCollectionViewCell.xib; sourceTree = "<group>"; };
 		3BFDD01B25A6F9350079B29D /* HomePostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostResponse.swift; sourceTree = "<group>"; };
 		3BFDD01E25A6FA020079B29D /* FripSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripSave.swift; sourceTree = "<group>"; };
 		3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -588,13 +598,26 @@
 			path = FripCommentCell;
 			sourceTree = "<group>";
 		};
+		3BF8BABE25A9A2ED005E3FB7 /* HostMainCell */ = {
+			isa = PBXGroup;
+			children = (
+				3BF8BABF25A9A31B005E3FB7 /* HostTextCollectionViewCell.swift */,
+				3BF8BAC025A9A31B005E3FB7 /* HostTextCollectionViewCell.xib */,
+				3BF8BAC425A9A446005E3FB7 /* HostButtonCollectionViewCell.swift */,
+				3BF8BAC525A9A446005E3FB7 /* HostButtonCollectionViewCell.xib */,
+			);
+			path = HostMainCell;
+			sourceTree = "<group>";
+		};
 		3BFDD02125A6FDE50079B29D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				3BF8BABE25A9A2ED005E3FB7 /* HostMainCell */,
 				3BEF49D125A887A300BC93BF /* FripCommentCell */,
 				3BEF49D025A8878C00BC93BF /* FripShowCell */,
 				3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */,
 				3BFDD02725A6FE0E0079B29D /* IndicatorCollectionViewCell.xib */,
+				3BF8BABB25A99A34005E3FB7 /* FripCollectionReusableView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -688,6 +711,7 @@
 				3BFDD02E25A707520079B29D /* FripImageCollectionViewCell.xib in Resources */,
 				3B24D81A25A8B76300A4A002 /* CommentShowCollectionViewCell.xib in Resources */,
 				3B3B5CD725A43FCF00719FA7 /* CategorySearchViewController.xib in Resources */,
+				3BF8BAC225A9A31B005E3FB7 /* HostTextCollectionViewCell.xib in Resources */,
 				3B0947AD25A8702D0084EBC9 /* FripIntroCollectionViewCell.xib in Resources */,
 				3B1AA24F25A5B1590020E967 /* DailyButtonCollectionViewCell.xib in Resources */,
 				3B066B6225A23C60002100A9 /* BestViewController.xib in Resources */,
@@ -703,6 +727,7 @@
 				3B77724E25A0A54600CF2905 /* NotoSansCJKkr-Bold.otf in Resources */,
 				3B56C55125A61C9B00C45B0E /* FripShowViewController.xib in Resources */,
 				3BFDD03E25A725870079B29D /* FripCommentCollectionViewCell.xib in Resources */,
+				3BF8BAC725A9A446005E3FB7 /* HostButtonCollectionViewCell.xib in Resources */,
 				3B24D81725A8B74B00A4A002 /* CommentHeaderCollectionViewCell.xib in Resources */,
 				3B066B5D25A23C3E002100A9 /* DailyViewController.xib in Resources */,
 				3B7EF04725A2E3C70003C210 /* BtnCollectionViewCell.xib in Resources */,
@@ -778,11 +803,14 @@
 				3B885A5825A578DF00C73854 /* AutoLogInResponse.swift in Sources */,
 				3B3F320F25A41FC900EE22C5 /* NoneCollectionViewCell.swift in Sources */,
 				3B3F31CB25A37B6100EE22C5 /* labelCollectionViewCell.swift in Sources */,
+				3BF8BAC125A9A31B005E3FB7 /* HostTextCollectionViewCell.swift in Sources */,
+				3BF8BABC25A99A34005E3FB7 /* FripCollectionReusableView.swift in Sources */,
 				3B0947B825A8846C0084EBC9 /* FripCommentViewController.swift in Sources */,
 				3B7EF04625A2E3C70003C210 /* BtnCollectionViewCell.swift in Sources */,
 				3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */,
 				3B77727325A0A70A00CF2905 /* UIButton.swift in Sources */,
 				3B77729B25A0E45A00CF2905 /* MainDataManager.swift in Sources */,
+				3BF8BAC625A9A446005E3FB7 /* HostButtonCollectionViewCell.swift in Sources */,
 				3BC4DDB325A82875000ABF0C /* CategorySearchGetManager.swift in Sources */,
 				3B56C55025A61C9B00C45B0E /* FripShowViewController.swift in Sources */,
 				3BEEBBE725A88A2400343B34 /* CommentHeaderCollectionViewCell.swift in Sources */,
