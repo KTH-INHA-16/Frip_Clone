@@ -9,5 +9,8 @@ class BaseViewController: UIViewController{
         ]
         self.navigationController?.navigationBar.backgroundColor = .white
         self.tabBarController?.tabBar.backgroundColor = .white
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .black
+
     }
 }

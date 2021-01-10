@@ -103,6 +103,7 @@
 		3BF8BAC225A9A31B005E3FB7 /* HostTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BAC025A9A31B005E3FB7 /* HostTextCollectionViewCell.xib */; };
 		3BF8BAC625A9A446005E3FB7 /* HostButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BAC425A9A446005E3FB7 /* HostButtonCollectionViewCell.swift */; };
 		3BF8BAC725A9A446005E3FB7 /* HostButtonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BAC525A9A446005E3FB7 /* HostButtonCollectionViewCell.xib */; };
+		3BF8BACA25AA909A005E3FB7 /* HostInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BAC925AA909A005E3FB7 /* HostInfoResponse.swift */; };
 		3BFDD01C25A6F9350079B29D /* HomePostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD01B25A6F9350079B29D /* HomePostResponse.swift */; };
 		3BFDD01F25A6FA020079B29D /* FripSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD01E25A6FA020079B29D /* FripSave.swift */; };
 		3BFDD02825A6FE0E0079B29D /* IndicatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */; };
@@ -215,6 +216,7 @@
 		3BF8BAC025A9A31B005E3FB7 /* HostTextCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostTextCollectionViewCell.xib; sourceTree = "<group>"; };
 		3BF8BAC425A9A446005E3FB7 /* HostButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BF8BAC525A9A446005E3FB7 /* HostButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostButtonCollectionViewCell.xib; sourceTree = "<group>"; };
+		3BF8BAC925AA909A005E3FB7 /* HostInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostInfoResponse.swift; sourceTree = "<group>"; };
 		3BFDD01B25A6F9350079B29D /* HomePostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostResponse.swift; sourceTree = "<group>"; };
 		3BFDD01E25A6FA020079B29D /* FripSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripSave.swift; sourceTree = "<group>"; };
 		3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -568,6 +570,7 @@
 			children = (
 				3BC4DDBB25A8491F000ABF0C /* FripDetailResponse.swift */,
 				3B24D81C25A9452800A4A002 /* FripCommentResponse.swift */,
+				3BF8BAC925AA909A005E3FB7 /* HostInfoResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -795,6 +798,7 @@
 				3B7771FA25A0726000CF2905 /* AppDelegate.swift in Sources */,
 				3B77727525A0A70A00CF2905 /* UINavigationBar.swift in Sources */,
 				3B44FE0425A5F85500B85451 /* BestButtonCollectionViewCell.swift in Sources */,
+				3BF8BACA25AA909A005E3FB7 /* HostInfoResponse.swift in Sources */,
 				3B1AA24E25A5B1590020E967 /* DailyButtonCollectionViewCell.swift in Sources */,
 				3B885A5D25A5871E00C73854 /* DailyBigCollectionViewCell.swift in Sources */,
 				3B24D81D25A9452800A4A002 /* FripCommentResponse.swift in Sources */,
