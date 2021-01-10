@@ -18,20 +18,30 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxG-a4-Iae">
-                        <rect key="frame" x="15" y="59" width="508" height="121"/>
+                        <rect key="frame" x="15" y="44" width="508" height="136"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="textColor" systemColor="labelColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUL-Ol-gHv">
+                        <rect key="frame" x="0.0" y="192" width="538" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="7yN-fl-9p6"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="lxG-a4-Iae" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="15" id="0h4-nW-DFL"/>
+                <constraint firstItem="lxG-a4-Iae" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="0h4-nW-DFL"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="HUL-Ol-gHv" secondAttribute="bottom" constant="2" id="76X-xu-ea9"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="HUL-Ol-gHv" secondAttribute="trailing" id="96B-eh-RGN"/>
                 <constraint firstItem="lxG-a4-Iae" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="15" id="AeK-l4-MuZ"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="lxG-a4-Iae" secondAttribute="trailing" constant="15" id="bQ3-Oq-vU3"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="lxG-a4-Iae" secondAttribute="bottom" constant="15" id="hyL-Yd-vKI"/>
+                <constraint firstItem="HUL-Ol-gHv" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="iFh-tG-KV4"/>
             </constraints>
             <size key="customSize" width="538" height="229"/>
             <connections>

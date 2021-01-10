@@ -140,8 +140,7 @@ extension HostMainViewController: UICollectionViewDelegate, UICollectionViewData
                 let frip = frips[indexPath.row]
                 do {
                     let url = URL(string: frip.fripPhotoUrl)!
-                    let realUrl = URL(string: "https://dummyimage.com"+url.relativePath)!
-                    let data = try Data(contentsOf: realUrl)
+                    let data = try Data(contentsOf: url)
                     cell.image.image = UIImage(data: data)
                 } catch { print("image load error") }
                 cell.saveButton.tag = frip.fripIdx
@@ -152,7 +151,7 @@ extension HostMainViewController: UICollectionViewDelegate, UICollectionViewData
                 } else {
                     cell.saveButton.tag = cell.saveButton.tag * 10 + 0
                     cell.saveButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
-                    cell.saveButton.tintColor = .white
+                    cell.saveButton.tintColor = .lightGray
                 }
                 cell.idx = frip.fripIdx
                 cell.place.text = frip.place

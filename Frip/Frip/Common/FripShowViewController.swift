@@ -10,7 +10,7 @@ import UIKit
 class FripShowViewController: BaseViewController {
     
     private let jwt = UserDefaults.standard.string(forKey: "userJWT")!
-    let identifier = ["FripImageCollectionViewCell","FripShowCollectionViewCell","HostCollectionViewCell","FripCommentCollectionViewCell","FripIntroCollectionViewCell"]
+    let identifier = ["FripImageCollectionViewCell","FripShowCollectionViewCell","HostCollectionViewCell","FripCommentCollectionViewCell","FripIntroCollectionViewCell","FripCommonCollectionViewCell"]
     var fripIdx: Int = 0
     var fripDetail: FripDetailInfo?
     var detail: FripDetailInfo {
@@ -105,22 +105,6 @@ class FripShowViewController: BaseViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    @objc func saveButtonTap(_ sender:UIButton!) {
-        let hostIdx = sender.tag / 10
-        let state = sender.tag % 10
-        
-        if state == 1 {
-            sender.tag = hostIdx * 10
-            sender.tintColor = UIColor.saveColor
-            sender.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
-        } else {
-            sender.tag = hostIdx * 10 + 1
-            sender.tintColor = UIColor.lightGray
-            sender.setImage(UIImage(systemName: "bookmark"), for: .normal)
-        }
-        CommonPostDataManager().hostLikePost(targetUrl: URL(string: Constant.HOST)!, idx: hostIdx, header: jwt, VC: self)
-    }
-    
     @objc func showCommentTap(_ sender:UIButton!) {
         let idx = sender.tag
         let vc = FripCommentViewController(fripIdx: idx, rate: detail.rate, commentCount: detail.fripReviewCnt,title:detail.fripTitle)
@@ -132,7 +116,7 @@ class FripShowViewController: BaseViewController {
 
 extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 5
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -153,9 +137,9 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let allCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier[indexPath.section], for: indexPath)
         switch indexPath.section {
         case 0:
+            let allCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier[indexPath.section], for: indexPath)
             let cell = allCell as! FripImageCollectionViewCell
             do {
                 var str = detail.fripPhotoUrl
@@ -166,11 +150,13 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
             } catch { print("image load error") }
             return cell
         case 1:
+            let allCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier[indexPath.section], for: indexPath)
             let cell = allCell as! FripShowCollectionViewCell
             cell.titleLabel.text = detail.fripTitle
             cell.priceLabel.text = "\(detail.price)원"
             return cell
         case 2:
+            let allCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier[indexPath.section], for: indexPath)
             let cell = allCell as! HostCollectionViewCell
             do {
                 var str = detail.profileImgUrl
@@ -194,9 +180,9 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
                 cell.bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
             }
             cell.bookmarkButton.tag = tag
-            cell.bookmarkButton.addTarget(self, action: #selector(saveButtonTap(_:)), for: .touchDown)
             return cell
         case 3:
+            let allCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier[indexPath.section], for: indexPath)
             let cell = allCell as! FripCommentCollectionViewCell
             cell.button.tag = fripIdx
             cell.rateLabel.text = detail.rate
@@ -210,9 +196,40 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
             }
             return cell
         case 4:
+            let allCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier[indexPath.section], for: indexPath)
             let cell = allCell as! FripIntroCollectionViewCell
             cell.descriptionTextView.adjustsFontForContentSizeCategory = true
             cell.descriptionTextView.text = detail.fripIntroduction
+            
+            return cell
+        case 5:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FripCommonCollectionViewCell", for: indexPath) as! FripCommonCollectionViewCell
+            cell.titleLable.text = "포함사항"
+            cell.textView.text = detail.includeThing
+            cell.border.backgroundColor = .lightGray
+            return cell
+        case 6:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FripCommonCollectionViewCell", for: indexPath) as! FripCommonCollectionViewCell
+            cell.titleLable.text = "불포함 사항"
+            cell.textView.text = detail.exceptThing
+            cell.border.backgroundColor = .lightGray
+            return cell
+        case 7:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FripCommonCollectionViewCell", for: indexPath) as! FripCommonCollectionViewCell
+            cell.titleLable.text = "준비물"
+            cell.textView.text = detail.preparation
+            cell.border.backgroundColor = .lightGray
+            return cell
+        case 8:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FripCommonCollectionViewCell", for: indexPath) as! FripCommonCollectionViewCell
+            cell.titleLable.text = "유의 사항"
+            cell.textView.text = detail.notice
+            cell.border.backgroundColor = .lightGray
+            return cell
+        case 9:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FripCommonCollectionViewCell", for: indexPath) as! FripCommonCollectionViewCell
+            cell.titleLable.text = "진행 장소"
+            cell.textView.text = detail.meetingPlace
             return cell
         default:
             return UICollectionViewCell()
@@ -236,6 +253,16 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
             }
         case 4:
             return CGSize(width: collectionView.frame.width, height: 180)
+        case 5:
+            return CGSize(width: collectionView.frame.width, height: 200)
+        case 6:
+            return CGSize(width: collectionView.frame.width, height: 200)
+        case 7:
+            return CGSize(width: collectionView.frame.width, height: 200)
+        case 8:
+            return CGSize(width: collectionView.frame.width, height: 200)
+        case 9:
+            return CGSize(width: collectionView.frame.width, height: 150)
         default:
             return CGSize(width: collectionView.frame.width, height: 100)
         }

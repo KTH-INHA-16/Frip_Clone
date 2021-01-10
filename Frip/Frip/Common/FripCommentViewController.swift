@@ -49,6 +49,7 @@ class FripCommentViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.navigationItem.title = "후기"
         collectionView.reloadData()
         indicator.startAnimating()
     }

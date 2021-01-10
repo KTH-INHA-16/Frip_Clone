@@ -115,6 +115,7 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else {
             if frips.count == 0 {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IndicatorCollectionViewCell", for: indexPath) as! IndicatorCollectionViewCell
+                cell.indicator.startAnimating()
                 return cell
             } else {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
