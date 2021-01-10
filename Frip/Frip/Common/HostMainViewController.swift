@@ -38,7 +38,12 @@ class HostMainViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
         CommonGetDataManager().getHostInfo(targetURL: URL(string: Constant.HOST)!, hostIdx: hostIdx, header: jwt, vc: self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     func getHostInfo(_ result: HostInfo) {
@@ -58,6 +63,7 @@ class HostMainViewController: UIViewController {
     func getFripDetail(_ result: FripDetailInfo,_ index: Int) {
         let vc = FripShowViewController(index, result)
         vc.tabBarController?.tabBar.isHidden = true
+        vc.navigationController?.navigationBar.isHidden = false
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

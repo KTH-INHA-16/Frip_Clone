@@ -8,4 +8,7 @@ struct Constant {
     static let ALL_FRIP = BASE_URL + "/frips"
     static let FRIP_CATEGORY = ALL_FRIP + "/categories"
     static let HOST = BASE_URL + "/hosts"
+    static let FRIP_LIKE = ALL_FRIP + "/likes"
+    static let HOST_LIKE = BASE_URL + "/hosts/likes"
+    
 }

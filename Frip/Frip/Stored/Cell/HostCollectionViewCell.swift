@@ -13,8 +13,11 @@ class HostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var hostNameLabel: UILabel!
     @IBOutlet weak var hostCountLabel: UILabel!
     @IBOutlet weak var bookmarkButton: UIButton!
+    @IBOutlet weak var border: UIView!
     
     var hostIdx: Int = 0
+    var save: Bool = false
+    private let jwt = UserDefaults.standard.string(forKey: "userJWT")!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,5 +29,18 @@ class HostCollectionViewCell: UICollectionViewCell {
         hostCountLabel.textColor = .lightGray
         
     }
+    
+    @IBAction func hostSaveButton(_ sender: Any) {
+        if save == true {
+            bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+            bookmarkButton.tintColor = .white
+        } else {
+            bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            bookmarkButton.tintColor = UIColor.saveColor
+        }
+        save = !save
+        CommonPostDataManager().hostLike(targetUrl: URL(string: Constant.HOST)!, idx: hostIdx, header: jwt)
+    }
+    
     
 }

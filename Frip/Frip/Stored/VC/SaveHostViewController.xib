@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SaveHostViewController" customModule="Frip" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="2HY-mN-Jhv" id="UCt-gL-za0"/>
+                <outlet property="indicator" destination="BEW-pL-0Ap" id="zDe-Mb-pYy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,11 +30,17 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="BEW-pL-0Ap">
+                    <rect key="frame" x="188.5" y="108" width="37" height="37"/>
+                    <color key="color" systemColor="systemBlueColor"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="2HY-mN-Jhv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8mt-87-odN"/>
+                <constraint firstItem="BEW-pL-0Ap" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="8tC-SH-PIV"/>
+                <constraint firstItem="BEW-pL-0Ap" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="T4c-AI-42o"/>
                 <constraint firstItem="2HY-mN-Jhv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hoM-lN-5tN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2HY-mN-Jhv" secondAttribute="bottom" id="k2f-0J-KnK"/>
                 <constraint firstItem="2HY-mN-Jhv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="qPV-C1-Dvt"/>
@@ -45,6 +52,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

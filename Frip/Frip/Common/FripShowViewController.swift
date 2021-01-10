@@ -181,7 +181,7 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
             } catch { print("image load error") }
             cell.hostIdx = detail.hostIdx
             cell.hostNameLabel.text = detail.hostName
-            cell.hostCountLabel.text = "프립\(detail.hostFripCnt) | 후기\(detail.fripReviewCnt) | 저장\(detail.fripLikeUserCnt)"
+            cell.hostCountLabel.text = "프립\(detail.hostFripCnt) | \(detail.fripReviewCnt) | 저장\(detail.fripLikeUserCnt)"
             var tag = detail.hostIdx
             if detail.fripLike == "Y" {
                 tag = tag * 10 + 1

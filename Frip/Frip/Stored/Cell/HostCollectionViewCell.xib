@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -45,7 +46,17 @@
                         <state key="normal">
                             <imageReference key="image" image="bookmark.fill" catalog="system" symbolScale="large"/>
                         </state>
+                        <connections>
+                            <action selector="hostSaveButton:" destination="gTV-IL-0wX" eventType="touchDown" id="oUF-2j-gQV"/>
+                        </connections>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5a-O7-MeL">
+                        <rect key="frame" x="10" y="147" width="255" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="jF7-ik-swz"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -53,10 +64,13 @@
                 <constraint firstItem="6JO-Jg-pBv" firstAttribute="leading" secondItem="pUh-Y9-9sY" secondAttribute="trailing" constant="15" id="4Sn-x1-B43"/>
                 <constraint firstItem="6JO-Jg-pBv" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" multiplier="0.5" id="4rh-ER-qWo"/>
                 <constraint firstItem="Hgj-ix-edF" firstAttribute="leading" secondItem="pUh-Y9-9sY" secondAttribute="trailing" constant="15" id="9jF-w8-KWd"/>
+                <constraint firstItem="X5a-O7-MeL" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="GSz-uE-6Jx"/>
                 <constraint firstItem="Hgj-ix-edF" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" multiplier="0.5" id="Ip5-80-vzu"/>
                 <constraint firstItem="Zk9-SJ-Thh" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" constant="-10" id="N6Z-cD-isQ"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="X5a-O7-MeL" secondAttribute="bottom" constant="2" id="Qnw-su-GTc"/>
                 <constraint firstItem="pUh-Y9-9sY" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="aeq-We-ebf"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="Zk9-SJ-Thh" secondAttribute="trailing" constant="20" id="cxN-HN-hIS"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="X5a-O7-MeL" secondAttribute="trailing" constant="10" id="nuj-Bc-nEx"/>
                 <constraint firstItem="6JO-Jg-pBv" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" constant="-10" id="pBF-pj-eS2"/>
                 <constraint firstItem="pUh-Y9-9sY" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="15" id="r51-5q-ubW"/>
                 <constraint firstItem="Hgj-ix-edF" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" constant="10" id="tNv-f7-lIZ"/>
@@ -64,6 +78,7 @@
             <size key="customSize" width="275" height="220"/>
             <connections>
                 <outlet property="bookmarkButton" destination="Zk9-SJ-Thh" id="ZoO-l2-OEN"/>
+                <outlet property="border" destination="X5a-O7-MeL" id="EHw-hX-lHu"/>
                 <outlet property="hostCountLabel" destination="Hgj-ix-edF" id="UR2-mv-gLz"/>
                 <outlet property="hostNameLabel" destination="6JO-Jg-pBv" id="H6G-hT-sUh"/>
                 <outlet property="image" destination="pUh-Y9-9sY" id="sio-Hz-Osd"/>
@@ -73,5 +88,8 @@
     </objects>
     <resources>
         <image name="bookmark.fill" catalog="system" width="112" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
