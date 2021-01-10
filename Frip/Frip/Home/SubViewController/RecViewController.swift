@@ -61,6 +61,11 @@ class RecViewController: BaseViewController {
             collectionView.reloadData()
         }
     }
+    
+    @objc func headerButtonTapDown(_ sender:UIButton!) {
+        userInfo = ["sort":sender.tag]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showSearch"), object: nil, userInfo: userInfo)
+    }
 
 }
 
@@ -150,6 +155,8 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
             
             header.configure(headerText[indexPath.section])
             header.buttonConfigure(headerText[indexPath.section])
+            header.button.tag = indexPath.section
+            header.button.addTarget(self, action: #selector(headerButtonTapDown(_:)), for: .touchDown)
             return header
         }
     }

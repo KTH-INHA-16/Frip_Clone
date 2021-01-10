@@ -56,6 +56,14 @@ class DailyViewController: BaseViewController {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PostButton"), object: nil, userInfo: userInfo)
     }
     
+    @objc func headerButtonTapDown(_ sender: UIButton!) {
+        let idx = sender.tag / 10
+        let what = sender.tag % 10
+        userInfo = ["category":idx,"what": what]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dailySearch"), object: nil, userInfo: userInfo)
+        
+    }
+    
     func setDelegateAndDataSource(_ view:[UICollectionView]) {
         for v in view {
             v.dataSource = self
@@ -194,6 +202,8 @@ extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegat
                 let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
                 header.configure("\(headerText[indexPath.section]) \(bigCategory[idx])")
                 header.buttonConfigure("전체보기")
+                header.button.tag = ((idx + 1) * 10) + indexPath.section
+                header.button.addTarget(self, action: #selector(headerButtonTapDown(_:)), for: .touchDown)
                 return header
             }
         } else {

@@ -102,6 +102,10 @@
 		3BCDDC7725AB3E6900CA0B67 /* SaveHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDDC7625AB3E6900CA0B67 /* SaveHost.swift */; };
 		3BCDDC7B25AB511600CA0B67 /* FripCommonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDDC7925AB511600CA0B67 /* FripCommonCollectionViewCell.swift */; };
 		3BCDDC7C25AB511600CA0B67 /* FripCommonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDDC7A25AB511600CA0B67 /* FripCommonCollectionViewCell.xib */; };
+		3BCDDC8A25AB5A7B00CA0B67 /* RecSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDDC8825AB5A7B00CA0B67 /* RecSearchViewController.swift */; };
+		3BCDDC8B25AB5A7B00CA0B67 /* RecSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDDC8925AB5A7B00CA0B67 /* RecSearchViewController.xib */; };
+		3BCDDC8F25AB5F8300CA0B67 /* DailySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDDC8D25AB5F8300CA0B67 /* DailySearchViewController.swift */; };
+		3BCDDC9025AB5F8300CA0B67 /* DailySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDDC8E25AB5F8300CA0B67 /* DailySearchViewController.xib */; };
 		3BD4CCCE25A8A441009B03C6 /* CommentShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD4CCCC25A8A441009B03C6 /* CommentShowCollectionViewCell.swift */; };
 		3BE3FE6525A31E8C00F49E0C /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */; };
 		3BEEBBE725A88A2400343B34 /* CommentHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEBBE525A88A2400343B34 /* CommentHeaderCollectionViewCell.swift */; };
@@ -234,6 +238,10 @@
 		3BCDDC7625AB3E6900CA0B67 /* SaveHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveHost.swift; sourceTree = "<group>"; };
 		3BCDDC7925AB511600CA0B67 /* FripCommonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripCommonCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BCDDC7A25AB511600CA0B67 /* FripCommonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FripCommonCollectionViewCell.xib; sourceTree = "<group>"; };
+		3BCDDC8825AB5A7B00CA0B67 /* RecSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecSearchViewController.swift; sourceTree = "<group>"; };
+		3BCDDC8925AB5A7B00CA0B67 /* RecSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecSearchViewController.xib; sourceTree = "<group>"; };
+		3BCDDC8D25AB5F8300CA0B67 /* DailySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySearchViewController.swift; sourceTree = "<group>"; };
+		3BCDDC8E25AB5F8300CA0B67 /* DailySearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailySearchViewController.xib; sourceTree = "<group>"; };
 		3BD4CCCC25A8A441009B03C6 /* CommentShowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentShowCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BD4CCCD25A8A441009B03C6 /* CommentShowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentShowCollectionViewCell.xib; sourceTree = "<group>"; };
 		3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -718,6 +726,10 @@
 				3BCDDC5E25AB14BD00CA0B67 /* Cell */,
 				3BF8BACD25AAB3AA005E3FB7 /* SearchViewController.swift */,
 				3BF8BACE25AAB3AA005E3FB7 /* SearchViewController.xib */,
+				3BCDDC8825AB5A7B00CA0B67 /* RecSearchViewController.swift */,
+				3BCDDC8925AB5A7B00CA0B67 /* RecSearchViewController.xib */,
+				3BCDDC8D25AB5F8300CA0B67 /* DailySearchViewController.swift */,
+				3BCDDC8E25AB5F8300CA0B67 /* DailySearchViewController.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -850,6 +862,7 @@
 				3BFDD02E25A707520079B29D /* FripImageCollectionViewCell.xib in Resources */,
 				3B24D81A25A8B76300A4A002 /* CommentShowCollectionViewCell.xib in Resources */,
 				3B3B5CD725A43FCF00719FA7 /* CategorySearchViewController.xib in Resources */,
+				3BCDDC8B25AB5A7B00CA0B67 /* RecSearchViewController.xib in Resources */,
 				3BF8BAC225A9A31B005E3FB7 /* HostTextCollectionViewCell.xib in Resources */,
 				3B0947AD25A8702D0084EBC9 /* FripIntroCollectionViewCell.xib in Resources */,
 				3BF8BAE125AABC21005E3FB7 /* OptionTableViewCell.xib in Resources */,
@@ -873,6 +886,7 @@
 				3BF8BAC725A9A446005E3FB7 /* HostButtonCollectionViewCell.xib in Resources */,
 				3B24D81725A8B74B00A4A002 /* CommentHeaderCollectionViewCell.xib in Resources */,
 				3B066B5D25A23C3E002100A9 /* DailyViewController.xib in Resources */,
+				3BCDDC9025AB5F8300CA0B67 /* DailySearchViewController.xib in Resources */,
 				3B7EF04725A2E3C70003C210 /* BtnCollectionViewCell.xib in Resources */,
 				3B3F31C625A339EC00EE22C5 /* CategoryCollectionViewCell.xib in Resources */,
 				3BFDD03325A707FE0079B29D /* FripShowCollectionViewCell.xib in Resources */,
@@ -994,6 +1008,7 @@
 				3BD4CCCE25A8A441009B03C6 /* CommentShowCollectionViewCell.swift in Sources */,
 				3BCDDC6E25AB368200CA0B67 /* StoredGetManager.swift in Sources */,
 				3B56C55625A6D62900C45B0E /* HomeGetResponse.swift in Sources */,
+				3BCDDC8A25AB5A7B00CA0B67 /* RecSearchViewController.swift in Sources */,
 				3B7772B725A18D5E00CF2905 /* FeedViewController.swift in Sources */,
 				3BFDD02D25A707520079B29D /* FripImageCollectionViewCell.swift in Sources */,
 				3B7772BC25A18D6800CF2905 /* StoredViewController.swift in Sources */,
@@ -1011,6 +1026,7 @@
 				3BF53A4E25AADB570045C400 /* BuyGetDataManager.swift in Sources */,
 				3BCDDC7325AB3A7600CA0B67 /* SaveFrip.swift in Sources */,
 				3BC4DDB825A84455000ABF0C /* CommonGetDataManager.swift in Sources */,
+				3BCDDC8F25AB5F8300CA0B67 /* DailySearchViewController.swift in Sources */,
 				3B3F321425A42FE400EE22C5 /* HostCollectionViewCell.swift in Sources */,
 				3BE3FE6525A31E8C00F49E0C /* HeaderCollectionReusableView.swift in Sources */,
 				3B77726F25A0A70A00CF2905 /* Color.swift in Sources */,

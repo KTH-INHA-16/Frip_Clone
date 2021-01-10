@@ -13,7 +13,8 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 150, height: 20))
     var searchView: UIView = UIView()
-    
+    let headerText: [String] = ["","가장 인기 있는 프립 🥇", "신규 프립", "후기가 많은 프립"]
+    let dailyText: [String] = ["인기","신규"]
     var fripIndex: Int = 0
     var fripDetail: FripDetailInfo?
     var bigCategory: String = ""
@@ -53,6 +54,9 @@ class HomeViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(presentVC(_:)), name: NSNotification.Name("PostButton"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(scrollVC(_:)), name: NSNotification.Name("hide"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(detailVC(_:)), name: NSNotification.Name("detail"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showSearch(_:)), name: NSNotification.Name("showSearch"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(dailySearch(_:)), name: NSNotification.Name("dailySearch"), object: nil)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -62,6 +66,19 @@ class HomeViewController: BaseViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    @objc func dailySearch(_ notification: Notification) {
+        guard let idx = notification.userInfo?["category"] as? Int else {return}
+        guard let what = notification.userInfo?["what"] as? Int else {return}
+        let vc = DailySearchViewController(sort: idx, titleIdx: what)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func showSearch(_ notification: Notification) {
+        guard let idx = notification.userInfo?["sort"] as? Int else {return}
+        let vc = RecSearchViewController(sort: idx, title: headerText[idx])
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func detailVC(_ notification: Notification) {
@@ -127,7 +144,6 @@ class HomeViewController: BaseViewController {
                 rightView.tintColor = UIColor.darkGray
             }
         }
-        print(bar.placeholder)
     }
     
     func getResult(_ result: FripDetailInfo) {
