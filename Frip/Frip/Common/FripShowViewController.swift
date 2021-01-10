@@ -43,6 +43,9 @@ class FripShowViewController: BaseViewController {
         
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.navigationBar.isHidden = false
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "house"), style: .plain, target: self, action: #selector(homeButtonTap))
+        self.navigationItem.rightBarButtonItem?.tintColor = .black
 
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -73,6 +76,12 @@ class FripShowViewController: BaseViewController {
         }
     }
     
+    @IBAction func joinTouchDownAction(_ sender: Any) {
+        let vc = BuyOptionViewController(fripIdx)
+        vc.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func saveButtonTouchDown(_ sender: Any) {
         if detail.fripLike == "Y" {
             detail.fripLike = "N"
@@ -92,6 +101,10 @@ class FripShowViewController: BaseViewController {
         }
     }
     
+    @objc func homeButtonTap() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     @objc func saveButtonTap(_ sender:UIButton!) {
         let hostIdx = sender.tag / 10
         let state = sender.tag % 10
@@ -99,17 +112,13 @@ class FripShowViewController: BaseViewController {
         if state == 1 {
             sender.tag = hostIdx * 10
             sender.tintColor = UIColor.saveColor
-            sender.borderColor = UIColor.saveColor
             sender.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
         } else {
             sender.tag = hostIdx * 10 + 1
             sender.tintColor = UIColor.lightGray
-            sender.borderWidth = 0.5
-            sender.borderColor = UIColor.gray
             sender.setImage(UIImage(systemName: "bookmark"), for: .normal)
         }
-        //CommonPostDataManager().hostLikePost(targetUrl: URL(string: Constant.HOST), idx: hostIdx, header: jwt, VC: self)
-        //구현되면 추가
+        CommonPostDataManager().hostLikePost(targetUrl: URL(string: Constant.HOST)!, idx: hostIdx, header: jwt, VC: self)
     }
     
     @objc func showCommentTap(_ sender:UIButton!) {
@@ -177,14 +186,11 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
             if detail.fripLike == "Y" {
                 tag = tag * 10 + 1
                 cell.bookmarkButton.tintColor = UIColor.saveColor
-                cell.borderColor = UIColor.saveColor
                 cell.bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
             }
             else {
                 tag = tag * 10
                 cell.bookmarkButton.tintColor = UIColor.lightGray
-                cell.borderWidth = 0.5
-                cell.borderColor = UIColor.gray
                 cell.bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
             }
             cell.bookmarkButton.tag = tag

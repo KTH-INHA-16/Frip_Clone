@@ -95,24 +95,6 @@ class BestViewController: BaseViewController {
             }
         }
     }
-    
-    @objc func saveButtonTap(_ sender: UIButton!) {
-        let save = sender.tag % 10
-        let idx = sender.tag / 10
-        if save != 0 {
-            sender.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
-            sender.tintColor = UIColor.saveColor
-            HomePostResponse().fripSavingBestPost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
-            sender.tag = idx * 10 + 0
-            print("save")
-        } else {
-            sender.setImage(UIImage(systemName: "bookmark"), for: .normal)
-            sender.tintColor = .white
-            HomePostResponse().fripSavingBestPost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
-            sender.tag = idx * 10 + 1
-            print("unsave")
-        }
-    }
 }
 
 extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -159,7 +141,6 @@ extension BestViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 cell.point.text = frip.rate
                 cell.shortDescription.text = frip.fripHeader
                 cell.title.text = frip.fripTitle
-                cell.saveButton.addTarget(self, action: #selector(saveButtonTap(_:)), for: .touchDown)
                 return cell
             }
         }

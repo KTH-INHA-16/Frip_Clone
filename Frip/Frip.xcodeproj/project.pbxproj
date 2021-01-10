@@ -93,9 +93,17 @@
 		3BC4DDB325A82875000ABF0C /* CategorySearchGetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4DDB225A82875000ABF0C /* CategorySearchGetManager.swift */; };
 		3BC4DDB825A84455000ABF0C /* CommonGetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4DDB725A84455000ABF0C /* CommonGetDataManager.swift */; };
 		3BC4DDBC25A8491F000ABF0C /* FripDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4DDBB25A8491F000ABF0C /* FripDetailResponse.swift */; };
+		3BCDDC6125AB14D000CA0B67 /* NothingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDDC5F25AB14D000CA0B67 /* NothingCollectionViewCell.swift */; };
+		3BCDDC6225AB14D000CA0B67 /* NothingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDDC6025AB14D000CA0B67 /* NothingCollectionViewCell.xib */; };
+		3BCDDC6725AB155800CA0B67 /* SearchGetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDDC6625AB155800CA0B67 /* SearchGetDataManager.swift */; };
+		3BCDDC6A25AB1AAE00CA0B67 /* SearchPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDDC6925AB1AAE00CA0B67 /* SearchPostDataManager.swift */; };
 		3BD4CCCE25A8A441009B03C6 /* CommentShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD4CCCC25A8A441009B03C6 /* CommentShowCollectionViewCell.swift */; };
 		3BE3FE6525A31E8C00F49E0C /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */; };
 		3BEEBBE725A88A2400343B34 /* CommentHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEBBE525A88A2400343B34 /* CommentHeaderCollectionViewCell.swift */; };
+		3BF53A4A25AADADE0045C400 /* FripOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53A4925AADADE0045C400 /* FripOption.swift */; };
+		3BF53A4E25AADB570045C400 /* BuyGetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53A4D25AADB570045C400 /* BuyGetDataManager.swift */; };
+		3BF53A5325AAE00A0045C400 /* OptionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53A5125AAE00A0045C400 /* OptionHeaderTableViewCell.swift */; };
+		3BF53A5425AAE00A0045C400 /* OptionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF53A5225AAE00A0045C400 /* OptionHeaderTableViewCell.xib */; };
 		3BF8BAB825A994A4005E3FB7 /* HostMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BAB625A994A4005E3FB7 /* HostMainViewController.swift */; };
 		3BF8BAB925A994A4005E3FB7 /* HostMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BAB725A994A4005E3FB7 /* HostMainViewController.xib */; };
 		3BF8BABC25A99A34005E3FB7 /* FripCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BABB25A99A34005E3FB7 /* FripCollectionReusableView.swift */; };
@@ -104,6 +112,14 @@
 		3BF8BAC625A9A446005E3FB7 /* HostButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BAC425A9A446005E3FB7 /* HostButtonCollectionViewCell.swift */; };
 		3BF8BAC725A9A446005E3FB7 /* HostButtonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BAC525A9A446005E3FB7 /* HostButtonCollectionViewCell.xib */; };
 		3BF8BACA25AA909A005E3FB7 /* HostInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BAC925AA909A005E3FB7 /* HostInfoResponse.swift */; };
+		3BF8BACF25AAB3AA005E3FB7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BACD25AAB3AA005E3FB7 /* SearchViewController.swift */; };
+		3BF8BAD025AAB3AA005E3FB7 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BACE25AAB3AA005E3FB7 /* SearchViewController.xib */; };
+		3BF8BADA25AAB92F005E3FB7 /* BuyOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BAD825AAB92F005E3FB7 /* BuyOptionViewController.swift */; };
+		3BF8BADB25AAB92F005E3FB7 /* BuyOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BAD925AAB92F005E3FB7 /* BuyOptionViewController.xib */; };
+		3BF8BAE025AABC21005E3FB7 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BADE25AABC21005E3FB7 /* OptionTableViewCell.swift */; };
+		3BF8BAE125AABC21005E3FB7 /* OptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BADF25AABC21005E3FB7 /* OptionTableViewCell.xib */; };
+		3BF8BAEB25AAD11A005E3FB7 /* OptionClickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF8BAE925AAD11A005E3FB7 /* OptionClickTableViewCell.swift */; };
+		3BF8BAEC25AAD11A005E3FB7 /* OptionClickTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF8BAEA25AAD11A005E3FB7 /* OptionClickTableViewCell.xib */; };
 		3BFDD01C25A6F9350079B29D /* HomePostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD01B25A6F9350079B29D /* HomePostResponse.swift */; };
 		3BFDD01F25A6FA020079B29D /* FripSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD01E25A6FA020079B29D /* FripSave.swift */; };
 		3BFDD02825A6FE0E0079B29D /* IndicatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */; };
@@ -204,11 +220,19 @@
 		3BC4DDB225A82875000ABF0C /* CategorySearchGetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchGetManager.swift; sourceTree = "<group>"; };
 		3BC4DDB725A84455000ABF0C /* CommonGetDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonGetDataManager.swift; sourceTree = "<group>"; };
 		3BC4DDBB25A8491F000ABF0C /* FripDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripDetailResponse.swift; sourceTree = "<group>"; };
+		3BCDDC5F25AB14D000CA0B67 /* NothingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NothingCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BCDDC6025AB14D000CA0B67 /* NothingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingCollectionViewCell.xib; sourceTree = "<group>"; };
+		3BCDDC6625AB155800CA0B67 /* SearchGetDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGetDataManager.swift; sourceTree = "<group>"; };
+		3BCDDC6925AB1AAE00CA0B67 /* SearchPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPostDataManager.swift; sourceTree = "<group>"; };
 		3BD4CCCC25A8A441009B03C6 /* CommentShowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentShowCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BD4CCCD25A8A441009B03C6 /* CommentShowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentShowCollectionViewCell.xib; sourceTree = "<group>"; };
 		3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		3BEEBBE525A88A2400343B34 /* CommentHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BEEBBE625A88A2400343B34 /* CommentHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		3BF53A4925AADADE0045C400 /* FripOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripOption.swift; sourceTree = "<group>"; };
+		3BF53A4D25AADB570045C400 /* BuyGetDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyGetDataManager.swift; sourceTree = "<group>"; };
+		3BF53A5125AAE00A0045C400 /* OptionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		3BF53A5225AAE00A0045C400 /* OptionHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		3BF8BAB625A994A4005E3FB7 /* HostMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostMainViewController.swift; sourceTree = "<group>"; };
 		3BF8BAB725A994A4005E3FB7 /* HostMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostMainViewController.xib; sourceTree = "<group>"; };
 		3BF8BABB25A99A34005E3FB7 /* FripCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -217,6 +241,14 @@
 		3BF8BAC425A9A446005E3FB7 /* HostButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BF8BAC525A9A446005E3FB7 /* HostButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostButtonCollectionViewCell.xib; sourceTree = "<group>"; };
 		3BF8BAC925AA909A005E3FB7 /* HostInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostInfoResponse.swift; sourceTree = "<group>"; };
+		3BF8BACD25AAB3AA005E3FB7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3BF8BACE25AAB3AA005E3FB7 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		3BF8BAD825AAB92F005E3FB7 /* BuyOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyOptionViewController.swift; sourceTree = "<group>"; };
+		3BF8BAD925AAB92F005E3FB7 /* BuyOptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyOptionViewController.xib; sourceTree = "<group>"; };
+		3BF8BADE25AABC21005E3FB7 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
+		3BF8BADF25AABC21005E3FB7 /* OptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionTableViewCell.xib; sourceTree = "<group>"; };
+		3BF8BAE925AAD11A005E3FB7 /* OptionClickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionClickTableViewCell.swift; sourceTree = "<group>"; };
+		3BF8BAEA25AAD11A005E3FB7 /* OptionClickTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionClickTableViewCell.xib; sourceTree = "<group>"; };
 		3BFDD01B25A6F9350079B29D /* HomePostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostResponse.swift; sourceTree = "<group>"; };
 		3BFDD01E25A6FA020079B29D /* FripSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripSave.swift; sourceTree = "<group>"; };
 		3BFDD02625A6FE0E0079B29D /* IndicatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -363,6 +395,8 @@
 		3B7771F825A0726000CF2905 /* Frip */ = {
 			isa = PBXGroup;
 			children = (
+				3BF8BAD225AAB908005E3FB7 /* Buy */,
+				3BF8BACC25AAB390005E3FB7 /* Search */,
 				3B56C54C25A60B0800C45B0E /* Common */,
 				3B3B5CCE25A43EE400719FA7 /* CategorySearch */,
 				3B7772A625A18D0D00CF2905 /* MyInfo */,
@@ -575,6 +609,24 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		3BCDDC5E25AB14BD00CA0B67 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDDC5F25AB14D000CA0B67 /* NothingCollectionViewCell.swift */,
+				3BCDDC6025AB14D000CA0B67 /* NothingCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3BCDDC6525AB154A00CA0B67 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDDC6625AB155800CA0B67 /* SearchGetDataManager.swift */,
+				3BCDDC6925AB1AAE00CA0B67 /* SearchPostDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		3BEF49D025A8878C00BC93BF /* FripShowCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,6 +653,22 @@
 			path = FripCommentCell;
 			sourceTree = "<group>";
 		};
+		3BF53A4725AADAC80045C400 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3BF53A4D25AADB570045C400 /* BuyGetDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		3BF53A4825AADAD20045C400 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3BF53A4925AADADE0045C400 /* FripOption.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		3BF8BABE25A9A2ED005E3FB7 /* HostMainCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,6 +678,42 @@
 				3BF8BAC525A9A446005E3FB7 /* HostButtonCollectionViewCell.xib */,
 			);
 			path = HostMainCell;
+			sourceTree = "<group>";
+		};
+		3BF8BACC25AAB390005E3FB7 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDDC6525AB154A00CA0B67 /* DataManager */,
+				3BCDDC5E25AB14BD00CA0B67 /* Cell */,
+				3BF8BACD25AAB3AA005E3FB7 /* SearchViewController.swift */,
+				3BF8BACE25AAB3AA005E3FB7 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		3BF8BAD225AAB908005E3FB7 /* Buy */ = {
+			isa = PBXGroup;
+			children = (
+				3BF53A4825AADAD20045C400 /* Entity */,
+				3BF53A4725AADAC80045C400 /* DataManager */,
+				3BF8BADD25AABC04005E3FB7 /* Cell */,
+				3BF8BAD825AAB92F005E3FB7 /* BuyOptionViewController.swift */,
+				3BF8BAD925AAB92F005E3FB7 /* BuyOptionViewController.xib */,
+			);
+			path = Buy;
+			sourceTree = "<group>";
+		};
+		3BF8BADD25AABC04005E3FB7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3BF8BADE25AABC21005E3FB7 /* OptionTableViewCell.swift */,
+				3BF8BADF25AABC21005E3FB7 /* OptionTableViewCell.xib */,
+				3BF8BAE925AAD11A005E3FB7 /* OptionClickTableViewCell.swift */,
+				3BF8BAEA25AAD11A005E3FB7 /* OptionClickTableViewCell.xib */,
+				3BF53A5125AAE00A0045C400 /* OptionHeaderTableViewCell.swift */,
+				3BF53A5225AAE00A0045C400 /* OptionHeaderTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		3BFDD02125A6FDE50079B29D /* Cell */ = {
@@ -701,6 +805,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF8BADB25AAB92F005E3FB7 /* BuyOptionViewController.xib in Resources */,
 				3B885A5E25A5871E00C73854 /* DailyBigCollectionViewCell.xib in Resources */,
 				3B7772C225A18D7400CF2905 /* MyInfoViewController.xib in Resources */,
 				3B3F31CC25A37B6100EE22C5 /* labelCollectionViewCell.xib in Resources */,
@@ -716,8 +821,10 @@
 				3B3B5CD725A43FCF00719FA7 /* CategorySearchViewController.xib in Resources */,
 				3BF8BAC225A9A31B005E3FB7 /* HostTextCollectionViewCell.xib in Resources */,
 				3B0947AD25A8702D0084EBC9 /* FripIntroCollectionViewCell.xib in Resources */,
+				3BF8BAE125AABC21005E3FB7 /* OptionTableViewCell.xib in Resources */,
 				3B1AA24F25A5B1590020E967 /* DailyButtonCollectionViewCell.xib in Resources */,
 				3B066B6225A23C60002100A9 /* BestViewController.xib in Resources */,
+				3BF53A5425AAE00A0045C400 /* OptionHeaderTableViewCell.xib in Resources */,
 				3BFDD02925A6FE0E0079B29D /* IndicatorCollectionViewCell.xib in Resources */,
 				3B3F321025A41FC900EE22C5 /* NoneCollectionViewCell.xib in Resources */,
 				3B7EF0F125A2E7500003C210 /* MainCollectionViewCell.xib in Resources */,
@@ -727,6 +834,7 @@
 				3B77724C25A0A54600CF2905 /* NotoSansCJKkr-Medium.otf in Resources */,
 				3BF8BAB925A994A4005E3FB7 /* HostMainViewController.xib in Resources */,
 				3B44FE0525A5F85500B85451 /* BestButtonCollectionViewCell.xib in Resources */,
+				3BCDDC6225AB14D000CA0B67 /* NothingCollectionViewCell.xib in Resources */,
 				3B77724E25A0A54600CF2905 /* NotoSansCJKkr-Bold.otf in Resources */,
 				3B56C55125A61C9B00C45B0E /* FripShowViewController.xib in Resources */,
 				3BFDD03E25A725870079B29D /* FripCommentCollectionViewCell.xib in Resources */,
@@ -739,7 +847,9 @@
 				3B3F321525A42FE400EE22C5 /* HostCollectionViewCell.xib in Resources */,
 				3B066B4D25A2375E002100A9 /* HomeViewController.xib in Resources */,
 				3B3F320425A398A800EE22C5 /* SaveHostViewController.xib in Resources */,
+				3BF8BAD025AAB3AA005E3FB7 /* SearchViewController.xib in Resources */,
 				3B066B5825A23C33002100A9 /* RecViewController.xib in Resources */,
+				3BF8BAEC25AAD11A005E3FB7 /* OptionClickTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,9 +911,12 @@
 				3BF8BACA25AA909A005E3FB7 /* HostInfoResponse.swift in Sources */,
 				3B1AA24E25A5B1590020E967 /* DailyButtonCollectionViewCell.swift in Sources */,
 				3B885A5D25A5871E00C73854 /* DailyBigCollectionViewCell.swift in Sources */,
+				3BF53A5325AAE00A0045C400 /* OptionHeaderTableViewCell.swift in Sources */,
 				3B24D81D25A9452800A4A002 /* FripCommentResponse.swift in Sources */,
+				3BCDDC6A25AB1AAE00CA0B67 /* SearchPostDataManager.swift in Sources */,
 				3B77727125A0A70A00CF2905 /* Date.swift in Sources */,
 				3B066B5C25A23C3E002100A9 /* DailyViewController.swift in Sources */,
+				3BF8BADA25AAB92F005E3FB7 /* BuyOptionViewController.swift in Sources */,
 				3B885A5825A578DF00C73854 /* AutoLogInResponse.swift in Sources */,
 				3B3F320F25A41FC900EE22C5 /* NoneCollectionViewCell.swift in Sources */,
 				3B3F31CB25A37B6100EE22C5 /* labelCollectionViewCell.swift in Sources */,
@@ -812,6 +925,8 @@
 				3B0947B825A8846C0084EBC9 /* FripCommentViewController.swift in Sources */,
 				3B7EF04625A2E3C70003C210 /* BtnCollectionViewCell.swift in Sources */,
 				3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */,
+				3BF8BAEB25AAD11A005E3FB7 /* OptionClickTableViewCell.swift in Sources */,
+				3BF53A4A25AADADE0045C400 /* FripOption.swift in Sources */,
 				3B77727325A0A70A00CF2905 /* UIButton.swift in Sources */,
 				3B77729B25A0E45A00CF2905 /* MainDataManager.swift in Sources */,
 				3BF8BAC625A9A446005E3FB7 /* HostButtonCollectionViewCell.swift in Sources */,
@@ -828,8 +943,11 @@
 				3B77727425A0A70A00CF2905 /* UIFont.swift in Sources */,
 				3B066B4C25A2375E002100A9 /* HomeViewController.swift in Sources */,
 				3B77729725A0E08800CF2905 /* SignInResponse.swift in Sources */,
+				3BF8BACF25AAB3AA005E3FB7 /* SearchViewController.swift in Sources */,
 				3B77727E25A0A88E00CF2905 /* Device.swift in Sources */,
 				3B7EF0F025A2E7500003C210 /* MainCollectionViewCell.swift in Sources */,
+				3BF8BAE025AABC21005E3FB7 /* OptionTableViewCell.swift in Sources */,
+				3BCDDC6125AB14D000CA0B67 /* NothingCollectionViewCell.swift in Sources */,
 				3B0947B025A880490084EBC9 /* CommonPostDataManager.swift in Sources */,
 				3B3B5CD625A43FCF00719FA7 /* CategorySearchViewController.swift in Sources */,
 				3B77727025A0A70A00CF2905 /* String.swift in Sources */,
@@ -855,11 +973,13 @@
 				3B7772C125A18D7400CF2905 /* MyInfoViewController.swift in Sources */,
 				3B3B5CDC25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift in Sources */,
 				3BFDD03D25A725870079B29D /* FripCommentCollectionViewCell.swift in Sources */,
+				3BF53A4E25AADB570045C400 /* BuyGetDataManager.swift in Sources */,
 				3BC4DDB825A84455000ABF0C /* CommonGetDataManager.swift in Sources */,
 				3B3F321425A42FE400EE22C5 /* HostCollectionViewCell.swift in Sources */,
 				3BE3FE6525A31E8C00F49E0C /* HeaderCollectionReusableView.swift in Sources */,
 				3B77726F25A0A70A00CF2905 /* Color.swift in Sources */,
 				3B3F320925A398B300EE22C5 /* SaveFripViewController.swift in Sources */,
+				3BCDDC6725AB155800CA0B67 /* SearchGetDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -61,24 +61,6 @@ class RecViewController: BaseViewController {
             collectionView.reloadData()
         }
     }
-    
-    @objc func saveButtonTap(_ sender: UIButton!) {
-        let save = sender.tag % 10
-        let idx = sender.tag / 10
-        if save != 0 {
-            sender.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
-            sender.tintColor = UIColor.saveColor
-            HomePostResponse().fripSavingPost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
-            sender.tag = idx * 10 + 0
-            print("save")
-        } else {
-            sender.setImage(UIImage(systemName: "bookmark"), for: .normal)
-            sender.tintColor = .white
-            HomePostResponse().fripSavingPost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
-            sender.tag = idx * 10 + 1
-            print("unsave")
-        }
-    }
 
 }
 
@@ -111,8 +93,7 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
             else { frip = commentFrips[indexPath.row] }
             do {
                 let url = URL(string: frip.fripPhotoUrl)!
-                let realUrl = URL(string: "https://dummyimage.com"+url.relativePath)!
-                let data = try Data(contentsOf: realUrl)
+                let data = try Data(contentsOf: url)
                 cell.image.image = UIImage(data: data)
             } catch { print("image load error") }
             cell.saveButton.tag = frip.fripIdx
@@ -132,7 +113,6 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
             cell.point.text = frip.rate
             cell.shortDescription.text = frip.fripHeader
             cell.title.text = frip.fripTitle
-            cell.saveButton.addTarget(self, action: #selector(saveButtonTap(_:)), for: .touchDown)
             return cell
         }
     }

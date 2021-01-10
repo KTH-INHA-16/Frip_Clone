@@ -11,7 +11,8 @@ class HomeViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
-    lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
+    lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 150, height: 20))
+    var searchView: UIView = UIView()
     
     var fripIndex: Int = 0
     var fripDetail: FripDetailInfo?
@@ -22,7 +23,8 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        searchView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        searchView.backgroundColor = .systemGray6
         setSearchBar()
         scrollView.contentSize = CGSize(width: self.view.bounds.width * 3, height: self.view.bounds.height)
         scrollView.isPagingEnabled = true
@@ -44,8 +46,6 @@ class HomeViewController: BaseViewController {
             vc.didMove(toParent: self)
             idx += 1
         }
-        
-        searchBar.delegate = self
         collectionView.register(UINib(nibName: "labelCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "labelCollectionViewCell")
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -53,6 +53,10 @@ class HomeViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(presentVC(_:)), name: NSNotification.Name("PostButton"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(scrollVC(_:)), name: NSNotification.Name("hide"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(detailVC(_:)), name: NSNotification.Name("detail"), object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setSearchBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -83,22 +87,25 @@ class HomeViewController: BaseViewController {
         if velo != "up" {
             UIView.animate(withDuration: 0.1, animations: {
                 self.navigationController?.setNavigationBarHidden(false, animated: false)
+                self.scrollView.frame.origin.y = 138
             })
         } else {
             UIView.animate(withDuration: 0.1, animations: {
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.scrollView.frame.origin.y = 88
             })
         }
     }
     
     func setSearchBar(){
         //서치바 만들기
-        let searchBar = UISearchBar()
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 150, height: 30))
         searchBar.cornerRadius = 50
         searchBar.placeholder = "검색어를 입력해 주세요"
         //네비게이션에 서치바 넣기
         self.navigationController?.navigationBar.topItem?.titleView = searchBar
-        
+        let bar = self.navigationController?.navigationBar.topItem?.titleView as! UISearchBar
+        bar.delegate = self
         
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
             //서치바 백그라운드 컬러
@@ -120,6 +127,7 @@ class HomeViewController: BaseViewController {
                 rightView.tintColor = UIColor.darkGray
             }
         }
+        print(bar.placeholder)
     }
     
     func getResult(_ result: FripDetailInfo) {
@@ -130,13 +138,38 @@ class HomeViewController: BaseViewController {
 }
 
 extension HomeViewController: UISearchBarDelegate {
+    
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        let search = self.navigationController?.navigationBar.topItem?.titleView as! UISearchBar
-        search.showsCancelButton = true
+        print("hellosdfdsfas")
+        self.view.addSubview(searchView)
+        let bar = self.navigationController?.navigationBar.topItem?.titleView as! UISearchBar
+        bar.setShowsCancelButton(true, animated: false)
+        bar.showsCancelButton = true
+        if let cancelButton = bar.value(forKey: "cancelButton") as? UIButton {
+            cancelButton.setTitle("취소", for: .normal)
+            cancelButton.setTitleColor(.black, for: .normal)
+        }
     }
     
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
+        print("취소")
+        searchView.removeFromSuperview()
+        let bar = self.navigationController?.navigationBar.topItem?.titleView as! UISearchBar
+        bar.endEditing(true)
+        bar.showsCancelButton = false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(searchView)
+        if let text = searchBar.text {
+            let search = text.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !search.isEmpty {
+                let vc = SearchViewController(search: search)
+                self.navigationController?.pushViewController(vc, animated: true)
+                
+            }
+        }
     }
 }
 
@@ -151,10 +184,12 @@ extension HomeViewController: UIScrollViewDelegate {
         if velocity.y > 0 {
             UIView.animate(withDuration: 0.1, animations: {
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
+                scrollView.frame.origin.y = 88
             })
         } else {
             UIView.animate(withDuration: 0.1, animations: {
                 self.navigationController?.setNavigationBarHidden(false, animated: false)
+                scrollView.frame.origin.y = 138
             })
         }
     }

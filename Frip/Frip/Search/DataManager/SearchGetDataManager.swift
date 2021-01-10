@@ -1,15 +1,16 @@
 //
-//  CategorySearchGetManager.swift
+//  SearchGetDataManager.swift
 //  Frip
 //
-//  Created by 김태훈 on 2021/01/08.
+//  Created by 김태훈 on 2021/01/10.
 //
 
+import Foundation
 import Alamofire
 
-class CategorySearchGetManager {
-    func getDetailCategory(targetURL: URL,idx: Int ,start: Int,end:Int,header:String, vc: CategorySearchViewController) {
-        let url =  URL(string: targetURL.absoluteString+"/\(idx)?order=0&start=\(start)&end=\(end)")!
+class SearchGetDataManager {
+    func getAllFrips(targetURL:URL,search:String,header:String,vc:SearchViewController) {
+        let url = URL(string: targetURL.absoluteString + "?search=\(search)")!
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":header])
             .validate()
             .responseDecodable(of: HomeFrips.self) { response in
@@ -17,18 +18,18 @@ class CategorySearchGetManager {
                 case .success(let result):
                     switch result.isSuccess {
                     case true:
-                        print("getDetailCategory success")
-                        vc.getFrips(results: result.result)
+                        vc.getFrips(result.result)
                     case false:
                         print("no data")
                     }
                 case .failure(_):
-                    print("error: getDetailCategory error")
+                    print("error: error")
                 }
             }
+        
     }
     
-    func getFripDetail(targetURL:URL,index:Int,header:String,vc:CategorySearchViewController) {
+    func getFripDetail(targetURL:URL,index:Int,header:String,vc:SearchViewController) {
         let url = URL(string: targetURL.absoluteString + "/\(index)")!
         print(url.absoluteString)
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":header])

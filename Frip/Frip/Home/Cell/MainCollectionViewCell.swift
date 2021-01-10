@@ -17,6 +17,7 @@ class MainCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var place: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
+    private let jwt = UserDefaults.standard.string(forKey: "userJWT")!
     var idx:Int = 0
     var save:Bool = false
     
@@ -41,6 +42,18 @@ class MainCollectionViewCell: UICollectionViewCell {
 
         point.font = UIFont.NotoSans(.regular, size: 10)
         point.textColor = .lightGray
+    }
+    
+    @IBAction func saveTapButton(_ sender: Any) {
+        if save == true {
+            saveButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+            saveButton.tintColor = .white
+        } else {
+            saveButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            saveButton.tintColor = UIColor.saveColor
+        }
+        save = !save
+        HomePostResponse().fripSave(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt)
     }
     
 }

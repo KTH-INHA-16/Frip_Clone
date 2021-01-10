@@ -7,9 +7,13 @@ class CategoryViewController: BaseViewController {
     let category: [[String]] = [["아웃도어","서핑","스포츠","수상레저"],["공예·DIY","댄스","요리","음료"],["피트니스","요가","필라테스","뷰티"],["클럽","스터디","토크","게임"]]
     let bigCategory: [String] = ["🏃‍♂️엑티비티","🍰배움","✨건강·뷰티","👫모임"]
     let bigText: [String] = ["엑티비티","배움","건강·뷰티","모임"]
+    var searchView: UIView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        searchView.backgroundColor = .systemGray6
 
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -21,12 +25,18 @@ class CategoryViewController: BaseViewController {
         setSearchBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        setSearchBar()
+    }
+    
     func setSearchBar(){
         //서치바 만들기
         let searchBar = UISearchBar()
         searchBar.placeholder = "프립 검색하기"
-        //네비게이션에 서치바 넣기
         self.navigationController?.navigationBar.topItem?.titleView = searchBar
+        let bar = self.navigationController?.navigationBar.topItem?.titleView as! UISearchBar
+        bar.delegate = self
+        //네비게이션에 서치바 넣기
         
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
             //서치바 백그라운드 컬러
@@ -50,6 +60,37 @@ class CategoryViewController: BaseViewController {
         }
     }
 
+}
+
+extension CategoryViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        print("hellosdfdsfas")
+        self.view.addSubview(searchView)
+        let bar = self.navigationController?.navigationBar.topItem?.titleView as! UISearchBar
+        bar.showsCancelButton = true
+        if let cancelButton = bar.value(forKey: "cancelButton") as? UIButton {
+            cancelButton.setTitle("취소", for: .normal)
+            cancelButton.setTitleColor(.black, for: .normal)
+        }
+
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchView.removeFromSuperview()
+        let bar = self.navigationController?.navigationBar.topItem?.titleView as! UISearchBar
+        bar.endEditing(true)
+        bar.showsCancelButton = false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let text = searchBar.text {
+            let search = text.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !search.isEmpty {
+                let vc = SearchViewController(search: search)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
 }
 
 extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {

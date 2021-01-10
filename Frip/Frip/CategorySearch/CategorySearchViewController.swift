@@ -22,7 +22,8 @@ class CategorySearchViewController: BaseViewController {
     var smallCategory: String = ""
     var bigCategoryIdx: Int = 0
     var smallCategoryIdx: Int = 0
-    var userInfo: [AnyHashable: Any]?
+    lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 150, height: 20))
+    var searchView: UIView = UIView()
     private let jwt = UserDefaults.standard.string(forKey: "userJWT")!
     
     init(_ bigCategory:String,_ smallCategory: String) {
@@ -57,7 +58,8 @@ class CategorySearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.tintColor = .black
+        searchView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        searchView.backgroundColor = .systemGray6
         
         bigCategoryButton.setTitle("\(bigCategory) ", for: .normal)
         
@@ -77,34 +79,93 @@ class CategorySearchViewController: BaseViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        setSearchBar()
+    }
+    
+    
+    func setSearchBar(){
+        //서치바 만들기
+        print("setSearch Bar")
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+        searchBar.placeholder = "프립 검색하기"
+        self.navigationController?.navigationBar.topItem?.titleView = searchBar
+        let bar = self.navigationController?.navigationBar.topItem?.titleView as! UISearchBar
+        bar.delegate = self
+        print(bar)
+        //네비게이션에 서치바 넣기
+        
+        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            //서치바 백그라운드 컬러
+            textfield.backgroundColor = UIColor.white
+            //플레이스홀더 글씨 색 정하기
+            textfield.attributedPlaceholder = NSAttributedString(string: textfield.placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+            //서치바 텍스트입력시 색 정하기
+            textfield.textColor = UIColor.black
+            //왼쪽 아이콘 이미지넣기
+            if let leftView = textfield.leftView as? UIImageView {
+                leftView.image = leftView.image?.withRenderingMode(.alwaysTemplate)
+                //이미지 틴트컬러 정하기
+                leftView.tintColor = UIColor.black
+            }
+            //오른쪽 x버튼 이미지넣기
+            if let rightView = textfield.rightView as? UIImageView {
+                rightView.image = rightView.image?.withRenderingMode(.alwaysTemplate)
+                //이미지 틴트 정하기
+                rightView.tintColor = UIColor.black
+            }
+        }
+    }
+    
     func getFrips(results: [Frip]) {
         for res in results {
             frips.append(res)
         }
-        var indexPaths: [NSIndexPath] = []
-        for i in fripIdx..<fripIdx+results.count {
-            indexPaths.append(NSIndexPath(item: i, section: 0))
-        }
-        fripIdx = fripIdx + results.count
-        downCollectionView.insertItems(at: indexPaths as [IndexPath])
-        downCollectionView.reloadItems(at: indexPaths as [IndexPath])
+//        var indexPaths: [NSIndexPath] = []
+//        for i in fripIdx..<fripIdx+results.count {
+//            indexPaths.append(NSIndexPath(item: i, section: 0))
+//        }
+//        fripIdx = fripIdx + results.count
+//        downCollectionView.insertItems(at: indexPaths as [IndexPath])
+//        downCollectionView.reloadItems(at: indexPaths as [IndexPath])
+        downCollectionView.reloadData()
     }
     
-    @objc func saveButtonTap(_ sender: UIButton!) {
-        let save = sender.tag % 10
-        let idx = sender.tag / 10
-        if save != 0 {
-            sender.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
-            sender.tintColor = UIColor.saveColor
-            HomePostResponse().fripSavingCategorySearch(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
-            sender.tag = idx * 10 + 0
-            print("save")
-        } else {
-            sender.setImage(UIImage(systemName: "bookmark"), for: .normal)
-            sender.tintColor = .white
-            HomePostResponse().fripSavingCategorySearch(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
-            sender.tag = idx * 10 + 1
-            print("unsave")
+    func getDetail(_ result: FripDetailInfo,_ index: Int) {
+        let vc = FripShowViewController(index, result)
+        vc.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
+}
+
+extension CategorySearchViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        print("hellosdfdsfas")
+        self.view.addSubview(searchView)
+        let bar = self.navigationController?.navigationBar.topItem?.titleView as! UISearchBar
+        bar.showsCancelButton = true
+        if let cancelButton = bar.value(forKey: "cancelButton") as? UIButton {
+            cancelButton.setTitle("취소", for: .normal)
+            cancelButton.setTitleColor(.black, for: .normal)
+        }
+
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchView.removeFromSuperview()
+        let bar = self.navigationController?.navigationBar.topItem?.titleView as! UISearchBar
+        bar.endEditing(true)
+        bar.showsCancelButton = false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let text = searchBar.text {
+            let search = text.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !search.isEmpty {
+                let vc = SearchViewController(search: search)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
 }
@@ -135,6 +196,7 @@ extension CategorySearchViewController: UICollectionViewDelegate, UICollectionVi
         } else {
             if frips.count == 0{
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IndicatorCollectionViewCell", for: indexPath) as! IndicatorCollectionViewCell
+                cell.indicator.startAnimating()
                 return cell
             } else {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
@@ -161,7 +223,6 @@ extension CategorySearchViewController: UICollectionViewDelegate, UICollectionVi
                 cell.point.text = frip.rate
                 cell.shortDescription.text = frip.fripHeader
                 cell.title.text = frip.fripTitle
-                cell.saveButton.addTarget(self, action: #selector(saveButtonTap(_:)), for: .touchDown)
                 return cell
             }
         }
@@ -181,12 +242,11 @@ extension CategorySearchViewController: UICollectionViewDelegate, UICollectionVi
             downCollectionView.reloadData()
             frips = []
             fripIdx = 0
-            CategorySearchGetManager().getDetailCategory(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: option[bigCategoryIdx][smallCategoryIdx], start: fripIdx, end: fripIdx, header: jwt, vc: self)
+            CategorySearchGetManager().getDetailCategory(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: option[bigCategoryIdx][smallCategoryIdx], start: fripIdx, end: fripIdx+16, header: jwt, vc: self)
         } else {
             if frips.count != 0{
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
-                userInfo = ["fripIdx": cell.idx]
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "detail"), object: nil, userInfo: userInfo)
+                let cell = collectionView.cellForItem(at: indexPath) as! MainCollectionViewCell
+                CategorySearchGetManager().getFripDetail(targetURL: URL(string: Constant.ALL_FRIP)!, index: cell.idx, header: jwt, vc: self)
             }
         }
     }

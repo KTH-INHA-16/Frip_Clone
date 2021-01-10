@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuyOptionViewController" customModule="Frip" customModuleProvider="target">
+            <connections>
+                <outlet property="finishButton" destination="KCM-N3-8M0" id="m2o-uW-3e3"/>
+                <outlet property="tableView" destination="Vgy-jE-g0W" id="AOx-Qm-eIq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vgy-jE-g0W">
+                    <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUJ-D1-eT1">
+                    <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                    <items>
+                        <barButtonItem style="plain" id="q43-KA-N2C">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="KCM-N3-8M0">
+                                <rect key="frame" x="20" y="12" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="결제 하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishTouchDown:" destination="-1" eventType="touchDown" id="WeO-Re-fK4"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Vgy-jE-g0W" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="55s-kf-SHA"/>
+                <constraint firstItem="fUJ-D1-eT1" firstAttribute="top" secondItem="Vgy-jE-g0W" secondAttribute="bottom" id="X88-wm-bV4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fUJ-D1-eT1" secondAttribute="bottom" id="Y2A-i1-c6l"/>
+                <constraint firstItem="fUJ-D1-eT1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aZ5-el-cG8"/>
+                <constraint firstItem="Vgy-jE-g0W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pSq-38-gQA"/>
+                <constraint firstItem="Vgy-jE-g0W" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uvD-ib-aYi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fUJ-D1-eT1" secondAttribute="trailing" id="wFB-g1-MiX"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="5.7971014492753632" y="92.410714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

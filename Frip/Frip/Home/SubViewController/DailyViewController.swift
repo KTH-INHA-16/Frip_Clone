@@ -70,24 +70,6 @@ class DailyViewController: BaseViewController {
             showBigCategoryCollectionView.reloadData()
         }
     }
-    
-    @objc func saveButtonTap(_ sender: UIButton!) {
-        let save = sender.tag % 10
-        let idx = sender.tag / 10
-        if save != 0 {
-            sender.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
-            sender.tintColor = UIColor.saveColor
-            HomePostResponse().fripSavingDailyPost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
-            sender.tag = idx * 10 + 0
-            print("save")
-        } else {
-            sender.setImage(UIImage(systemName: "bookmark"), for: .normal)
-            sender.tintColor = .white
-            HomePostResponse().fripSavingDailyPost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
-            sender.tag = idx * 10 + 1
-            print("unsave")
-        }
-    }
 }
 
 extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -135,7 +117,8 @@ extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegat
             return cell
         } else {
             if frips.count < 8 {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IndicatorCollectionViewCell", for: indexPath)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IndicatorCollectionViewCell", for: indexPath) as! IndicatorCollectionViewCell
+                cell.indicator.startAnimating()
                 return cell
             } else {
                 if indexPath.section < 2 {
@@ -168,7 +151,6 @@ extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegat
                     cell.point.text = frip.rate
                     cell.shortDescription.text = frip.fripHeader
                     cell.title.text = frip.fripTitle
-                    cell.saveButton.addTarget(self, action: #selector(saveButtonTap(_:)), for: .touchDown)
                     return cell
                 } else {
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DailyButtonCollectionViewCell", for: indexPath) as! DailyButtonCollectionViewCell

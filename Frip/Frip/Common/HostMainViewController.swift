@@ -62,24 +62,6 @@ class HostMainViewController: UIViewController {
     }
     
     
-    @objc func saveButtonTap(_ sender: UIButton!) {
-        let save = sender.tag % 10
-        let idx = sender.tag / 10
-        if save != 0 {
-            sender.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
-            sender.tintColor = UIColor.saveColor
-            CommonPostDataManager().hostFripLlkePost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
-            sender.tag = idx * 10 + 0
-            print("save")
-        } else {
-            sender.setImage(UIImage(systemName: "bookmark"), for: .normal)
-            sender.tintColor = .white
-            CommonPostDataManager().hostFripLlkePost(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: idx, header: jwt, VC: self)
-            sender.tag = idx * 10 + 1
-            print("unsave")
-        }
-    }
-    
     @objc func goodButtonTouchDown(_ sender: UIButton!) {
         if sender.tintColor == UIColor.lightGray{
             sender.setTitle("도움이 됐어요", for: .normal)
@@ -172,7 +154,6 @@ extension HostMainViewController: UICollectionViewDelegate, UICollectionViewData
                 cell.point.text = frip.rate
                 cell.shortDescription.text = frip.fripHeader
                 cell.title.text = frip.fripTitle
-                cell.saveButton.addTarget(self, action: #selector(saveButtonTap(_:)), for: .touchDown)
             }
             return cell
         default:
