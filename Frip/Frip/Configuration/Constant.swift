@@ -10,5 +10,6 @@ struct Constant {
     static let HOST = BASE_URL + "/hosts"
     static let FRIP_LIKE = ALL_FRIP + "/likes"
     static let HOST_LIKE = BASE_URL + "/hosts/likes"
-    
+    static let ALL_FEED = BASE_URL + "/reviews/feeds"
+    static let FEED_LIKE =  BASE_URL + "/reviews/feeds"
 }

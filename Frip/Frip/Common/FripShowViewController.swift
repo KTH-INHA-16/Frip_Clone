@@ -11,6 +11,8 @@ class FripShowViewController: BaseViewController {
     
     private let jwt = UserDefaults.standard.string(forKey: "userJWT")!
     let identifier = ["FripImageCollectionViewCell","FripShowCollectionViewCell","HostCollectionViewCell","FripCommentCollectionViewCell","FripIntroCollectionViewCell","FripCommonCollectionViewCell"]
+    var count: Int = 0
+    var isSave: Bool =  false
     var fripIdx: Int = 0
     var fripDetail: FripDetailInfo?
     var detail: FripDetailInfo {
@@ -30,16 +32,19 @@ class FripShowViewController: BaseViewController {
     }
 
     
-    @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var joinButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        toolBar.frame.size = CGSize(width: view.frame.width, height: 60)
         saveButton.frame.size = CGSize(width: 25, height: 25)
         joinButton.cornerRadius = 5
+        countLabel.adjustsFontSizeToFitWidth = true
+        countLabel.font = UIFont.NotoSans(.regular, size: 8)
+        countLabel.text = "\(detail.fripLikeUserCnt)"
+        count = detail.fripLikeUserCnt
         
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.navigationBar.isHidden = false
@@ -69,10 +74,16 @@ class FripShowViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.barTintColor = .clear
+        self.navigationController?.navigationBar.backgroundColor = .clear
         if detail.fripLike == "Y" {
+            isSave = true
             saveButton.setBackgroundImage(UIImage(systemName: "bookmark.fill"), for: .normal)
             saveButton.tintColor = UIColor.saveColor
         } else {
+            isSave = false
             saveButton.setBackgroundImage(UIImage(systemName: "bookmark"), for: .normal)
             saveButton.tintColor = UIColor.black
         }
@@ -85,15 +96,18 @@ class FripShowViewController: BaseViewController {
     }
     
     @IBAction func saveButtonTouchDown(_ sender: Any) {
-        if detail.fripLike == "Y" {
-            detail.fripLike = "N"
+        if isSave == false {
+            count += 1
+            countLabel.text = "\(count)"
             saveButton.setBackgroundImage(UIImage(systemName: "bookmark.fill"), for: .normal)
             saveButton.tintColor = UIColor.saveColor
         } else {
-            detail.fripLike = "Y"
+            count -= 1
+            countLabel.text = "\(count)"
             saveButton.setBackgroundImage(UIImage(systemName: "bookmark"), for: .normal)
             saveButton.tintColor = UIColor.black
         }
+        isSave = !isSave
         HomePostResponse().fripShowSave(targetUrl: URL(string: Constant.ALL_FRIP)!, idx: fripIdx, header: jwt, VC: self)
     }
     

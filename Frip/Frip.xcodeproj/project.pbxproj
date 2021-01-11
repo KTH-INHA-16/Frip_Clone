@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B01AAF325AC4C5D008C930F /* FeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01AAF225AC4C5D008C930F /* FeedEntity.swift */; };
+		3B01AAF625AC4D6C008C930F /* FeedGetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01AAF525AC4D6C008C930F /* FeedGetDataManager.swift */; };
+		3B01AAF925AC5E97008C930F /* FeedPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01AAF825AC5E97008C930F /* FeedPostDataManager.swift */; };
 		3B066B4C25A2375E002100A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B066B4A25A2375E002100A9 /* HomeViewController.swift */; };
 		3B066B4D25A2375E002100A9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B066B4B25A2375E002100A9 /* HomeViewController.xib */; };
 		3B066B5725A23C33002100A9 /* RecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B066B5525A23C33002100A9 /* RecViewController.swift */; };
@@ -145,6 +148,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B01AAF225AC4C5D008C930F /* FeedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntity.swift; sourceTree = "<group>"; };
+		3B01AAF525AC4D6C008C930F /* FeedGetDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedGetDataManager.swift; sourceTree = "<group>"; };
+		3B01AAF825AC5E97008C930F /* FeedPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostDataManager.swift; sourceTree = "<group>"; };
 		3B066B4A25A2375E002100A9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3B066B4B25A2375E002100A9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		3B066B5525A23C33002100A9 /* RecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +304,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B01AAF025AC4B3E008C930F /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3B01AAF525AC4D6C008C930F /* FeedGetDataManager.swift */,
+				3B01AAF825AC5E97008C930F /* FeedPostDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		3B01AAF125AC4B48008C930F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3B01AAF225AC4C5D008C930F /* FeedEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		3B3B5CCE25A43EE400719FA7 /* CategorySearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,6 +581,8 @@
 		3B7772A425A18CE900CF2905 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				3B01AAF125AC4B48008C930F /* Entity */,
+				3B01AAF025AC4B3E008C930F /* DataManager */,
 				3BCDDC9225AC0CFF00CA0B67 /* Cell */,
 				3B7772B525A18D5E00CF2905 /* FeedViewController.swift */,
 				3B7772B625A18D5E00CF2905 /* FeedViewController.xib */,
@@ -985,6 +1010,7 @@
 				3BF8BABC25A99A34005E3FB7 /* FripCollectionReusableView.swift in Sources */,
 				3B0947B825A8846C0084EBC9 /* FripCommentViewController.swift in Sources */,
 				3B7EF04625A2E3C70003C210 /* BtnCollectionViewCell.swift in Sources */,
+				3B01AAF325AC4C5D008C930F /* FeedEntity.swift in Sources */,
 				3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */,
 				3BF8BAEB25AAD11A005E3FB7 /* OptionClickTableViewCell.swift in Sources */,
 				3BF53A4A25AADADE0045C400 /* FripOption.swift in Sources */,
@@ -1029,11 +1055,13 @@
 				3BFDD02D25A707520079B29D /* FripImageCollectionViewCell.swift in Sources */,
 				3B7772BC25A18D6800CF2905 /* StoredViewController.swift in Sources */,
 				3B77728225A0A8CE00CF2905 /* BaseViewController.swift in Sources */,
+				3B01AAF925AC5E97008C930F /* FeedPostDataManager.swift in Sources */,
 				3B3F31C025A3376700EE22C5 /* MainPostDataManager.swift in Sources */,
 				3BC4DDBC25A8491F000ABF0C /* FripDetailResponse.swift in Sources */,
 				3BFDD01C25A6F9350079B29D /* HomePostResponse.swift in Sources */,
 				3B885A5525A5701300C73854 /* LogInResponse.swift in Sources */,
 				3B066B6125A23C60002100A9 /* BestViewController.swift in Sources */,
+				3B01AAF625AC4D6C008C930F /* FeedGetDataManager.swift in Sources */,
 				3B066B5725A23C33002100A9 /* RecViewController.swift in Sources */,
 				3B77727225A0A70A00CF2905 /* UIView.swift in Sources */,
 				3B7772C125A18D7400CF2905 /* MyInfoViewController.swift in Sources */,

@@ -11,9 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FripShowViewController" customModule="Frip" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="Few-Qv-lBJ" id="h0R-0T-gu4"/>
-                <outlet property="joinButton" destination="nka-RK-b8G" id="PnE-pN-eFF"/>
-                <outlet property="saveButton" destination="FGE-0N-Jln" id="eFa-93-muq"/>
-                <outlet property="toolBar" destination="X3c-0h-nFo" id="oaV-kC-NwN"/>
+                <outlet property="countLabel" destination="1Kr-ic-7H6" id="2th-Rf-uOW"/>
+                <outlet property="joinButton" destination="aJH-AQ-HSS" id="fKP-c1-2Bn"/>
+                <outlet property="saveButton" destination="duK-6C-jDq" id="pfM-19-ykD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Few-Qv-lBJ">
-                    <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                    <rect key="frame" x="0.0" y="88" width="414" height="733"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Azf-gm-FzZ">
                         <size key="itemSize" width="128" height="128"/>
@@ -37,43 +37,59 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </collectionView>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3c-0h-nFo">
-                    <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                    <items>
-                        <barButtonItem style="plain" id="Fed-ul-qV8">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="FGE-0N-Jln">
-                                <rect key="frame" x="20" y="12" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="saveButtonTouchDown:" destination="-1" eventType="touchUpInside" id="pFW-9D-twa"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem style="plain" id="hnA-im-LgQ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="nka-RK-b8G">
-                                <rect key="frame" x="66" y="12" width="328" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <state key="normal" title="참여하기">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="joinTouchDownAction:" destination="-1" eventType="touchUpInside" id="3Vh-A4-fau"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </items>
-                </toolbar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kH-FQ-vKO">
+                    <rect key="frame" x="0.0" y="821" width="414" height="41"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJH-AQ-HSS">
+                            <rect key="frame" x="57" y="5" width="352" height="30"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <state key="normal" title="참여하기">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="joinTouchDownAction:" destination="-1" eventType="touchUpInside" id="PG9-WT-Brf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duK-6C-jDq">
+                            <rect key="frame" x="15" y="1" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="CKQ-ed-n4R"/>
+                                <constraint firstAttribute="height" constant="25" id="M5E-9Z-NDR"/>
+                            </constraints>
+                            <connections>
+                                <action selector="saveButtonTouchDown:" destination="-1" eventType="touchUpInside" id="4M9-XV-KXA"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kr-ic-7H6">
+                            <rect key="frame" x="15" y="29" width="27.5" height="10"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="1Kr-ic-7H6" firstAttribute="width" secondItem="duK-6C-jDq" secondAttribute="width" multiplier="1.1" id="4uS-Zq-LyH"/>
+                        <constraint firstAttribute="height" constant="41" id="C1q-fP-Umb"/>
+                        <constraint firstItem="1Kr-ic-7H6" firstAttribute="leading" secondItem="3kH-FQ-vKO" secondAttribute="leading" constant="15" id="ItM-65-8Wu"/>
+                        <constraint firstAttribute="trailing" secondItem="aJH-AQ-HSS" secondAttribute="trailing" constant="5" id="MgF-Wb-rNi"/>
+                        <constraint firstItem="aJH-AQ-HSS" firstAttribute="width" secondItem="3kH-FQ-vKO" secondAttribute="width" multiplier="0.85" id="SBg-Uf-9Mg"/>
+                        <constraint firstItem="1Kr-ic-7H6" firstAttribute="top" secondItem="duK-6C-jDq" secondAttribute="bottom" constant="3" id="Wo3-Ox-dAT"/>
+                        <constraint firstAttribute="bottom" secondItem="aJH-AQ-HSS" secondAttribute="bottom" constant="6" id="drp-Wz-cRM"/>
+                        <constraint firstAttribute="bottom" secondItem="duK-6C-jDq" secondAttribute="bottom" constant="15" id="ocO-fD-5bt"/>
+                        <constraint firstItem="duK-6C-jDq" firstAttribute="leading" secondItem="3kH-FQ-vKO" secondAttribute="leading" constant="15" id="rnB-mS-kbb"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="3kH-FQ-vKO" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="1bb-UY-29V"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3kH-FQ-vKO" secondAttribute="trailing" id="CzZ-Xx-ejR"/>
                 <constraint firstItem="Few-Qv-lBJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EnV-v1-19Y"/>
+                <constraint firstItem="3kH-FQ-vKO" firstAttribute="top" secondItem="Few-Qv-lBJ" secondAttribute="bottom" id="R8d-9L-rTw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Few-Qv-lBJ" secondAttribute="trailing" id="VeQ-o2-yqj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="X3c-0h-nFo" secondAttribute="bottom" id="YcV-gf-RG5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X3c-0h-nFo" secondAttribute="trailing" id="hbl-mM-EJ6"/>
-                <constraint firstItem="X3c-0h-nFo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mp8-5e-ZuH"/>
-                <constraint firstItem="X3c-0h-nFo" firstAttribute="top" secondItem="Few-Qv-lBJ" secondAttribute="bottom" id="vE4-vN-0g2"/>
+                <constraint firstItem="3kH-FQ-vKO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qmU-Rl-oVX"/>
                 <constraint firstItem="Few-Qv-lBJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="88" id="xbe-NP-2ec"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
