@@ -6,6 +6,7 @@
 //
 import Foundation
 import UIKit
+import Kingfisher
 
 class RecViewController: BaseViewController {
 
@@ -96,11 +97,9 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
             if indexPath.section == 1 { frip = recFrips[indexPath.row] }
             else if indexPath.section == 2 { frip = newFrips[indexPath.row] }
             else { frip = commentFrips[indexPath.row] }
-            do {
-                let url = URL(string: frip.fripPhotoUrl)!
-                let data = try Data(contentsOf: url)
-                cell.image.image = UIImage(data: data)
-            } catch { print("image load error") }
+            let url = URL(string: frip.fripPhotoUrl)
+            cell.image.kf.setImage(with: url)
+                //킹 피셔 라이브러리 -> 오픈 소스
             cell.saveButton.tag = frip.fripIdx
             if frip.fripLike == "Y" {
                 cell.saveButton.tag = cell.saveButton.tag * 10 + 1

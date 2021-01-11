@@ -10,5 +10,6 @@ target 'Frip' do
 pod 'Alamofire'
 pod 'naveridlogin-sdk-ios'
 pod 'SnapKit'
+pod 'Kingfisher'
 
 end

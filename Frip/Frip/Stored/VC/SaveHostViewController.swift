@@ -1,10 +1,3 @@
-//
-//  SaveHostViewController.swift
-//  Frip
-//
-//  Created by 김태훈 on 2021/01/05.
-//
-
 import UIKit
 
 class SaveHostViewController: BaseViewController {
@@ -64,11 +57,8 @@ extension SaveHostViewController: UICollectionViewDelegate, UICollectionViewDele
                 cell.save = true
                 cell.hostIdx = host.hostIdx
                 cell.hostNameLabel.text = host.hostName
-                do {
-                    let url = URL(string: host.hostProfileImg)!
-                    let data = try Data(contentsOf: url)
-                    cell.image.image = UIImage(data: data)
-                } catch { print("image load error") }
+                let url = URL(string: host.hostProfileImg)
+                cell.image.kf.setImage(with: url)
                 cell.hostCountLabel.text = "프립\(host.hostFripCnt) | 후기\(host.hostReviewCnt) | 저장\(host.hostLikeCnt)"
                 cell.hostCountLabel.sizeToFit()
                 cell.border.backgroundColor = .lightGray

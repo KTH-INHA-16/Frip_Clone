@@ -60,11 +60,8 @@ extension SaveFripViewController: UICollectionViewDelegate, UICollectionViewDele
             }
             if frips.count != 0 {
                 let frip = frips[indexPath.row]
-                do {
-                    let url = URL(string: frip.fripPhotoUrl)!
-                    let data = try Data(contentsOf: url)
-                    cell.image.image = UIImage(data: data)
-                } catch { print("image load error") }
+                let url = URL(string: frip.fripPhotoUrl)
+                cell.image.kf.setImage(with: url)
                 cell.idx = frip.fripIdx
                 cell.save = true
                 cell.saveButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)

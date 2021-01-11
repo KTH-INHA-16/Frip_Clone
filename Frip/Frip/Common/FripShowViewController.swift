@@ -50,6 +50,8 @@ class FripShowViewController: BaseViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.barTintColor = .clear
+        self.navigationController?.navigationBar.backgroundColor = .clear
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -158,13 +160,8 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
         case 2:
             let allCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier[indexPath.section], for: indexPath)
             let cell = allCell as! HostCollectionViewCell
-            do {
-                var str = detail.profileImgUrl
-                for _ in 0...3 { str.removeFirst() }
-                let url = URL(string: "https"+str)!
-                let data = try Data(contentsOf: url)
-                cell.image.image = UIImage(data: data)
-            } catch { print("image load error") }
+            let url = URL(string: detail.profileImgUrl)
+            cell.image.kf.setImage(with: url)
             cell.hostIdx = detail.hostIdx
             cell.hostNameLabel.text = detail.hostName
             cell.hostCountLabel.text = "프립\(detail.hostFripCnt) | \(detail.fripReviewCnt) | 저장\(detail.fripLikeUserCnt)"

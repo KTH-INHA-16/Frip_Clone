@@ -98,11 +98,8 @@ extension FripCommentViewController: UICollectionViewDelegate, UICollectionViewD
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommentShowCollectionViewCell", for: indexPath) as! CommentShowCollectionViewCell
             if comments.count > 0 {
-                do {
-                    let url = URL(string: comments[indexPath.row].fripReviewUserProfileImg)!
-                    let data = try Data(contentsOf: url)
-                    cell.userImage.image = UIImage(data: data)
-                } catch { print("image error") }
+                let url = URL(string: comments[indexPath.row].fripReviewUserProfileImg)
+                cell.userImage.kf.setImage(with: url)
                 cell.userNameLabel.text = comments[indexPath.row].fripReviewUserNickname
                 cell.userRateLabel.text = comments[indexPath.row].rate
                 cell.userRateLabel.sizeToFit()
@@ -117,24 +114,14 @@ extension FripCommentViewController: UICollectionViewDelegate, UICollectionViewD
                 cell.likeCount = comments[indexPath.row].fripReviewLikeCnt
                 if comments[indexPath.row].fripReviewPhotoUrl != "null" {
                     cell.commentImage.isHidden = false
-                    do {
-                        if let url = URL(string: comments[indexPath.row].fripReviewPhotoUrl){
-                            let data = try Data(contentsOf: url)
-                            cell.commentImage.image = UIImage(data: data)
-                        }
-                    } catch {
-                        print("image error")
-                        cell.commentImage.isHidden = true
-                    }
+                    let url = URL(string: comments[indexPath.row].fripReviewPhotoUrl)
+                    cell.commentImage.kf.setImage(with: url)
                 } else {
                     cell.commentImage.isHidden = true
                 }
                 if comments[indexPath.row].hostIdx != -1 {
-                    do {
-                        let url = URL(string: comments[indexPath.row].hostProfileImg)!
-                        let data = try Data(contentsOf: url)
-                        cell.hostImage.image = UIImage(data: data)
-                    } catch { print("image error") }
+                    let url = URL(string: comments[indexPath.row].hostProfileImg)
+                    cell.hostImage.kf.setImage(with: url)
                     cell.hostNameLabel.text = comments[indexPath.row].hostName
                     cell.hostDateLabel.text = comments[indexPath.row].fripReviewCommentTime
                     cell.hostNameLabel.sizeToFit()

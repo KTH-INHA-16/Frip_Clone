@@ -10,7 +10,9 @@ import Alamofire
 
 class SearchGetDataManager {
     func getAllFrips(targetURL:URL,search:String,header:String,vc:SearchViewController) {
-        if let url = URL(string: targetURL.absoluteString + "?search=\(search)") {
+        //인코딩 처리 -> search(한글일 경우)
+        // urlQueryAllowed
+        if let url = URL(string: targetURL.absoluteString + "?search=\(search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)") {
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":header])
             .validate()
             .responseDecodable(of: HomeFrips.self) { response in

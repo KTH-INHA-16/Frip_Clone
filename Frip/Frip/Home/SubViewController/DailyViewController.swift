@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DailyViewController: BaseViewController {
 
@@ -137,12 +138,8 @@ extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegat
                         base = 3
                     }
                     frip = frips[base+indexPath.row]
-                    do {
-                        let url = URL(string: frip.fripPhotoUrl)!
-                        let realUrl = URL(string: "https://dummyimage.com"+url.relativePath)!
-                        let data = try Data(contentsOf: realUrl)
-                        cell.image.image = UIImage(data: data)
-                    } catch { print("image load error") }
+                    let url = URL(string: frip.fripPhotoUrl)!
+                    cell.image.kf.setImage(with: url)
                     cell.saveButton.tag = frip.fripIdx
                     if frip.fripLike == "Y" {
                         cell.saveButton.tag = cell.saveButton.tag * 10 + 1

@@ -145,11 +145,8 @@ extension DailySearchViewController: UICollectionViewDelegate, UICollectionViewD
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
             let frip = frips[indexPath.row]
-            do {
-                let url = URL(string: frip.fripPhotoUrl)!
-                let data = try Data(contentsOf: url)
-                cell.image.image = UIImage(data: data)
-            } catch { print("image load error") }
+            let url = URL(string: frip.fripPhotoUrl)
+            cell.image.kf.setImage(with: url)
             cell.saveButton.tag = frip.fripIdx
             if frip.fripLike == "Y" {
                 cell.saveButton.tag = cell.saveButton.tag * 10 + 1

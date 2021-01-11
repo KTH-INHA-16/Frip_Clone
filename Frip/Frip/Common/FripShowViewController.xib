@@ -41,7 +41,7 @@
                     <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                     <items>
                         <barButtonItem style="plain" id="Fed-ul-qV8">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="FGE-0N-Jln">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="FGE-0N-Jln">
                                 <rect key="frame" x="20" y="12" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -50,7 +50,7 @@
                             </button>
                         </barButtonItem>
                         <barButtonItem style="plain" id="hnA-im-LgQ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="nka-RK-b8G">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="nka-RK-b8G">
                                 <rect key="frame" x="66" y="12" width="328" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -69,12 +69,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Few-Qv-lBJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EnV-v1-19Y"/>
-                <constraint firstItem="Few-Qv-lBJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="O3b-uB-UxG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Few-Qv-lBJ" secondAttribute="trailing" id="VeQ-o2-yqj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="X3c-0h-nFo" secondAttribute="bottom" id="YcV-gf-RG5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X3c-0h-nFo" secondAttribute="trailing" id="hbl-mM-EJ6"/>
                 <constraint firstItem="X3c-0h-nFo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mp8-5e-ZuH"/>
                 <constraint firstItem="X3c-0h-nFo" firstAttribute="top" secondItem="Few-Qv-lBJ" secondAttribute="bottom" id="vE4-vN-0g2"/>
+                <constraint firstItem="Few-Qv-lBJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="88" id="xbe-NP-2ec"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
