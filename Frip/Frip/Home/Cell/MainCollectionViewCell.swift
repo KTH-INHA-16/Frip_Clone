@@ -32,7 +32,9 @@ class MainCollectionViewCell: UICollectionViewCell {
         shortDescription.textColor = .lightGray
         
         title.font = UIFont.NotoSans(.regular, size: 13)
+        title.numberOfLines = 2
         title.adjustsFontSizeToFitWidth = true
+        title.lineBreakMode = .byCharWrapping
         title.textColor = .black
         
         price.font = UIFont.NotoSans(.bold, size: 12)

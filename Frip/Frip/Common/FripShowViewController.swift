@@ -157,13 +157,8 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
         case 0:
             let allCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier[indexPath.section], for: indexPath)
             let cell = allCell as! FripImageCollectionViewCell
-            do {
-                var str = detail.fripPhotoUrl
-                for _ in 0...3 { str.removeFirst() }
-                let url = URL(string: "https"+str)!
-                let data = try Data(contentsOf: url)
-                cell.imageView.image = UIImage(data: data)
-            } catch { print("image load error") }
+            let url = URL(string: detail.fripPhotoUrl)
+            cell.imageView.kf.setImage(with: url)
             return cell
         case 1:
             let allCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier[indexPath.section], for: indexPath)
@@ -261,7 +256,7 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
                 return CGSize(width: collectionView.frame.width, height: 150)
             }
         case 4:
-            return CGSize(width: collectionView.frame.width, height: 180)
+            return CGSize(width: collectionView.frame.width, height: 500)
         case 5:
             return CGSize(width: collectionView.frame.width, height: 200)
         case 6:

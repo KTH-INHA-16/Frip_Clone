@@ -55,7 +55,7 @@ class FripCommentViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        CommonGetDataManager().getFripComments(targetURL: URL(string: Constant.ALL_FRIP)!, index: fripIdx, start: commentIdx, end: commentIdx+10, header: jwt, vc: self)
+        CommonGetDataManager().getFripComments(targetURL: URL(string: Constant.ALL_FRIP)!, index: fripIdx, start: commentIdx, end: commentIdx+500, header: jwt, vc: self)
     }
 
     func getComments(_ result: [FripComment]) {
@@ -128,6 +128,18 @@ extension FripCommentViewController: UICollectionViewDelegate, UICollectionViewD
                     cell.hostDateLabel.sizeToFit()
                     cell.hostCommentView.text = comments[indexPath.row].fripReviewComment
                 }
+                cell.goodButton.setTitle("도움이 됐어요\(cell.likeCount)", for: .normal)
+                if comments[indexPath.row].fripReviewLike == "Y" {
+                    cell.isSave = true
+                    cell.goodButton.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
+                    cell.goodButton.tintColor = .systemBlue
+                    cell.goodButton.setTitleColor(.systemBlue, for: .normal)
+                } else {
+                    cell.isSave = false
+                    cell.goodButton.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
+                    cell.goodButton.tintColor = .lightGray
+                    cell.goodButton.setTitleColor(.lightGray, for: .normal)
+                }
             }
             return cell
         }
@@ -154,6 +166,6 @@ extension FripCommentViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        CommonGetDataManager().getFripComments(targetURL: URL(string: Constant.ALL_FRIP)!, index: fripIdx, start: commentIdx, end: commentIdx+10, header: jwt, vc: self)
+        //CommonGetDataManager().getFripComments(targetURL: URL(string: Constant.ALL_FRIP)!, index: fripIdx, start: commentIdx, end: commentIdx+10, header: jwt, vc: self)
     }
 }

@@ -10,6 +10,10 @@
 		3B01AAF325AC4C5D008C930F /* FeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01AAF225AC4C5D008C930F /* FeedEntity.swift */; };
 		3B01AAF625AC4D6C008C930F /* FeedGetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01AAF525AC4D6C008C930F /* FeedGetDataManager.swift */; };
 		3B01AAF925AC5E97008C930F /* FeedPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01AAF825AC5E97008C930F /* FeedPostDataManager.swift */; };
+		3B01AAFD25AC6238008C930F /* FeedCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01AAFB25AC6238008C930F /* FeedCommentViewController.swift */; };
+		3B01AAFE25AC6238008C930F /* FeedCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B01AAFC25AC6238008C930F /* FeedCommentViewController.xib */; };
+		3B01AB0225AC6330008C930F /* FeedCommentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01AB0025AC6330008C930F /* FeedCommentCollectionViewCell.swift */; };
+		3B01AB0325AC6330008C930F /* FeedCommentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B01AB0125AC6330008C930F /* FeedCommentCollectionViewCell.xib */; };
 		3B066B4C25A2375E002100A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B066B4A25A2375E002100A9 /* HomeViewController.swift */; };
 		3B066B4D25A2375E002100A9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B066B4B25A2375E002100A9 /* HomeViewController.xib */; };
 		3B066B5725A23C33002100A9 /* RecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B066B5525A23C33002100A9 /* RecViewController.swift */; };
@@ -52,6 +56,9 @@
 		3B56C55125A61C9B00C45B0E /* FripShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B56C54F25A61C9B00C45B0E /* FripShowViewController.xib */; };
 		3B56C55625A6D62900C45B0E /* HomeGetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56C55525A6D62900C45B0E /* HomeGetResponse.swift */; };
 		3B56C55925A6D86700C45B0E /* MainFrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56C55825A6D86700C45B0E /* MainFrip.swift */; };
+		3B74A97A25AC808D00D5709A /* CommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74A97925AC808D00D5709A /* CommentEntity.swift */; };
+		3B74A97D25AC9E4400D5709A /* CommentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74A97C25AC9E4400D5709A /* CommentUser.swift */; };
+		3B74A98025ACA2C600D5709A /* CommentPostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74A97F25ACA2C600D5709A /* CommentPostEntity.swift */; };
 		3B7771FA25A0726000CF2905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771F925A0726000CF2905 /* AppDelegate.swift */; };
 		3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771FB25A0726000CF2905 /* SceneDelegate.swift */; };
 		3B77720325A0726200CF2905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B77720225A0726200CF2905 /* Assets.xcassets */; };
@@ -151,6 +158,10 @@
 		3B01AAF225AC4C5D008C930F /* FeedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntity.swift; sourceTree = "<group>"; };
 		3B01AAF525AC4D6C008C930F /* FeedGetDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedGetDataManager.swift; sourceTree = "<group>"; };
 		3B01AAF825AC5E97008C930F /* FeedPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostDataManager.swift; sourceTree = "<group>"; };
+		3B01AAFB25AC6238008C930F /* FeedCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCommentViewController.swift; sourceTree = "<group>"; };
+		3B01AAFC25AC6238008C930F /* FeedCommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCommentViewController.xib; sourceTree = "<group>"; };
+		3B01AB0025AC6330008C930F /* FeedCommentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCommentCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B01AB0125AC6330008C930F /* FeedCommentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCommentCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B066B4A25A2375E002100A9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3B066B4B25A2375E002100A9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		3B066B5525A23C33002100A9 /* RecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +202,9 @@
 		3B56C54F25A61C9B00C45B0E /* FripShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FripShowViewController.xib; sourceTree = "<group>"; };
 		3B56C55525A6D62900C45B0E /* HomeGetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGetResponse.swift; sourceTree = "<group>"; };
 		3B56C55825A6D86700C45B0E /* MainFrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFrip.swift; sourceTree = "<group>"; };
+		3B74A97925AC808D00D5709A /* CommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEntity.swift; sourceTree = "<group>"; };
+		3B74A97C25AC9E4400D5709A /* CommentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentUser.swift; sourceTree = "<group>"; };
+		3B74A97F25ACA2C600D5709A /* CommentPostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPostEntity.swift; sourceTree = "<group>"; };
 		3B7771F625A0726000CF2905 /* Frip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7771F925A0726000CF2905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B7771FB25A0726000CF2905 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -317,6 +331,9 @@
 			isa = PBXGroup;
 			children = (
 				3B01AAF225AC4C5D008C930F /* FeedEntity.swift */,
+				3B74A97925AC808D00D5709A /* CommentEntity.swift */,
+				3B74A97C25AC9E4400D5709A /* CommentUser.swift */,
+				3B74A97F25ACA2C600D5709A /* CommentPostEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -586,6 +603,8 @@
 				3BCDDC9225AC0CFF00CA0B67 /* Cell */,
 				3B7772B525A18D5E00CF2905 /* FeedViewController.swift */,
 				3B7772B625A18D5E00CF2905 /* FeedViewController.xib */,
+				3B01AAFB25AC6238008C930F /* FeedCommentViewController.swift */,
+				3B01AAFC25AC6238008C930F /* FeedCommentViewController.xib */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -699,6 +718,8 @@
 			children = (
 				3BCDDC9325AC0D1600CA0B67 /* FeedCollectionViewCell.swift */,
 				3BCDDC9425AC0D1600CA0B67 /* FeedCollectionViewCell.xib */,
+				3B01AB0025AC6330008C930F /* FeedCommentCollectionViewCell.swift */,
+				3B01AB0125AC6330008C930F /* FeedCommentCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -911,6 +932,7 @@
 				3BFDD02925A6FE0E0079B29D /* IndicatorCollectionViewCell.xib in Resources */,
 				3B3F321025A41FC900EE22C5 /* NoneCollectionViewCell.xib in Resources */,
 				3B7EF0F125A2E7500003C210 /* MainCollectionViewCell.xib in Resources */,
+				3B01AB0325AC6330008C930F /* FeedCommentCollectionViewCell.xib in Resources */,
 				3B7772BD25A18D6800CF2905 /* StoredViewController.xib in Resources */,
 				3B3F320A25A398B300EE22C5 /* SaveFripViewController.xib in Resources */,
 				3B77720325A0726200CF2905 /* Assets.xcassets in Resources */,
@@ -919,6 +941,7 @@
 				3BF8BAB925A994A4005E3FB7 /* HostMainViewController.xib in Resources */,
 				3B44FE0525A5F85500B85451 /* BestButtonCollectionViewCell.xib in Resources */,
 				3BCDDC6225AB14D000CA0B67 /* NothingCollectionViewCell.xib in Resources */,
+				3B01AAFE25AC6238008C930F /* FeedCommentViewController.xib in Resources */,
 				3BCDDC9625AC0D1600CA0B67 /* FeedCollectionViewCell.xib in Resources */,
 				3B77724E25A0A54600CF2905 /* NotoSansCJKkr-Bold.otf in Resources */,
 				3B56C55125A61C9B00C45B0E /* FripShowViewController.xib in Resources */,
@@ -994,6 +1017,7 @@
 				3B7771FA25A0726000CF2905 /* AppDelegate.swift in Sources */,
 				3B77727525A0A70A00CF2905 /* UINavigationBar.swift in Sources */,
 				3B44FE0425A5F85500B85451 /* BestButtonCollectionViewCell.swift in Sources */,
+				3B74A98025ACA2C600D5709A /* CommentPostEntity.swift in Sources */,
 				3BF8BACA25AA909A005E3FB7 /* HostInfoResponse.swift in Sources */,
 				3B1AA24E25A5B1590020E967 /* DailyButtonCollectionViewCell.swift in Sources */,
 				3B885A5D25A5871E00C73854 /* DailyBigCollectionViewCell.swift in Sources */,
@@ -1013,6 +1037,7 @@
 				3B01AAF325AC4C5D008C930F /* FeedEntity.swift in Sources */,
 				3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */,
 				3BF8BAEB25AAD11A005E3FB7 /* OptionClickTableViewCell.swift in Sources */,
+				3B01AAFD25AC6238008C930F /* FeedCommentViewController.swift in Sources */,
 				3BF53A4A25AADADE0045C400 /* FripOption.swift in Sources */,
 				3B77727325A0A70A00CF2905 /* UIButton.swift in Sources */,
 				3B77729B25A0E45A00CF2905 /* MainDataManager.swift in Sources */,
@@ -1024,6 +1049,7 @@
 				3B0947AC25A8702D0084EBC9 /* FripIntroCollectionViewCell.swift in Sources */,
 				3B77727625A0A70A00CF2905 /* UIViewController.swift in Sources */,
 				3BF8BAB825A994A4005E3FB7 /* HostMainViewController.swift in Sources */,
+				3B74A97A25AC808D00D5709A /* CommentEntity.swift in Sources */,
 				3B56C55925A6D86700C45B0E /* MainFrip.swift in Sources */,
 				3B7772A025A189DC00CF2905 /* BaseTabBarViewController.swift in Sources */,
 				3B77728B25A0AC4000CF2905 /* MainViewController.swift in Sources */,
@@ -1031,6 +1057,7 @@
 				3B066B4C25A2375E002100A9 /* HomeViewController.swift in Sources */,
 				3B77729725A0E08800CF2905 /* SignInResponse.swift in Sources */,
 				3BF8BACF25AAB3AA005E3FB7 /* SearchViewController.swift in Sources */,
+				3B01AB0225AC6330008C930F /* FeedCommentCollectionViewCell.swift in Sources */,
 				3BCDDC7725AB3E6900CA0B67 /* SaveHost.swift in Sources */,
 				3B77727E25A0A88E00CF2905 /* Device.swift in Sources */,
 				3B7EF0F025A2E7500003C210 /* MainCollectionViewCell.swift in Sources */,
@@ -1043,6 +1070,7 @@
 				3B77727B25A0A87A00CF2905 /* IndicatorView.swift in Sources */,
 				3BCDDC9525AC0D1600CA0B67 /* FeedCollectionViewCell.swift in Sources */,
 				3B3F320325A398A800EE22C5 /* SaveHostViewController.swift in Sources */,
+				3B74A97D25AC9E4400D5709A /* CommentUser.swift in Sources */,
 				3B1AA24225A59C650020E967 /* UICollectionView.swift in Sources */,
 				3B7772B225A18D5200CF2905 /* CategoryViewController.swift in Sources */,
 				3B77725125A0A58C00CF2905 /* Constant.swift in Sources */,

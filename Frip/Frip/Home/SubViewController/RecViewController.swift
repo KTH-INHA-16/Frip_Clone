@@ -132,9 +132,9 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0{
-            return CGSize(width: collectionView.bounds.width / 5, height: 70)
+            return CGSize(width: collectionView.bounds.width / 4, height: 70)
         } else {
-            return CGSize(width: collectionView.bounds.width / 2 - 10, height: 280)
+            return CGSize(width: collectionView.bounds.width / 2 - 5, height: 280)
         }
     }
     

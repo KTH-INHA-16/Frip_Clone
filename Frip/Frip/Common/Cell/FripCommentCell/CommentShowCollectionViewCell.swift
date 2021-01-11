@@ -26,6 +26,7 @@ class CommentShowCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var view: UIView!
     
+    var isSave = false
     var likeCount: Int = 0
     var fripIdx: Int = 0
     var reviewIdx: Int = 0
@@ -64,7 +65,7 @@ class CommentShowCollectionViewCell: UICollectionViewCell {
     }
     @IBAction func goodButtonTapDown(_ sender: Any) {
         CommonPostDataManager().commentLikePost(targetUrl: URL(string: Constant.ALL_FRIP)!, fripIdx: fripIdx, reviewIdx: reviewIdx, header: jwt)
-        if goodButton.tintColor == UIColor.lightGray{
+        if isSave == false{
             likeCount += 1
             goodButton.setTitle("도움이 됐어요\(likeCount)", for: .normal)
             goodButton.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
@@ -77,6 +78,7 @@ class CommentShowCollectionViewCell: UICollectionViewCell {
             goodButton.tintColor = .lightGray
             goodButton.setTitleColor(.lightGray, for: .normal)
         }
+        isSave = !isSave
     }
     
 }

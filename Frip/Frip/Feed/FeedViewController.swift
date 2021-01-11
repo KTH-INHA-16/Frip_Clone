@@ -58,6 +58,15 @@ class FeedViewController: BaseViewController {
         let idx = sender.tag
         FeedGetDataManager().goShowFrip(targetURL: Constant.ALL_FRIP, fripIdx: idx, vc: self)
     }
+    
+    @objc func goShowComments(_ sender: UIButton!) {
+        let idx = sender.tag
+        let vc = FeedCommentViewController(idx)
+        vc.navigationController?.navigationItem.title = "댓글"
+        vc.navigationController?.navigationItem.titleView?.tintColor = .black
+        vc.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 
@@ -86,6 +95,8 @@ extension FeedViewController: UICollectionViewDelegate, UICollectionViewDelegate
             cell.userImage.kf.setImage(with: URL(string: feeds[indexPath.row].userProfileImg))
             cell.likeButton.setTitle("\(cell.feedLikeCnt)", for: .normal)
             cell.messageButton.setTitle("\(cell.feedCommentCnt)", for: .normal)
+            cell.messageButton.tag = cell.feedIdx
+            cell.messageButton.addTarget(self, action: #selector(goShowComments(_:)), for: .touchDown)
             if feeds[indexPath.row].feedLike == "Y" {
                 cell.isLike = true
                 cell.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)

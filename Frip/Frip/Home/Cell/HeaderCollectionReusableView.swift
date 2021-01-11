@@ -45,7 +45,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        label.frame = CGRect(x: 10, y: 5, width: frame.width * 0.6, height: 30)
-        button.frame = CGRect(x: frame.width * 0.80,y: 5,width: frame.width * 0.15,height: 25)
+        label.frame = CGRect(x: 20, y: 5, width: frame.width * 0.6, height: 30)
+        button.frame = CGRect(x: frame.width * 0.85,y: 5,width: frame.width * 0.15,height: 25)
     }
 }

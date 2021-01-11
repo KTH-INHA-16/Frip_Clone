@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedCommentViewController" customModule="Frip" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="FuC-y6-blE" id="Voi-wO-3ND"/>
+                <outlet property="commentView" destination="SiT-D3-aE7" id="pH3-EY-JOS"/>
+                <outlet property="registerButton" destination="BYr-fj-aGj" id="jie-eF-5vQ"/>
+                <outlet property="underView" destination="ObG-WP-qTe" id="OuP-rT-unh"/>
+                <outlet property="userImage" destination="dhE-Fx-AGa" id="z6A-x6-dyc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObG-WP-qTe">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-Fx-AGa">
+                            <rect key="frame" x="15" y="5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="CbB-f6-SMQ"/>
+                                <constraint firstAttribute="height" constant="40" id="ieH-GW-VD3"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="댓글 달기..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SiT-D3-aE7">
+                            <rect key="frame" x="60" y="8" width="339" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYr-fj-aGj">
+                            <rect key="frame" x="359" y="11.5" width="30" height="27"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="등록"/>
+                            <connections>
+                                <action selector="registerTapDown:" destination="-1" eventType="touchDown" id="mVh-he-bkf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="dhE-Fx-AGa" firstAttribute="leading" secondItem="ObG-WP-qTe" secondAttribute="leading" constant="15" id="1hs-mC-6bO"/>
+                        <constraint firstItem="dhE-Fx-AGa" firstAttribute="centerY" secondItem="ObG-WP-qTe" secondAttribute="centerY" id="3kF-cH-ZIe"/>
+                        <constraint firstItem="BYr-fj-aGj" firstAttribute="leading" secondItem="SiT-D3-aE7" secondAttribute="trailing" constant="-40" id="8hw-ot-ZIZ"/>
+                        <constraint firstItem="BYr-fj-aGj" firstAttribute="centerY" secondItem="ObG-WP-qTe" secondAttribute="centerY" id="EPX-DY-TMa"/>
+                        <constraint firstItem="SiT-D3-aE7" firstAttribute="centerY" secondItem="ObG-WP-qTe" secondAttribute="centerY" id="I7j-LB-EXL"/>
+                        <constraint firstAttribute="trailing" secondItem="SiT-D3-aE7" secondAttribute="trailing" constant="15" id="cqu-eq-xY7"/>
+                        <constraint firstAttribute="height" constant="50" id="dbl-oy-8Md"/>
+                        <constraint firstItem="SiT-D3-aE7" firstAttribute="leading" secondItem="dhE-Fx-AGa" secondAttribute="trailing" constant="5" id="uhR-a8-YlI"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FuC-y6-blE">
+                    <rect key="frame" x="0.0" y="88" width="414" height="724"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="i7d-9q-Lis">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FuC-y6-blE" secondAttribute="trailing" id="4td-ta-7xd"/>
+                <constraint firstItem="FuC-y6-blE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="C4f-Bv-Yvi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ObG-WP-qTe" secondAttribute="bottom" id="FBg-PC-elY"/>
+                <constraint firstItem="ObG-WP-qTe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JQo-Gc-ukd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ObG-WP-qTe" secondAttribute="trailing" id="mD2-kc-6bf"/>
+                <constraint firstItem="FuC-y6-blE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="o1B-Yu-qO6"/>
+                <constraint firstItem="ObG-WP-qTe" firstAttribute="top" secondItem="FuC-y6-blE" secondAttribute="bottom" id="qUJ-Sg-5eb"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="13.043478260869566" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
