@@ -66,21 +66,6 @@ class HostMainViewController: UIViewController {
         vc.navigationController?.navigationBar.isHidden = false
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
-    @objc func goodButtonTouchDown(_ sender: UIButton!) {
-        if sender.tintColor == UIColor.lightGray{
-            sender.setTitle("도움이 됐어요", for: .normal)
-            sender.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
-            sender.tintColor = .systemBlue
-            sender.setTitleColor(.systemBlue, for: .normal)
-        } else {
-            sender.setTitle("도움이 됐어요", for: .normal)
-            sender.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
-            sender.tintColor = .lightGray
-            sender.setTitleColor(.lightGray, for: .normal)
-        }
-    }
 
 }
 
@@ -115,6 +100,15 @@ extension HostMainViewController: UICollectionViewDelegate, UICollectionViewData
                     let data = try Data(contentsOf: url)
                     cell.image.image = UIImage(data: data)
                 } catch { print("image error") }
+                if host.hostLike == "Y" {
+                    cell.save = true
+                    cell.bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+                    cell.bookmarkButton.tintColor = UIColor.saveColor
+                } else {
+                    cell.save = false
+                    cell.bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+                    cell.bookmarkButton.tintColor = UIColor.lightGray
+                }
                 cell.hostNameLabel.text = host.hostName
                 cell.hostCountLabel.text = "프립\(host.hostFripCnt)개 | 후기\(host.hostReviewCnt)개 | 저장\(host.hostLikeCnt)개"
             }
@@ -178,7 +172,7 @@ extension HostMainViewController: UICollectionViewDelegate, UICollectionViewData
         case 0:
             return CGSize(width: collectionView.frame.width, height: 120)
         case 1:
-            return CGSize(width: collectionView.frame.width, height: 100)
+            return CGSize(width: collectionView.frame.width, height: 140)
         case 2:
             return CGSize(width: collectionView.frame.width, height: 45)
         case 3:

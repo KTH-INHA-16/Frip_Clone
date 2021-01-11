@@ -168,18 +168,16 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
             cell.hostIdx = detail.hostIdx
             cell.hostNameLabel.text = detail.hostName
             cell.hostCountLabel.text = "프립\(detail.hostFripCnt) | \(detail.fripReviewCnt) | 저장\(detail.fripLikeUserCnt)"
-            var tag = detail.hostIdx
             if detail.fripLike == "Y" {
-                tag = tag * 10 + 1
+                cell.save = true
                 cell.bookmarkButton.tintColor = UIColor.saveColor
                 cell.bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
             }
             else {
-                tag = tag * 10
+                cell.save = false
                 cell.bookmarkButton.tintColor = UIColor.lightGray
                 cell.bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
             }
-            cell.bookmarkButton.tag = tag
             return cell
         case 3:
             let allCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier[indexPath.section], for: indexPath)

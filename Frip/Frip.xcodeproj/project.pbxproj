@@ -106,6 +106,8 @@
 		3BCDDC8B25AB5A7B00CA0B67 /* RecSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDDC8925AB5A7B00CA0B67 /* RecSearchViewController.xib */; };
 		3BCDDC8F25AB5F8300CA0B67 /* DailySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDDC8D25AB5F8300CA0B67 /* DailySearchViewController.swift */; };
 		3BCDDC9025AB5F8300CA0B67 /* DailySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDDC8E25AB5F8300CA0B67 /* DailySearchViewController.xib */; };
+		3BCDDC9525AC0D1600CA0B67 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDDC9325AC0D1600CA0B67 /* FeedCollectionViewCell.swift */; };
+		3BCDDC9625AC0D1600CA0B67 /* FeedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDDC9425AC0D1600CA0B67 /* FeedCollectionViewCell.xib */; };
 		3BD4CCCE25A8A441009B03C6 /* CommentShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD4CCCC25A8A441009B03C6 /* CommentShowCollectionViewCell.swift */; };
 		3BE3FE6525A31E8C00F49E0C /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */; };
 		3BEEBBE725A88A2400343B34 /* CommentHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEBBE525A88A2400343B34 /* CommentHeaderCollectionViewCell.swift */; };
@@ -242,6 +244,8 @@
 		3BCDDC8925AB5A7B00CA0B67 /* RecSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecSearchViewController.xib; sourceTree = "<group>"; };
 		3BCDDC8D25AB5F8300CA0B67 /* DailySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySearchViewController.swift; sourceTree = "<group>"; };
 		3BCDDC8E25AB5F8300CA0B67 /* DailySearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailySearchViewController.xib; sourceTree = "<group>"; };
+		3BCDDC9325AC0D1600CA0B67 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BCDDC9425AC0D1600CA0B67 /* FeedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCollectionViewCell.xib; sourceTree = "<group>"; };
 		3BD4CCCC25A8A441009B03C6 /* CommentShowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentShowCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BD4CCCD25A8A441009B03C6 /* CommentShowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentShowCollectionViewCell.xib; sourceTree = "<group>"; };
 		3BE3FE6425A31E8C00F49E0C /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -554,6 +558,7 @@
 		3B7772A425A18CE900CF2905 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				3BCDDC9225AC0CFF00CA0B67 /* Cell */,
 				3B7772B525A18D5E00CF2905 /* FeedViewController.swift */,
 				3B7772B625A18D5E00CF2905 /* FeedViewController.xib */,
 			);
@@ -662,6 +667,15 @@
 				3BCDDC7625AB3E6900CA0B67 /* SaveHost.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		3BCDDC9225AC0CFF00CA0B67 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDDC9325AC0D1600CA0B67 /* FeedCollectionViewCell.swift */,
+				3BCDDC9425AC0D1600CA0B67 /* FeedCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		3BEF49D025A8878C00BC93BF /* FripShowCell */ = {
@@ -880,6 +894,7 @@
 				3BF8BAB925A994A4005E3FB7 /* HostMainViewController.xib in Resources */,
 				3B44FE0525A5F85500B85451 /* BestButtonCollectionViewCell.xib in Resources */,
 				3BCDDC6225AB14D000CA0B67 /* NothingCollectionViewCell.xib in Resources */,
+				3BCDDC9625AC0D1600CA0B67 /* FeedCollectionViewCell.xib in Resources */,
 				3B77724E25A0A54600CF2905 /* NotoSansCJKkr-Bold.otf in Resources */,
 				3B56C55125A61C9B00C45B0E /* FripShowViewController.xib in Resources */,
 				3BFDD03E25A725870079B29D /* FripCommentCollectionViewCell.xib in Resources */,
@@ -1000,6 +1015,7 @@
 				3B77727025A0A70A00CF2905 /* String.swift in Sources */,
 				3BFDD03225A707FE0079B29D /* FripShowCollectionViewCell.swift in Sources */,
 				3B77727B25A0A87A00CF2905 /* IndicatorView.swift in Sources */,
+				3BCDDC9525AC0D1600CA0B67 /* FeedCollectionViewCell.swift in Sources */,
 				3B3F320325A398A800EE22C5 /* SaveHostViewController.swift in Sources */,
 				3B1AA24225A59C650020E967 /* UICollectionView.swift in Sources */,
 				3B7772B225A18D5200CF2905 /* CategoryViewController.swift in Sources */,

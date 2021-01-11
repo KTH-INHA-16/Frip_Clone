@@ -33,7 +33,7 @@ class HostCollectionViewCell: UICollectionViewCell {
     @IBAction func hostSaveButton(_ sender: Any) {
         if save == true {
             bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
-            bookmarkButton.tintColor = .white
+            bookmarkButton.tintColor = .lightGray
         } else {
             bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
             bookmarkButton.tintColor = UIColor.saveColor

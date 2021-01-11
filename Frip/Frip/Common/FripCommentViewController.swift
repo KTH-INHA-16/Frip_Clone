@@ -74,23 +74,6 @@ class FripCommentViewController: BaseViewController {
         indicator.stopAnimating()
         indicator.isHidden = true
     }
-
-    @objc func goodButtonTouchDown(_ sender: UIButton!) {
-        let idx = sender.tag
-        let count: Int = Int(String(((sender.titleLabel?.text?.last!)!)))!
-        CommonPostDataManager().commentLikePost(targetUrl: URL(string: Constant.ALL_FRIP)!, fripIdx: fripIdx, reviewIdx: idx, header: jwt, vc: self)
-        if sender.tintColor == UIColor.lightGray{
-            sender.setTitle("도움이 됐어요\(count)", for: .normal)
-            sender.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
-            sender.tintColor = .systemBlue
-            sender.setTitleColor(.systemBlue, for: .normal)
-        } else {
-            sender.setTitle("도움이 됐어요\(count)", for: .normal)
-            sender.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
-            sender.tintColor = .lightGray
-            sender.setTitleColor(.lightGray, for: .normal)
-        }
-    }
 }
 
 extension FripCommentViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -129,8 +112,9 @@ extension FripCommentViewController: UICollectionViewDelegate, UICollectionViewD
                 cell.fripTitleLabel.text = fripTitle
                 cell.fripOptionLabel.text = comments[indexPath.row].userBuyFripOption
                 cell.goodButton.setTitle("도움이 됐어요\(comments[indexPath.row].fripReviewLikeCnt)", for: .normal)
-                cell.goodButton.tag = comments[indexPath.row].fripReviewIdx
-                cell.goodButton.addTarget(self, action: #selector(goodButtonTouchDown(_:)), for: .touchDown)
+                cell.fripIdx = self.fripIdx
+                cell.reviewIdx = comments[indexPath.row].fripReviewIdx
+                cell.likeCount = comments[indexPath.row].fripReviewLikeCnt
                 if comments[indexPath.row].fripReviewPhotoUrl != "null" {
                     cell.commentImage.isHidden = false
                     do {

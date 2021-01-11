@@ -10,7 +10,7 @@ import Alamofire
 
 class SearchGetDataManager {
     func getAllFrips(targetURL:URL,search:String,header:String,vc:SearchViewController) {
-        let url = URL(string: targetURL.absoluteString + "?search=\(search)")!
+        if let url = URL(string: targetURL.absoluteString + "?search=\(search)") {
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":header])
             .validate()
             .responseDecodable(of: HomeFrips.self) { response in
@@ -26,7 +26,7 @@ class SearchGetDataManager {
                     print("error: error")
                 }
             }
-        
+        }
     }
     
     func getFripDetail(targetURL:URL,index:Int,header:String,vc:SearchViewController) {

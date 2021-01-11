@@ -80,6 +80,9 @@
                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <imageReference key="image" image="hand.thumbsup" catalog="system" symbolScale="small"/>
                         </state>
+                        <connections>
+                            <action selector="goodButtonTapDown:" destination="gTV-IL-0wX" eventType="touchDown" id="TC8-0N-JLi"/>
+                        </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginImage" translatesAutoresizingMaskIntoConstraints="NO" id="t0U-sC-3Ak">
                         <rect key="frame" x="25" y="307" width="75" height="75"/>

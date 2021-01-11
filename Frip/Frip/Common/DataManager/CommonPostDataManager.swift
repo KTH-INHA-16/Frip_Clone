@@ -38,7 +38,7 @@ class CommonPostDataManager {
             }
     }
     
-    func commentLikePost(targetUrl: URL,fripIdx:Int,reviewIdx:Int,header:String,vc:FripCommentViewController) {
+    func commentLikePost(targetUrl: URL,fripIdx:Int,reviewIdx:Int,header:String) {
         let url = URL(string: targetUrl.absoluteString + "/\(fripIdx)/reviews/\(reviewIdx)/likes")!
         AF.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":header])
             .validate()

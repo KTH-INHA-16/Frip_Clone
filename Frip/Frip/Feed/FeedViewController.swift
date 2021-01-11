@@ -9,10 +9,13 @@ import UIKit
 
 class FeedViewController: BaseViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.navigationController?.navigationItem.title = "프립 피드"
+        
+        
     }
 
 }

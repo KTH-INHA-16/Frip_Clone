@@ -25,6 +25,12 @@ class CommentShowCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var view: UIView!
+    
+    var likeCount: Int = 0
+    var fripIdx: Int = 0
+    var reviewIdx: Int = 0
+    private let jwt = UserDefaults.standard.string(forKey: "userJWT")!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -56,5 +62,21 @@ class CommentShowCollectionViewCell: UICollectionViewCell {
         
         view.cornerRadius = view.bounds.height / 8
     }
-
+    @IBAction func goodButtonTapDown(_ sender: Any) {
+        CommonPostDataManager().commentLikePost(targetUrl: URL(string: Constant.ALL_FRIP)!, fripIdx: fripIdx, reviewIdx: reviewIdx, header: jwt)
+        if goodButton.tintColor == UIColor.lightGray{
+            likeCount += 1
+            goodButton.setTitle("도움이 됐어요\(likeCount)", for: .normal)
+            goodButton.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
+            goodButton.tintColor = .systemBlue
+            goodButton.setTitleColor(.systemBlue, for: .normal)
+        } else {
+            likeCount -= 1
+            goodButton.setTitle("도움이 됐어요\(likeCount)", for: .normal)
+            goodButton.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
+            goodButton.tintColor = .lightGray
+            goodButton.setTitleColor(.lightGray, for: .normal)
+        }
+    }
+    
 }
