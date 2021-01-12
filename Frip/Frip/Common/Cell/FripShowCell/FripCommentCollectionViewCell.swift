@@ -14,6 +14,7 @@ class FripCommentCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var border: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

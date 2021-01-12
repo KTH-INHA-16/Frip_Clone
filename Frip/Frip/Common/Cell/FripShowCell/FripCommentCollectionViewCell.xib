@@ -87,6 +87,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="border" destination="l6Y-eH-EpI" id="jpS-dH-I96"/>
                 <outlet property="button" destination="dmJ-Vu-iE1" id="C0z-wm-HHK"/>
                 <outlet property="commentLabel" destination="bkt-bg-whc" id="QlG-lU-ubY"/>
                 <outlet property="descriptionLabel" destination="y80-sz-WPA" id="kA2-pn-Ygv"/>

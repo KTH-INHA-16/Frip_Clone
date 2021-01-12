@@ -194,6 +194,7 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
             cell.commentLabel.text = detail.fripReviewCnt
             if detail.fripReviewCnt == "0개 후기" {
                 cell.button.isHidden = true
+                cell.border.isHidden = true
             } else {
                 cell.button.setTitle("\(detail.fripReviewCnt) 보러 가기", for: .normal)
                 cell.button.addTarget(self, action: #selector(showCommentTap(_:)), for: .touchDown)
