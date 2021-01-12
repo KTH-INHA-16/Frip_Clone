@@ -45,7 +45,8 @@ class CommentShowCollectionViewCell: UICollectionViewCell {
         userDateLabel.font = UIFont.NotoSans(.regular, size: 13)
         userDateLabel.textColor = .lightGray
         
-        userCommentView.font = UIFont.NotoSans(.regular, size: 13)
+        userCommentView.font = UIFont.NotoSans(.regular, size: 11)
+        userCommentView.adjustsFontForContentSizeCategory = true
         
         fripTitleLabel.font = UIFont.NotoSans(.regular, size: 13)
         fripTitleLabel.textColor = .lightGray
@@ -59,7 +60,8 @@ class CommentShowCollectionViewCell: UICollectionViewCell {
         hostDateLabel.font = UIFont.NotoSans(.regular, size: 13)
         hostDateLabel.textColor = .lightGray
         
-        hostCommentView.font = UIFont.NotoSans(.regular, size: 13)
+        hostCommentView.font = UIFont.NotoSans(.regular, size: 11)
+        userCommentView.adjustsFontForContentSizeCategory = true
         
         view.cornerRadius = view.bounds.height / 8
     }

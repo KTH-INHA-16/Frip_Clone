@@ -67,7 +67,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuT-F5-M2r">
-                    <rect key="frame" x="89" y="113" width="73.5" height="18"/>
+                    <rect key="frame" x="88" y="118" width="73.5" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="  로그아웃 ">
@@ -97,10 +97,10 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="feZ-r3-hT1" secondAttribute="trailing" id="P9G-U1-p1y"/>
                 <constraint firstItem="feZ-r3-hT1" firstAttribute="top" secondItem="Qf0-kP-9pI" secondAttribute="bottom" constant="40" id="PbS-Lx-lOF"/>
                 <constraint firstItem="jha-7U-IBw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="XY9-oP-zdq"/>
-                <constraint firstItem="MuT-F5-M2r" firstAttribute="leading" secondItem="jha-7U-IBw" secondAttribute="trailing" constant="16" id="Z5c-JQ-XHB"/>
+                <constraint firstItem="MuT-F5-M2r" firstAttribute="leading" secondItem="jha-7U-IBw" secondAttribute="trailing" constant="15" id="Z5c-JQ-XHB"/>
                 <constraint firstItem="Qf0-kP-9pI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="dTy-TU-9OO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FXr-7D-eB2" secondAttribute="trailing" constant="25" id="hDn-ck-UOn"/>
-                <constraint firstItem="MuT-F5-M2r" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="i6G-Oq-g13"/>
+                <constraint firstItem="MuT-F5-M2r" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="i6G-Oq-g13"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Pz-e4-0YT" secondAttribute="trailing" id="r5W-M4-d0j"/>
                 <constraint firstItem="8Pz-e4-0YT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="r8V-Om-bNo"/>
                 <constraint firstItem="8Pz-e4-0YT" firstAttribute="top" secondItem="Qf0-kP-9pI" secondAttribute="bottom" constant="27" id="wKu-U4-fgL"/>

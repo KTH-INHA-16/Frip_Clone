@@ -113,7 +113,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="호호" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DJ5-MG-3cY">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="호호" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ5-MG-3cY">
                                 <rect key="frame" x="15" y="67" width="345" height="60"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>

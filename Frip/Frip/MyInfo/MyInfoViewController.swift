@@ -110,12 +110,14 @@ extension MyInfoViewController: UICollectionViewDataSource, UICollectionViewDele
         if velocity.y < 0 {
             if isScroll == true {
                 border.isHidden = false
+                logoutButton.isHidden = false
                 collectionView.frame.origin.y = collectionView.frame.origin.y + 120
                 isScroll = false
             }
         } else {
             if isScroll == false {
                 border.isHidden = true
+                logoutButton.isHidden = true
                 collectionView.frame.origin.y = collectionView.frame.origin.y - 120
                 isScroll = true
             }

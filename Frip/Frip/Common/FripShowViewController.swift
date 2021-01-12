@@ -42,7 +42,7 @@ class FripShowViewController: BaseViewController {
         saveButton.frame.size = CGSize(width: 25, height: 25)
         joinButton.cornerRadius = 5
         countLabel.adjustsFontSizeToFitWidth = true
-        countLabel.font = UIFont.NotoSans(.regular, size: 8)
+        countLabel.font = UIFont.NotoSans(.regular, size: 10)
         countLabel.text = "\(detail.fripLikeUserCnt)"
         count = detail.fripLikeUserCnt
         

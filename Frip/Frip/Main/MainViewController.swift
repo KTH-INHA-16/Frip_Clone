@@ -8,8 +8,11 @@ class MainViewController: BaseViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var naverLoginButton: UIButton!
+    @IBOutlet weak var image: UIImageView!
     
+    var imageIdx: Int = 1
     var timer: Timer = Timer()
+    var imageTimer: Timer = Timer()
     var userInfo: UserInfo = UserInfo(birthday: "", email: "", gender: "", mobile: "", mobileGlobal: "", name: "", nickname: "", profileImage: "")
     var loginInfo : LogIn = LogIn(isSuccess: false, code: 0, message: "", result: JWT(jwt: ""))
     
@@ -18,6 +21,7 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        naverLoginButton.cornerRadius = 5
         greetingLabel.font = UIFont.NotoSans(.bold, size: 20)
         
         descriptionLabel.text = "지금 프립 가입하고 5만원 상당의 \n 쿠폰팩 받아가세요"
@@ -30,6 +34,12 @@ class MainViewController: BaseViewController {
         warningLabel.textAlignment = .center
         warningLabel.numberOfLines = 0
         warningLabel.textColor = .systemGray
+        
+        imageTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(imageChange), userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        imageTimer.invalidate()
     }
     
     @IBAction func naverLoginTapAction(_ sender: Any) {
@@ -58,6 +68,18 @@ class MainViewController: BaseViewController {
         if result < 2000 {
             self.changeRootViewController(BaseTabBarViewController())
         }
+    }
+    
+    @objc func imageChange() {
+        UIView.animate(withDuration: 3, animations: {
+            self.image.transform = CGAffineTransform.identity.translatedBy(x: 0, y: -50)
+        })
+        self.image.transform = CGAffineTransform.identity.translatedBy(x: 0, y: 0)
+        imageIdx += 1
+        if imageIdx == 4 {
+            imageIdx = 1
+        }
+        image.image = UIImage(named: "LoginImage\(imageIdx)")
     }
     
     @objc func pushController() {

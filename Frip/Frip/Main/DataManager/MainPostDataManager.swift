@@ -17,7 +17,11 @@ class MainPostDataManager {
             case .success(let response):
                 print("우리 서버 성공")
                 print("jwt: \(response.result.jwt)")
-                VC.successToLogin(result: response)
+                if response.isSuccess == true {
+                    VC.successToLogin(result: response)
+                } else {
+                    VC.presentAlert(title: "로그인 실패")
+                }
             case .failure(_):
                 print("우리 서버 실패")
                 VC.failedToRequest(message: "서버와의 연결이 원활하지 않음")

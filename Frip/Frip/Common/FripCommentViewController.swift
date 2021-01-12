@@ -147,7 +147,7 @@ extension FripCommentViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
-            return CGSize(width: collectionView.frame.width, height: 195)
+            return CGSize(width: collectionView.frame.width, height: 160)
         } else {
             if comments.count > 0 {
                 if comments[indexPath.row].hostIdx == -1 {

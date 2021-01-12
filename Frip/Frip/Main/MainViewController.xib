@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="descriptionLabel" destination="jx0-Lh-2GX" id="af5-Tm-mAo"/>
                 <outlet property="greetingLabel" destination="wVW-8r-Mya" id="i1t-3n-mQn"/>
+                <outlet property="image" destination="3W2-Yd-3AC" id="dZB-2E-NpQ"/>
                 <outlet property="naverLoginButton" destination="RtH-10-Wem" id="ZO7-2F-cEU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="warningLabel" destination="Q8H-aT-F28" id="dNP-pe-qEQ"/>
@@ -46,7 +47,7 @@
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="269" id="VTb-Vi-9Q0"/>
                         <constraint firstAttribute="width" secondItem="RtH-10-Wem" secondAttribute="height" multiplier="130:23" constant="48.565217391304344" id="ytR-Lh-Mey"/>
                     </constraints>
-                    <state key="normal" image="NaverLoginComplete"/>
+                    <state key="normal" image="naver"/>
                     <connections>
                         <action selector="naverLoginTapAction:" destination="-1" eventType="touchUpInside" id="rhj-ZN-daJ"/>
                     </connections>
@@ -80,7 +81,7 @@
     </objects>
     <resources>
         <image name="LoginImage" width="1124" height="804"/>
-        <image name="NaverLoginComplete" width="260" height="57"/>
+        <image name="naver" width="648" height="132"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
