@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q78-1b-qED">
-                        <rect key="frame" x="158.5" y="44" width="40" height="40"/>
+                        <rect key="frame" x="156" y="44" width="45" height="45"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="Dbj-4N-Avx"/>
-                            <constraint firstAttribute="height" constant="40" id="cfQ-V3-hAB"/>
+                            <constraint firstAttribute="width" constant="45" id="Dbj-4N-Avx"/>
+                            <constraint firstAttribute="height" constant="45" id="cfQ-V3-hAB"/>
                         </constraints>
                         <state key="normal" image="ButtonImage0" backgroundImage="ButtonImage0">
                             <color key="titleColor" systemColor="labelColor"/>
@@ -32,7 +32,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dd-Vh-Qq1">
-                        <rect key="frame" x="157.5" y="94" width="42" height="21"/>
+                        <rect key="frame" x="157.5" y="99" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>

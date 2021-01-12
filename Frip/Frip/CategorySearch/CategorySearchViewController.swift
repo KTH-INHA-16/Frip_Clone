@@ -83,6 +83,59 @@ class CategorySearchViewController: BaseViewController {
         setSearchBar()
     }
     
+    @IBAction func buttonTouchDown(_ sender: Any) {
+        let action = UIAlertController(title: "카테고리 선택", message: nil, preferredStyle: .actionSheet)
+        let alert1 = UIAlertAction(title: "엑티비티", style: .default, handler: { _ in
+            self.bigCategoryIdx = 0
+            self.smallCategoryIdx = 0
+            self.bigCategory = "엑티비티"
+            self.smallCategory = self.category[self.bigCategory]![self.smallCategoryIdx]
+            self.frips = []
+            self.fripIdx = 0
+            self.upperCollectionView.reloadData()
+            self.bigCategoryButton.setTitle(self.bigCategory, for: .normal)
+            CategorySearchGetManager().getDetailCategory(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: self.option[self.bigCategoryIdx][self.smallCategoryIdx], start: self.fripIdx, end: self.fripIdx + 16, header: self.jwt, vc: self)
+        })
+        let alert2 = UIAlertAction(title: "배움", style: .default, handler: { _ in
+            self.bigCategoryIdx = 1
+            self.smallCategoryIdx = 0
+            self.bigCategory = "배움"
+            self.smallCategory = self.category[self.bigCategory]![self.smallCategoryIdx]
+            self.frips = []
+            self.fripIdx = 0
+            self.upperCollectionView.reloadData()
+            self.bigCategoryButton.setTitle(self.bigCategory, for: .normal)
+            CategorySearchGetManager().getDetailCategory(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: self.option[self.bigCategoryIdx][self.smallCategoryIdx], start: self.fripIdx, end: self.fripIdx + 16, header: self.jwt, vc: self)
+        })
+        let alert3 = UIAlertAction(title: "건강·뷰티", style: .default, handler: { _ in
+            self.bigCategoryIdx = 2
+            self.smallCategoryIdx = 0
+            self.bigCategory = "건강·뷰티"
+            self.smallCategory = self.category[self.bigCategory]![self.smallCategoryIdx]
+            self.frips = []
+            self.fripIdx = 0
+            self.upperCollectionView.reloadData()
+            self.bigCategoryButton.setTitle(self.bigCategory, for: .normal)
+            CategorySearchGetManager().getDetailCategory(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: self.option[self.bigCategoryIdx][self.smallCategoryIdx], start: self.fripIdx, end: self.fripIdx + 16, header: self.jwt, vc: self)
+        })
+        let alert4 = UIAlertAction(title: "모임", style: .default, handler: { _ in
+            self.bigCategoryIdx = 3
+            self.smallCategoryIdx = 0
+            self.bigCategory = "모임"
+            self.smallCategory = self.category[self.bigCategory]![self.smallCategoryIdx]
+            self.frips = []
+            self.fripIdx = 0
+            self.upperCollectionView.reloadData()
+            self.bigCategoryButton.setTitle(self.bigCategory, for: .normal)
+            CategorySearchGetManager().getDetailCategory(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: self.option[self.bigCategoryIdx][self.smallCategoryIdx], start: self.fripIdx, end: self.fripIdx + 16, header: self.jwt, vc: self)
+        })
+        action.addAction(alert1)
+        action.addAction(alert2)
+        action.addAction(alert3)
+        action.addAction(alert4)
+        present(action, animated: true, completion: nil)
+    }
+    
     
     func setSearchBar(){
         //서치바 만들기
@@ -121,13 +174,6 @@ class CategorySearchViewController: BaseViewController {
         for res in results {
             frips.append(res)
         }
-//        var indexPaths: [NSIndexPath] = []
-//        for i in fripIdx..<fripIdx+results.count {
-//            indexPaths.append(NSIndexPath(item: i, section: 0))
-//        }
-//        fripIdx = fripIdx + results.count
-//        downCollectionView.insertItems(at: indexPaths as [IndexPath])
-//        downCollectionView.reloadItems(at: indexPaths as [IndexPath])
         downCollectionView.reloadData()
     }
     

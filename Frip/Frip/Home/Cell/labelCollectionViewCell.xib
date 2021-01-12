@@ -24,10 +24,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYd-Kw-gUx">
-                        <rect key="frame" x="0.0" y="133" width="303" height="2"/>
+                        <rect key="frame" x="0.0" y="133" width="303" height="1.5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="2" id="mbi-g5-DEa"/>
+                            <constraint firstAttribute="height" constant="1.5" id="mbi-g5-DEa"/>
                         </constraints>
                     </view>
                 </subviews>

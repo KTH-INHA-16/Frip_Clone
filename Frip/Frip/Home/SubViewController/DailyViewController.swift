@@ -13,7 +13,6 @@ class DailyViewController: BaseViewController {
     @IBOutlet weak var bigCategoryCollectionView: UICollectionView!
     @IBOutlet weak var smallCategoryCollectionView: UICollectionView!
     @IBOutlet weak var showBigCategoryCollectionView: UICollectionView!
-    @IBOutlet weak var refreshButton: UIButton!
     
     var category: [String:[String]] = ["엑티비티":["아웃도어","서핑","스포츠","수상레저"],"배움":["공예·DIY","댄스","요리","음료"],"건강·뷰티":["피트니스","요가","필라테스","뷰티"],"모임":["클럽","스터디","토크","게임"]]
     var headerText: [String] = ["인기","신규"]
@@ -25,9 +24,6 @@ class DailyViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        refreshButton.borderWidth = 1
-        refreshButton.borderColor = .lightGray
-        refreshButton.cornerRadius = 5
         
         DispatchQueue.global(qos: .userInitiated).sync {
             HomeGetResponse().getDailyFrips(targetURL: URL(string: Constant.FRIP_CATEGORY)!, idx: 1, option: 0, header: jwt, vc: self)
@@ -159,7 +155,7 @@ extension DailyViewController: UICollectionViewDelegate, UICollectionViewDelegat
                     return cell
                 } else {
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DailyButtonCollectionViewCell", for: indexPath) as! DailyButtonCollectionViewCell
-                    cell.button.setTitle("n개의 \(bigCategory[idx]) 전체보기", for: .normal)
+                    cell.button.setTitle("\(bigCategory[idx]) 전체보기", for: .normal)
                     cell.button.addTarget(self, action: #selector(buttonTapDown), for: .touchDown)
                     return cell
                 }
