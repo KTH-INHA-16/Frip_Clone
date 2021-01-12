@@ -9,6 +9,7 @@ class MyInfoViewController: BaseViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var border: UIView!
+    @IBOutlet weak var logoutButton: UIButton!
     
     var isScroll: Bool = false
     var user: User = User(userIdx: 0, userNickname: "", profileImg: "", reviewCnt: 0, feedCnt: 0)
@@ -18,6 +19,7 @@ class MyInfoViewController: BaseViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         
+        logoutButton.cornerRadius = logoutButton.frame.width / 8
         profileImage.cornerRadius = profileImage.bounds.width * 0.5
         nameLabel.font = UIFont.NotoSans(.bold, size: 20)
         label.font = UIFont.NotoSans(.regular, size: 14)
@@ -32,6 +34,11 @@ class MyInfoViewController: BaseViewController {
         collectionView.register(UINib(nibName: "NothingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NothingCollectionViewCell")
         
         MyInfoGetDataManager().getMyFrips(targetURL: Constant.MY_PAGE_FRIP, vc: self)
+    }
+    
+    @IBAction func logOutTouchDown(_ sender: Any) {
+        UserDefaults.standard.set("1", forKey: "userJWT")
+        self.changeRootViewController(MainViewController())
     }
     
     func getFrips(_ result:[UserFrip]) {

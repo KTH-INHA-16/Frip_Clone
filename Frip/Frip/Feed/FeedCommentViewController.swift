@@ -40,6 +40,7 @@ class FeedCommentViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "댓글"
         NotificationCenter.default.addObserver(self, selector: #selector(textViewMoveUp(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(textViewMoveDown), name: UIResponder.keyboardWillHideNotification, object: nil)
         FeedGetDataManager().getFeedComments(targetURL: Constant.FEED_LIKE, idx: idx, vc: self)
@@ -110,7 +111,7 @@ extension FeedCommentViewController: UICollectionViewDelegate,UICollectionViewDe
         if comments.count != 0 {
             cell.image.kf.setImage(with: URL(string: comments[indexPath.row].userProfileImg))
             cell.name.text = comments[indexPath.row].userNickname
-            cell.comment.text = comments[indexPath.row].fripFeedComment
+            cell.comment.text = "  \(comments[indexPath.row].fripFeedComment)  "
             cell.time.text = comments[indexPath.row].fripFeedCommentTime
             cell.name.sizeToFit()
             cell.comment.sizeToFit()
