@@ -85,7 +85,9 @@ extension RecViewController: UICollectionViewDataSource, UICollectionViewDelegat
         if indexPath.section == 0{
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BtnCollectionViewCell", for: indexPath) as? BtnCollectionViewCell else { return UICollectionViewCell() }
             cell.idx = indexPath.row
-            cell.button.setImage(UIImage(named: "ButtonImage\(indexPath.row)"), for: .normal)
+            cell.button.borderColor = .white
+            cell.button.borderWidth = 0
+            cell.button.setImage(UIImage(named: "\(indexPath.row+1)"), for: .normal)
             cell.label.text = labelText[indexPath.row]
             cell.button.tag = indexPath.row
             cell.button.addTarget(self, action: #selector(roundButtonTap(sender:)), for: .touchDown)

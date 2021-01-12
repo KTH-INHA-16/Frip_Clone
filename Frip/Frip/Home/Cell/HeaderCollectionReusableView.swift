@@ -16,7 +16,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
         label.text = "header"
         label.textColor = .black
         label.adjustsFontSizeToFitWidth = true
-        label.font = UIFont.NotoSans(.bold, size: 19)
+        label.font = UIFont.NotoSans(.bold, size: 18)
         return label
     }()
     
