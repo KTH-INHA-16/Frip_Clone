@@ -10,6 +10,7 @@ import UIKit
 class BuyOptionViewController: BaseViewController {
     
     private let jwt = UserDefaults.standard.string(forKey: "userJWT")!
+    var buyOption:Int = 0
     var fripIdx: Int = 0
     var options:[FripOption] = []
     var clickOptions: SelectOption = SelectOption(option: FripOption(fripOptionIdx: 0, fripOption: "", price: "", limitcount: "", isEnd: ""), count: 0)
@@ -52,11 +53,15 @@ class BuyOptionViewController: BaseViewController {
     
     @IBAction func finishTouchDown(_ sender: Any) {
         // 결제 api 서버 연동 해야함
-        if clickOptions.count != 0{
-            self.navigationController?.popToRootViewController(animated:true)
+        if buyOption != 0{
+            BuyPostDataManager().postBuyFrip(targetURL: Constant.ALL_FRIP, fripIdx: fripIdx,option: buyOption, vc: self)
         } else {
             self.presentAlert(title: "옵션을 선택 하지 않았습니다")
         }
+    }
+    
+    func postSuccess() {
+        self.navigationController?.popToRootViewController(animated:true)
     }
     
     func getOptions(_ result: [FripOption]) {
@@ -65,6 +70,7 @@ class BuyOptionViewController: BaseViewController {
     }
     
     @objc func cancelTouchDown(_ sender: UIButton!) {
+        buyOption = 0
         clickOptions = SelectOption(option: FripOption(fripOptionIdx: 0, fripOption: "", price: "", limitcount: "", isEnd: ""), count: 0)
         tableView.reloadData()
     }
@@ -126,9 +132,11 @@ extension BuyOptionViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 1 {
             let cell = tableView.cellForRow(at: indexPath) as! OptionTableViewCell
             if cell.count != 0 {
+                buyOption = cell.option.fripOptionIdx
                 clickOptions = SelectOption(option: cell.option, count: 1)
                 tableView.reloadData()
             }
+            buyOption = cell.option.fripOptionIdx
             clickOptions = SelectOption(option: cell.option, count: 1)
             tableView.reloadData()
         }

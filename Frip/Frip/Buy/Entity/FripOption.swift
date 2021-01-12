@@ -27,3 +27,14 @@ struct SelectOption {
     var option: FripOption 
     var count: Int
 }
+
+struct BuyResult: Codable{
+    var result: BuyFripIdx
+    var isSuccess: Bool
+    var code: Int
+    var message: String
+}
+
+struct BuyFripIdx: Codable {
+    var fripIdx: Int
+}

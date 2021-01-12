@@ -35,6 +35,7 @@
 		3B24D81D25A9452800A4A002 /* FripCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B24D81C25A9452800A4A002 /* FripCommentResponse.swift */; };
 		3B2AFA0325AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2AFA0125AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.swift */; };
 		3B2AFA0425AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2AFA0225AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.xib */; };
+		3B2AFA0825AD906200BC0EFC /* BuyPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2AFA0725AD906200BC0EFC /* BuyPostDataManager.swift */; };
 		3B3B5CD625A43FCF00719FA7 /* CategorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B5CD425A43FCF00719FA7 /* CategorySearchViewController.swift */; };
 		3B3B5CD725A43FCF00719FA7 /* CategorySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3B5CD525A43FCF00719FA7 /* CategorySearchViewController.xib */; };
 		3B3B5CDC25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B5CDA25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift */; };
@@ -187,6 +188,7 @@
 		3B24D81C25A9452800A4A002 /* FripCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripCommentResponse.swift; sourceTree = "<group>"; };
 		3B2AFA0125AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B2AFA0225AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B2AFA0725AD906200BC0EFC /* BuyPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyPostDataManager.swift; sourceTree = "<group>"; };
 		3B3B5CD425A43FCF00719FA7 /* CategorySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchViewController.swift; sourceTree = "<group>"; };
 		3B3B5CD525A43FCF00719FA7 /* CategorySearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySearchViewController.xib; sourceTree = "<group>"; };
 		3B3B5CDA25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -798,6 +800,7 @@
 			isa = PBXGroup;
 			children = (
 				3BF53A4D25AADB570045C400 /* BuyGetDataManager.swift */,
+				3B2AFA0725AD906200BC0EFC /* BuyPostDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -1133,6 +1136,7 @@
 				3B01AAF925AC5E97008C930F /* FeedPostDataManager.swift in Sources */,
 				3B3F31C025A3376700EE22C5 /* MainPostDataManager.swift in Sources */,
 				3BC4DDBC25A8491F000ABF0C /* FripDetailResponse.swift in Sources */,
+				3B2AFA0825AD906200BC0EFC /* BuyPostDataManager.swift in Sources */,
 				3BFDD01C25A6F9350079B29D /* HomePostResponse.swift in Sources */,
 				3B885A5525A5701300C73854 /* LogInResponse.swift in Sources */,
 				3B066B6125A23C60002100A9 /* BestViewController.swift in Sources */,
