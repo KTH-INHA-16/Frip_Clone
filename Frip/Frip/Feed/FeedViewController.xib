@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController" customModule="Frip" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="7HX-6z-YpX" id="k5H-lf-Fs3"/>
+                <outlet property="userButton" destination="W8h-Zb-qSq" id="QvK-HH-Sgg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,10 +31,26 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8h-Zb-qSq">
+                    <rect key="frame" x="334" y="733" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="QM9-Mv-6Ul"/>
+                        <constraint firstAttribute="width" constant="40" id="vuc-lL-rPr"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal">
+                        <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="userButtonTapDown:" destination="-1" eventType="touchDown" id="KmU-Gd-819"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W8h-Zb-qSq" secondAttribute="trailing" constant="40" id="8EQ-e8-GCr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="W8h-Zb-qSq" secondAttribute="bottom" constant="40" id="IDM-JH-0iM"/>
                 <constraint firstItem="7HX-6z-YpX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IaV-Qv-OgY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7HX-6z-YpX" secondAttribute="trailing" id="PHF-4K-GFu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7HX-6z-YpX" secondAttribute="bottom" id="SMF-Dn-pcl"/>
@@ -44,6 +62,7 @@
         </view>
     </objects>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

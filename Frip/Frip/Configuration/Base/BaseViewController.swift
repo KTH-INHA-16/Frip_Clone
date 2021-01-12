@@ -11,7 +11,6 @@ class BaseViewController: UIViewController{
         self.tabBarController?.tabBar.backgroundColor = .white
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem?.tintColor = .black
-        self.navigationController?.navigationItem.titleView?.tintColor = .black
 
     }
 }

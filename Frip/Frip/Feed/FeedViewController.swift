@@ -10,15 +10,21 @@ import UIKit
 class FeedViewController: BaseViewController {
 //280 -> 높이
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var userButton: UIButton!
     var feeds: [Feed] = []
     var fripTitles: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationItem.title = "프립 피드"
+        self.navigationItem.title = "프립 피드"
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        userButton.cornerRadius = userButton.bounds.width * 0.5
+        userButton.borderWidth = 0.5
+        userButton.borderColor = .lightGray
+        userButton.backgroundColor = .white
         
         FeedGetDataManager().getAllFeed(targetURL: Constant.ALL_FEED, vc: self)
         
@@ -26,12 +32,10 @@ class FeedViewController: BaseViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationItem.title = "프립 피드"
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.navigationItem.title = "프립 피드"
+    @IBAction func userButtonTapDown(_ sender: Any) {
+        let vc = FeedUserViewController()
+        vc.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func getResult(_ result:[Feed]) {

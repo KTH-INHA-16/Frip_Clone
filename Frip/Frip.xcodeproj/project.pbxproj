@@ -33,6 +33,8 @@
 		3B24D81725A8B74B00A4A002 /* CommentHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEEBBE625A88A2400343B34 /* CommentHeaderCollectionViewCell.xib */; };
 		3B24D81A25A8B76300A4A002 /* CommentShowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD4CCCD25A8A441009B03C6 /* CommentShowCollectionViewCell.xib */; };
 		3B24D81D25A9452800A4A002 /* FripCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B24D81C25A9452800A4A002 /* FripCommentResponse.swift */; };
+		3B2AFA0325AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2AFA0125AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.swift */; };
+		3B2AFA0425AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2AFA0225AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.xib */; };
 		3B3B5CD625A43FCF00719FA7 /* CategorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B5CD425A43FCF00719FA7 /* CategorySearchViewController.swift */; };
 		3B3B5CD725A43FCF00719FA7 /* CategorySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3B5CD525A43FCF00719FA7 /* CategorySearchViewController.xib */; };
 		3B3B5CDC25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B5CDA25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift */; };
@@ -59,6 +61,10 @@
 		3B74A97A25AC808D00D5709A /* CommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74A97925AC808D00D5709A /* CommentEntity.swift */; };
 		3B74A97D25AC9E4400D5709A /* CommentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74A97C25AC9E4400D5709A /* CommentUser.swift */; };
 		3B74A98025ACA2C600D5709A /* CommentPostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74A97F25ACA2C600D5709A /* CommentPostEntity.swift */; };
+		3B74A98425AD72D000D5709A /* FeedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74A98225AD72D000D5709A /* FeedUserViewController.swift */; };
+		3B74A98525AD72D000D5709A /* FeedUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B74A98325AD72D000D5709A /* FeedUserViewController.xib */; };
+		3B74A99025AD7EDB00D5709A /* MyInfoGetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74A98F25AD7EDB00D5709A /* MyInfoGetDataManager.swift */; };
+		3B74A99425AD850000D5709A /* MyInfoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74A99325AD850000D5709A /* MyInfoUser.swift */; };
 		3B7771FA25A0726000CF2905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771F925A0726000CF2905 /* AppDelegate.swift */; };
 		3B7771FC25A0726000CF2905 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7771FB25A0726000CF2905 /* SceneDelegate.swift */; };
 		3B77720325A0726200CF2905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B77720225A0726200CF2905 /* Assets.xcassets */; };
@@ -179,6 +185,8 @@
 		3B1AA24C25A5B1590020E967 /* DailyButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B1AA24D25A5B1590020E967 /* DailyButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyButtonCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B24D81C25A9452800A4A002 /* FripCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FripCommentResponse.swift; sourceTree = "<group>"; };
+		3B2AFA0125AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B2AFA0225AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B3B5CD425A43FCF00719FA7 /* CategorySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchViewController.swift; sourceTree = "<group>"; };
 		3B3B5CD525A43FCF00719FA7 /* CategorySearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySearchViewController.xib; sourceTree = "<group>"; };
 		3B3B5CDA25A543FB00719FA7 /* SmallCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -205,6 +213,10 @@
 		3B74A97925AC808D00D5709A /* CommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEntity.swift; sourceTree = "<group>"; };
 		3B74A97C25AC9E4400D5709A /* CommentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentUser.swift; sourceTree = "<group>"; };
 		3B74A97F25ACA2C600D5709A /* CommentPostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPostEntity.swift; sourceTree = "<group>"; };
+		3B74A98225AD72D000D5709A /* FeedUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUserViewController.swift; sourceTree = "<group>"; };
+		3B74A98325AD72D000D5709A /* FeedUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedUserViewController.xib; sourceTree = "<group>"; };
+		3B74A98F25AD7EDB00D5709A /* MyInfoGetDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoGetDataManager.swift; sourceTree = "<group>"; };
+		3B74A99325AD850000D5709A /* MyInfoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoUser.swift; sourceTree = "<group>"; };
 		3B7771F625A0726000CF2905 /* Frip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7771F925A0726000CF2905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B7771FB25A0726000CF2905 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -338,6 +350,15 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		3B2AFA0025AD86AD00BC0EFC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3B2AFA0125AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.swift */,
+				3B2AFA0225AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3B3B5CCE25A43EE400719FA7 /* CategorySearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +453,22 @@
 			children = (
 				3B56C55825A6D86700C45B0E /* MainFrip.swift */,
 				3BFDD01E25A6FA020079B29D /* FripSave.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3B74A98E25AD7ECE00D5709A /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3B74A98F25AD7EDB00D5709A /* MyInfoGetDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		3B74A99625AD850500D5709A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3B74A99325AD850000D5709A /* MyInfoUser.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -605,6 +642,8 @@
 				3B7772B625A18D5E00CF2905 /* FeedViewController.xib */,
 				3B01AAFB25AC6238008C930F /* FeedCommentViewController.swift */,
 				3B01AAFC25AC6238008C930F /* FeedCommentViewController.xib */,
+				3B74A98225AD72D000D5709A /* FeedUserViewController.swift */,
+				3B74A98325AD72D000D5709A /* FeedUserViewController.xib */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -625,6 +664,9 @@
 		3B7772A625A18D0D00CF2905 /* MyInfo */ = {
 			isa = PBXGroup;
 			children = (
+				3B2AFA0025AD86AD00BC0EFC /* Cell */,
+				3B74A99625AD850500D5709A /* Entity */,
+				3B74A98E25AD7ECE00D5709A /* DataManager */,
 				3B7772BF25A18D7400CF2905 /* MyInfoViewController.swift */,
 				3B7772C025A18D7400CF2905 /* MyInfoViewController.xib */,
 			);
@@ -933,6 +975,7 @@
 				3B3F321025A41FC900EE22C5 /* NoneCollectionViewCell.xib in Resources */,
 				3B7EF0F125A2E7500003C210 /* MainCollectionViewCell.xib in Resources */,
 				3B01AB0325AC6330008C930F /* FeedCommentCollectionViewCell.xib in Resources */,
+				3B74A98525AD72D000D5709A /* FeedUserViewController.xib in Resources */,
 				3B7772BD25A18D6800CF2905 /* StoredViewController.xib in Resources */,
 				3B3F320A25A398B300EE22C5 /* SaveFripViewController.xib in Resources */,
 				3B77720325A0726200CF2905 /* Assets.xcassets in Resources */,
@@ -955,6 +998,7 @@
 				3BFDD03325A707FE0079B29D /* FripShowCollectionViewCell.xib in Resources */,
 				3B3F321525A42FE400EE22C5 /* HostCollectionViewCell.xib in Resources */,
 				3B066B4D25A2375E002100A9 /* HomeViewController.xib in Resources */,
+				3B2AFA0425AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.xib in Resources */,
 				3B3F320425A398A800EE22C5 /* SaveHostViewController.xib in Resources */,
 				3BF8BAD025AAB3AA005E3FB7 /* SearchViewController.xib in Resources */,
 				3B066B5825A23C33002100A9 /* RecViewController.xib in Resources */,
@@ -1039,6 +1083,7 @@
 				3BF8BAEB25AAD11A005E3FB7 /* OptionClickTableViewCell.swift in Sources */,
 				3B01AAFD25AC6238008C930F /* FeedCommentViewController.swift in Sources */,
 				3BF53A4A25AADADE0045C400 /* FripOption.swift in Sources */,
+				3B74A99425AD850000D5709A /* MyInfoUser.swift in Sources */,
 				3B77727325A0A70A00CF2905 /* UIButton.swift in Sources */,
 				3B77729B25A0E45A00CF2905 /* MainDataManager.swift in Sources */,
 				3BF8BAC625A9A446005E3FB7 /* HostButtonCollectionViewCell.swift in Sources */,
@@ -1068,6 +1113,7 @@
 				3B77727025A0A70A00CF2905 /* String.swift in Sources */,
 				3BFDD03225A707FE0079B29D /* FripShowCollectionViewCell.swift in Sources */,
 				3B77727B25A0A87A00CF2905 /* IndicatorView.swift in Sources */,
+				3B2AFA0325AD86D000BC0EFC /* MyInfoHeaderCollectionViewCell.swift in Sources */,
 				3BCDDC9525AC0D1600CA0B67 /* FeedCollectionViewCell.swift in Sources */,
 				3B3F320325A398A800EE22C5 /* SaveHostViewController.swift in Sources */,
 				3B74A97D25AC9E4400D5709A /* CommentUser.swift in Sources */,
@@ -1080,6 +1126,7 @@
 				3B56C55625A6D62900C45B0E /* HomeGetResponse.swift in Sources */,
 				3BCDDC8A25AB5A7B00CA0B67 /* RecSearchViewController.swift in Sources */,
 				3B7772B725A18D5E00CF2905 /* FeedViewController.swift in Sources */,
+				3B74A99025AD7EDB00D5709A /* MyInfoGetDataManager.swift in Sources */,
 				3BFDD02D25A707520079B29D /* FripImageCollectionViewCell.swift in Sources */,
 				3B7772BC25A18D6800CF2905 /* StoredViewController.swift in Sources */,
 				3B77728225A0A8CE00CF2905 /* BaseViewController.swift in Sources */,
@@ -1100,6 +1147,7 @@
 				3BC4DDB825A84455000ABF0C /* CommonGetDataManager.swift in Sources */,
 				3BCDDC8F25AB5F8300CA0B67 /* DailySearchViewController.swift in Sources */,
 				3B3F321425A42FE400EE22C5 /* HostCollectionViewCell.swift in Sources */,
+				3B74A98425AD72D000D5709A /* FeedUserViewController.swift in Sources */,
 				3BE3FE6525A31E8C00F49E0C /* HeaderCollectionReusableView.swift in Sources */,
 				3B77726F25A0A70A00CF2905 /* Color.swift in Sources */,
 				3B3F320925A398B300EE22C5 /* SaveFripViewController.swift in Sources */,

@@ -13,4 +13,5 @@ struct Constant {
     static let ALL_FEED = BASE_URL + "/reviews/feeds"
     static let FEED_LIKE =  BASE_URL + "/reviews/feeds"
     static let MY_PAGE = BASE_URL + "/users/mypage"
+    static let MY_PAGE_FRIP = BASE_URL  + "/users/frips"
 }

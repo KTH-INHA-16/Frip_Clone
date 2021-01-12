@@ -52,7 +52,6 @@ class FeedPostDataManager {
     }
     
     func deleteFeedComments(targetURL:String,idx:Int,commentIdx:Int,vc:FeedCommentViewController) {
-        print(URL(string: targetURL+"/\(idx)/comments/\(commentIdx)")?.absoluteString)
         AF.request(URL(string: targetURL+"/\(idx)/comments/\(commentIdx)")!, method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":jwt])
             .validate()
             .responseDecodable(of: CommentPost.self) { response in
@@ -64,8 +63,8 @@ class FeedPostDataManager {
                     case false:
                         vc.presentAlert(title: "삭제 실패")
                     }
-                case .failure(_):
-                    print("deleteFeedComments error")
+                case .failure(let error):
+                    print("deleteFeedComments error:  \(error)")
                 }
             }
     }
