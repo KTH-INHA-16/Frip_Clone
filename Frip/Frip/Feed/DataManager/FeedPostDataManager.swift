@@ -15,7 +15,7 @@ class FeedPostDataManager {
     
     func postFeedLike(url: String,reviewIdx: Int) {
         print(url+"/\(reviewIdx)/likes")
-        AF.request(URL(string: url+"/\(reviewIdx)/likes")!, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":jwt])
+        AF.request(URL(string: url+"/\(reviewIdx)/feeds/likes")!, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":jwt])
             .validate()
             .responseDecodable(of: SaveResult.self) { response in
                 switch response.result {
@@ -31,7 +31,7 @@ class FeedPostDataManager {
         if let text = message.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
             let body = ["fripFeedComment":text]
             print(url+"/\(reviewIdx)/comments")
-            AF.request(URL(string: url+"/\(reviewIdx)/comments")!, method: .post, parameters: body, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":jwt])
+            AF.request(URL(string: url+"/\(reviewIdx)/feeds/comments")!, method: .post, parameters: body, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":jwt])
                 .validate()
                 .responseDecodable(of: CommentPost.self) { response in
                     switch response.result {
@@ -52,7 +52,7 @@ class FeedPostDataManager {
     }
     
     func deleteFeedComments(targetURL:String,idx:Int,commentIdx:Int,vc:FeedCommentViewController) {
-        AF.request(URL(string: targetURL+"/\(idx)/comments/\(commentIdx)")!, method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":jwt])
+        AF.request(URL(string: targetURL+"/\(idx)/feeds/comments/\(commentIdx)")!, method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":jwt])
             .validate()
             .responseDecodable(of: CommentPost.self) { response in
                 switch response.result {

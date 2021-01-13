@@ -43,7 +43,7 @@ class FeedCommentViewController: BaseViewController {
         self.navigationItem.title = "댓글"
         NotificationCenter.default.addObserver(self, selector: #selector(textViewMoveUp(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(textViewMoveDown), name: UIResponder.keyboardWillHideNotification, object: nil)
-        FeedGetDataManager().getFeedComments(targetURL: Constant.FEED_LIKE, idx: idx, vc: self)
+        FeedGetDataManager().getFeedComments(targetURL: Constant.COMMENT_PAGE, idx: idx, vc: self)
         FeedGetDataManager().getMyInfo(targetURL: Constant.MY_PAGE, vc: self)
     }
     
@@ -63,7 +63,7 @@ class FeedCommentViewController: BaseViewController {
         if text.count > 50 {
             self.presentAlert(title: "50글자 초과!")
         } else {
-            FeedPostDataManager().postComment(url: Constant.ALL_FEED, reviewIdx: idx, message: text, vc: self)
+            FeedPostDataManager().postComment(url: Constant.COMMENT_PAGE, reviewIdx: idx, message: text, vc: self)
         }
     }
     
@@ -97,7 +97,7 @@ class FeedCommentViewController: BaseViewController {
     
     @objc func deleteTapDown(_ sender: UIButton!) {
         let commentIdx = sender.tag
-        FeedPostDataManager().deleteFeedComments(targetURL: Constant.ALL_FEED, idx: idx, commentIdx: commentIdx, vc: self)
+        FeedPostDataManager().deleteFeedComments(targetURL: Constant.COMMENT_PAGE, idx: idx, commentIdx: commentIdx, vc: self)
     }
 }
 

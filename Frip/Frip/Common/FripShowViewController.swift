@@ -210,19 +210,31 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
         case 5:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FripCommonCollectionViewCell", for: indexPath) as! FripCommonCollectionViewCell
             cell.titleLable.text = "포함사항"
-            cell.textView.text = detail.includeThing
+            if !detail.includeThing.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                cell.textView.text = detail.includeThing
+            } else {
+                cell.textView.text = "포함 사항이 없습니다"
+            }
             cell.border.backgroundColor = .lightGray
             return cell
         case 6:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FripCommonCollectionViewCell", for: indexPath) as! FripCommonCollectionViewCell
             cell.titleLable.text = "불포함 사항"
-            cell.textView.text = detail.exceptThing
+            if !detail.exceptThing.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                cell.textView.text = detail.exceptThing
+            } else {
+                cell.textView.text = "불포함 사항이 없습니다"
+            }
             cell.border.backgroundColor = .lightGray
             return cell
         case 7:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FripCommonCollectionViewCell", for: indexPath) as! FripCommonCollectionViewCell
             cell.titleLable.text = "준비물"
-            cell.textView.text = detail.preparation
+            if !detail.preparation.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                cell.textView.text = detail.preparation
+            } else {
+                cell.textView.text = "준비물은 없습니다"
+            }
             cell.border.backgroundColor = .lightGray
             return cell
         case 8:
@@ -249,7 +261,7 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
         case 1:
             return CGSize(width: collectionView.frame.width, height: 150)
         case 2:
-            return CGSize(width: collectionView.frame.width, height: 120)
+            return CGSize(width: collectionView.frame.width, height: 100)
         case 3:
             if detail.fripReviewCnt == "0개 후기" {
                 return CGSize(width: collectionView.frame.width, height: 120)
@@ -257,13 +269,25 @@ extension FripShowViewController: UICollectionViewDelegate, UICollectionViewDele
                 return CGSize(width: collectionView.frame.width, height: 150)
             }
         case 4:
-            return CGSize(width: collectionView.frame.width, height: 500)
+            return CGSize(width: collectionView.frame.width, height: 600)
         case 5:
-            return CGSize(width: collectionView.frame.width, height: 200)
+            if !detail.includeThing.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                return CGSize(width: collectionView.frame.width, height: 200)
+            } else {
+                return CGSize(width: collectionView.frame.width, height: 130)
+            }
         case 6:
-            return CGSize(width: collectionView.frame.width, height: 200)
+            if !detail.exceptThing.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                return CGSize(width: collectionView.frame.width, height: 200)
+            } else {
+                return CGSize(width: collectionView.frame.width, height: 130)
+            }
         case 7:
-            return CGSize(width: collectionView.frame.width, height: 200)
+            if !detail.preparation.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                return CGSize(width: collectionView.frame.width, height: 200)
+            } else {
+                return CGSize(width: collectionView.frame.width, height: 130)
+            }
         case 8:
             return CGSize(width: collectionView.frame.width, height: 200)
         case 9:

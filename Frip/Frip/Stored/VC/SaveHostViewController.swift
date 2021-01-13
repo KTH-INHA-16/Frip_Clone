@@ -86,7 +86,7 @@ extension SaveHostViewController: UICollectionViewDelegate, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if saveHost.count != 0 {
-            return CGSize(width: collectionView.frame.width, height: 100)
+            return CGSize(width: collectionView.frame.width, height: 85)
         } else {
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         }

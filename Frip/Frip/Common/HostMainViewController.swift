@@ -169,11 +169,11 @@ extension HostMainViewController: UICollectionViewDelegate, UICollectionViewData
         case 0:
             return CGSize(width: collectionView.frame.width, height: 120)
         case 1:
-            return CGSize(width: collectionView.frame.width, height: 140)
+            return CGSize(width: collectionView.frame.width, height: 180)
         case 2:
             return CGSize(width: collectionView.frame.width, height: 45)
         case 3:
-            return CGSize(width: collectionView.frame.width / 2 - 10, height: 300)
+            return CGSize(width: collectionView.frame.width / 2 - 5, height: 300)
         default:
             return CGSize(width: collectionView.frame.width, height: 0)
         }

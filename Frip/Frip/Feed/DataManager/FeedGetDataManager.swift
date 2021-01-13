@@ -53,8 +53,8 @@ class FeedGetDataManager {
     }
     
     func getFeedComments(targetURL:String,idx:Int,vc:FeedCommentViewController) {
-        print(URL(string: targetURL+"/\(idx)/comments")?.absoluteString)
-        AF.request(URL(string: targetURL+"/\(idx)/comments")!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":jwt])
+        print(URL(string: targetURL+"/\(idx)/feeds/comments")?.absoluteString)
+        AF.request(URL(string: targetURL+"/\(idx)/feeds/comments")!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["X-ACCESS-TOKEN":jwt])
             .validate()
             .responseDecodable(of: CommentResults.self) { response in
                 switch response.result {
