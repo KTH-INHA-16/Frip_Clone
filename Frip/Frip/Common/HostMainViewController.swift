@@ -1,6 +1,6 @@
 import UIKit
 
-class HostMainViewController: UIViewController {
+class HostMainViewController: BaseViewController {
 
     let buttonText: [String] = ["프립","후기"]
     var hostIdx: Int = 0
