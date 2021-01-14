@@ -14,7 +14,7 @@ class BestViewController: BaseViewController {
     @IBOutlet weak var sortButton: UIButton!
     
     var bigCategory: [String] = ["전체","엑티비티","배움","건강·뷰티","모임"]
-    var sortText: [String] = ["인기","최신"]
+    var sortText: [String] = ["인기","후기"]
     var frips: [Frip] = []
     var categoryIdx: Int = 0
     var option: Int = 0
@@ -23,7 +23,7 @@ class BestViewController: BaseViewController {
     private let jwt = UserDefaults.standard.string(forKey: "userJWT")!
     
     let text1 = NSAttributedString(string: "인기순", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black,NSAttributedString.Key.font: UIFont.NotoSans(.regular, size: 15)])
-    let text2 = NSAttributedString(string: "최신순", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black,NSAttributedString.Key.font: UIFont.NotoSans(.regular, size: 15)])
+    let text2 = NSAttributedString(string: "후기순", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black,NSAttributedString.Key.font: UIFont.NotoSans(.regular, size: 15)])
     
     override func viewDidLoad() {
         super.viewDidLoad()

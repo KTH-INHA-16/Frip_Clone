@@ -68,6 +68,7 @@ extension SaveFripViewController: UICollectionViewDelegate, UICollectionViewDele
                 cell.saveButton.tintColor = UIColor.saveColor
                 cell.saveButton.tag = indexPath.row
                 cell.saveButton.addTarget(self, action: #selector(buttonTap(sender:)), for: .touchDown)
+                cell.price.text = frip.price
                 cell.place.text = frip.place
                 cell.point.text = frip.rate
                 cell.title.text = frip.fripTitle
