@@ -58,6 +58,9 @@ extension SaveHostViewController: UICollectionViewDelegate, UICollectionViewDele
                 cell.hostIdx = host.hostIdx
                 cell.hostNameLabel.text = host.hostName
                 let url = URL(string: host.hostProfileImg)
+                cell.bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+                cell.save = true
+                cell.bookmarkButton.tintColor = UIColor.saveColor
                 cell.image.kf.setImage(with: url)
                 cell.hostCountLabel.text = "프립\(host.hostFripCnt) | 후기\(host.hostReviewCnt) | 저장\(host.hostLikeCnt)"
                 cell.hostCountLabel.sizeToFit()
