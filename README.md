@@ -20,7 +20,7 @@
 
 툴바 메뉴 화면 (카테고리 / 저장 /피드)
 
-<img src="https://lh6.googleusercontent.com/lGQNFOIdqQl4rQoCWfLhvd5LZszXfRu2S75U8V0AmPUUIqdJbKTkakBJsWhz2o1VRCzxIukgmUndJbh-IBBFsFleTvEbzlqaf_Uk4jhZopwWnnddpfcYdXugMDb4PVlXAUGf2Bbi" alt="img" style="zoom:5%;" width="300" height="600"/> <img src="https://lh4.googleusercontent.com/xF3FUSudcYt9c9n9cYT_aF0NHOa7GL3pyxWcix9F3CqewcIO93zqPVe9lWFjJcvryJf7qPQ9lh1MMugHs3zmyzpzSz62whyrTkhtJqB5TPJWZMO1pm6W2DSFJWK_S7YdTzLSilZE" alt="img" style="zoom:5%;" /> <img src="https://lh3.googleusercontent.com/lm1kocAjy_QgN4iAmQV1eAQzCCs0hPUri6eVxZmKs6hmQOLF-DqwIYfAx1pIyppuod0ICYOTVxu2-fXiotp3y0rg94O1HndLaTcYEjq1sbGqKFLlS-3gvMhBpY_fELQ6SzTERGV1" alt="img" style="zoom:5%;" width="300" height="600"/>
+<img src="https://lh6.googleusercontent.com/lGQNFOIdqQl4rQoCWfLhvd5LZszXfRu2S75U8V0AmPUUIqdJbKTkakBJsWhz2o1VRCzxIukgmUndJbh-IBBFsFleTvEbzlqaf_Uk4jhZopwWnnddpfcYdXugMDb4PVlXAUGf2Bbi" alt="img" style="zoom:5%;" width="300" height="600"/> <img src="https://lh4.googleusercontent.com/xF3FUSudcYt9c9n9cYT_aF0NHOa7GL3pyxWcix9F3CqewcIO93zqPVe9lWFjJcvryJf7qPQ9lh1MMugHs3zmyzpzSz62whyrTkhtJqB5TPJWZMO1pm6W2DSFJWK_S7YdTzLSilZE" alt="img" style="zoom:5%;" width="300" height="600"/> <img src="https://lh3.googleusercontent.com/lm1kocAjy_QgN4iAmQV1eAQzCCs0hPUri6eVxZmKs6hmQOLF-DqwIYfAx1pIyppuod0ICYOTVxu2-fXiotp3y0rg94O1HndLaTcYEjq1sbGqKFLlS-3gvMhBpY_fELQ6SzTERGV1" alt="img" style="zoom:5%;" width="300" height="600"/>
 
 네비게이션 바 메뉴 (추천/ 일상 베스트)
 
