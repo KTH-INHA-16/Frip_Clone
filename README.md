@@ -36,7 +36,7 @@
 
 마이페이지
 
-<img src="https://lh5.googleusercontent.com/4hK6kaaHHPJ773CP8sEzPKkyCavJEyJoujCDluOjfXWD_8WsuHnLaNpIZ89xLlRUzfAmYedxu9Crr-YKtWpLnZSXReV-otCc7e1sr0N8YZU2V9VWVnL8nFwgEDRS4gL47qUyTB7d" alt="img" style="zoom:5%;" width="300" height="600"/><img src="https://lh5.googleusercontent.com/-6hCITo23wY4d8wPQ3QeyzcQI3Wda3o_u3GCAJdPz1FL7LAeJjZLSLIIvFTjujgZzPGVx71qyjxEzcQropAyp7D6PoMZwKFF8HKn4Db1IW6bcwFgpEbDvRYLIYthX_LQdCnNxU2d" alt="img" style="zoom:5%;" /><img src="https://lh4.googleusercontent.com/ej_v1CDROug2-R9LHvwemc-AzjnUmZ8kSjt8jG1rYoXRH7nFXW4xMeh2x1H8sar1Rz_Cu4cIzijkzR0auhoJPFry0JcUfQO2xDCXZO8krteZG0YoqXUnphc0iL5yCYdLkMzDlh7y" alt="img" style="zoom: 5%;" width="300" height="600"/>
+<img src="https://lh5.googleusercontent.com/4hK6kaaHHPJ773CP8sEzPKkyCavJEyJoujCDluOjfXWD_8WsuHnLaNpIZ89xLlRUzfAmYedxu9Crr-YKtWpLnZSXReV-otCc7e1sr0N8YZU2V9VWVnL8nFwgEDRS4gL47qUyTB7d" alt="img" style="zoom:5%;" width="300" height="600"/><img src="https://lh5.googleusercontent.com/-6hCITo23wY4d8wPQ3QeyzcQI3Wda3o_u3GCAJdPz1FL7LAeJjZLSLIIvFTjujgZzPGVx71qyjxEzcQropAyp7D6PoMZwKFF8HKn4Db1IW6bcwFgpEbDvRYLIYthX_LQdCnNxU2d" alt="img" style="zoom:5%;" width="300" height="600"/><img src="https://lh4.googleusercontent.com/ej_v1CDROug2-R9LHvwemc-AzjnUmZ8kSjt8jG1rYoXRH7nFXW4xMeh2x1H8sar1Rz_Cu4cIzijkzR0auhoJPFry0JcUfQO2xDCXZO8krteZG0YoqXUnphc0iL5yCYdLkMzDlh7y" alt="img" style="zoom: 5%;" width="300" height="600"/>
 
 4. 1주차 구현 범위 
 
