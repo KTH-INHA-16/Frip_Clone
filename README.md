@@ -16,7 +16,7 @@
 3. 구현 화면
   로그인
 
-  <img src="https://lh6.googleusercontent.com/4JC5nKpSc4f53NbODrlbo3xoKi96mOdjNV0eVhaUx90SDOozDJmU8FTVU3pJtKyMirST8v9TL1XO6poWB4c1EgesHj9jYcqX882DSXn2iSDY6dSuUr_tVY7xDpcYhQeUim5Gva5T" alt="img" style="zoom:300%;" width="300" height="300"/> 
+  <img src="https://lh6.googleusercontent.com/4JC5nKpSc4f53NbODrlbo3xoKi96mOdjNV0eVhaUx90SDOozDJmU8FTVU3pJtKyMirST8v9TL1XO6poWB4c1EgesHj9jYcqX882DSXn2iSDY6dSuUr_tVY7xDpcYhQeUim5Gva5T" alt="img" style="zoom:300%;" width="300" height="600"/> 
 
 툴바 메뉴 화면 (카테고리 / 저장 /피드)
 
